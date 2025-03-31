@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C96AC6902D9B4FC300369BAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC68D2D9B4FC300369BAD /* ContentView.swift */; };
+		C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC68E2D9B4FC300369BAD /* History_RepublicApp.swift */; };
+		C96AC6922D9B4FC300369BAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96AC68A2D9B4FC300369BAD /* Preview Assets.xcassets */; };
+		C96AC6932D9B4FC300369BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96AC68C2D9B4FC300369BAD /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C96AC66E2D9B4F8300369BAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +34,13 @@
 		C96AC65D2D9B4F8200369BAD /* History Republic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "History Republic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96AC66D2D9B4F8300369BAD /* History RepublicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "History RepublicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96AC6772D9B4F8300369BAD /* History RepublicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "History RepublicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96AC68A2D9B4FC300369BAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C96AC68C2D9B4FC300369BAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C96AC68D2D9B4FC300369BAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C96AC68E2D9B4FC300369BAD /* History_RepublicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History_RepublicApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C96AC65F2D9B4F8200369BAD /* History Republic */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "History Republic";
-			sourceTree = "<group>";
-		};
 		C96AC6702D9B4F8300369BAD /* History RepublicTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "History RepublicTests";
@@ -75,7 +81,7 @@
 		C96AC6542D9B4F8200369BAD = {
 			isa = PBXGroup;
 			children = (
-				C96AC65F2D9B4F8200369BAD /* History Republic */,
+				C96AC68F2D9B4FC300369BAD /* History Republic */,
 				C96AC6702D9B4F8300369BAD /* History RepublicTests */,
 				C96AC67A2D9B4F8300369BAD /* History RepublicUITests */,
 				C96AC65E2D9B4F8200369BAD /* Products */,
@@ -92,6 +98,121 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C96AC68B2D9B4FC300369BAD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC68A2D9B4FC300369BAD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C96AC68F2D9B4FC300369BAD /* History Republic */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC6942D9B4FCD00369BAD /* Shared */,
+				C96AC68D2D9B4FC300369BAD /* ContentView.swift */,
+				C96AC68B2D9B4FC300369BAD /* Preview Content */,
+				C96AC68C2D9B4FC300369BAD /* Assets.xcassets */,
+				C96AC68E2D9B4FC300369BAD /* History_RepublicApp.swift */,
+			);
+			path = "History Republic";
+			sourceTree = "<group>";
+		};
+		C96AC6942D9B4FCD00369BAD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC6952D9B4FD400369BAD /* Data */,
+				C96AC6982D9B500100369BAD /* Domain */,
+				C96AC69D2D9B504700369BAD /* Presentation */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C96AC6952D9B4FD400369BAD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC6962D9B4FDD00369BAD /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C96AC6962D9B4FDD00369BAD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC6972D9B4FE600369BAD /* BaseNetwork */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C96AC6972D9B4FE600369BAD /* BaseNetwork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseNetwork;
+			sourceTree = "<group>";
+		};
+		C96AC6982D9B500100369BAD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC69C2D9B503E00369BAD /* Entities */,
+				C96AC69B2D9B503700369BAD /* Protocols */,
+				C96AC69A2D9B503100369BAD /* Tools */,
+				C96AC6992D9B502700369BAD /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C96AC6992D9B502700369BAD /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		C96AC69A2D9B503100369BAD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C96AC69B2D9B503700369BAD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C96AC69C2D9B503E00369BAD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C96AC69D2D9B504700369BAD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC69E2D9B505E00369BAD /* ViewModels */,
+				C96AC69F2D9B506600369BAD /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C96AC69E2D9B505E00369BAD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C96AC69F2D9B506600369BAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +227,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C96AC65F2D9B4F8200369BAD /* History Republic */,
 			);
 			name = "History Republic";
 			packageProductDependencies = (
@@ -212,6 +330,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96AC6922D9B4FC300369BAD /* Preview Assets.xcassets in Resources */,
+				C96AC6932D9B4FC300369BAD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +356,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96AC6902D9B4FC300369BAD /* ContentView.swift in Sources */,
+				C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
