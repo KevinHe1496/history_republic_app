@@ -11,6 +11,21 @@
 		C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC68E2D9B4FC300369BAD /* History_RepublicApp.swift */; };
 		C96AC6922D9B4FC300369BAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96AC68A2D9B4FC300369BAD /* Preview Assets.xcassets */; };
 		C96AC6932D9B4FC300369BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96AC68C2D9B4FC300369BAD /* Assets.xcassets */; };
+		C96AC6A22D9B511300369BAD /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC6A12D9B511300369BAD /* SplashView.swift */; };
+		C96AC6C62D9B552600369BAD /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC6C52D9B552600369BAD /* Color-Theme.swift */; };
+		C96AC6D52D9B5A4F00369BAD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC6D42D9B5A4F00369BAD /* LoginView.swift */; };
+		C96AC73F2D9B648400369BAD /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC73E2D9B648400369BAD /* EndPoints.swift */; };
+		C96AC7C92D9B664C00369BAD /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7C82D9B664C00369BAD /* HttpMethods.swift */; };
+		C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7CA2D9B665C00369BAD /* HttpResponseCodes.swift */; };
+		C96AC7CD2D9B66A300369BAD /* ConstantsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7CC2D9B66A300369BAD /* ConstantsApp.swift */; };
+		C96AC7CF2D9B674D00369BAD /* NetworkLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7CE2D9B674D00369BAD /* NetworkLogin.swift */; };
+		C96AC7D12D9B68B700369BAD /* KeyChainKC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7D02D9B68B700369BAD /* KeyChainKC.swift */; };
+		C96AC7D42D9B68E000369BAD /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C96AC7D32D9B68E000369BAD /* KeychainSwift */; };
+		C96AC7D62D9B693100369BAD /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7D52D9B693100369BAD /* LoginRepositoryProtocol.swift */; };
+		C96AC7D82D9B696400369BAD /* LoginUserCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7D72D9B696400369BAD /* LoginUserCase.swift */; };
+		C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7D92D9B69DC00369BAD /* hrPersistenceKeyChain.swift */; };
+		C96AC7DD2D9B6AC700369BAD /* DefaultLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */; };
+		C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7DE2D9B701400369BAD /* AppStateVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +53,20 @@
 		C96AC68C2D9B4FC300369BAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96AC68D2D9B4FC300369BAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C96AC68E2D9B4FC300369BAD /* History_RepublicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History_RepublicApp.swift; sourceTree = "<group>"; };
+		C96AC6A12D9B511300369BAD /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		C96AC6C52D9B552600369BAD /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
+		C96AC6D42D9B5A4F00369BAD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C96AC73E2D9B648400369BAD /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		C96AC7C82D9B664C00369BAD /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
+		C96AC7CA2D9B665C00369BAD /* HttpResponseCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseCodes.swift; sourceTree = "<group>"; };
+		C96AC7CC2D9B66A300369BAD /* ConstantsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsApp.swift; sourceTree = "<group>"; };
+		C96AC7CE2D9B674D00369BAD /* NetworkLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogin.swift; sourceTree = "<group>"; };
+		C96AC7D02D9B68B700369BAD /* KeyChainKC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainKC.swift; sourceTree = "<group>"; };
+		C96AC7D52D9B693100369BAD /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
+		C96AC7D72D9B696400369BAD /* LoginUserCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserCase.swift; sourceTree = "<group>"; };
+		C96AC7D92D9B69DC00369BAD /* hrPersistenceKeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hrPersistenceKeyChain.swift; sourceTree = "<group>"; };
+		C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginRepository.swift; sourceTree = "<group>"; };
+		C96AC7DE2D9B701400369BAD /* AppStateVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -58,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96AC7D42D9B68E000369BAD /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				C96AC6962D9B4FDD00369BAD /* Network */,
+				C96AC7DB2D9B6A8500369BAD /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -139,7 +170,9 @@
 		C96AC6962D9B4FDD00369BAD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C96AC7C62D9B65EA00369BAD /* Local */,
 				C96AC6972D9B4FE600369BAD /* BaseNetwork */,
+				C96AC7CE2D9B674D00369BAD /* NetworkLogin.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -147,6 +180,9 @@
 		C96AC6972D9B4FE600369BAD /* BaseNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				C96AC73E2D9B648400369BAD /* EndPoints.swift */,
+				C96AC7C82D9B664C00369BAD /* HttpMethods.swift */,
+				C96AC7CA2D9B665C00369BAD /* HttpResponseCodes.swift */,
 			);
 			path = BaseNetwork;
 			sourceTree = "<group>";
@@ -154,6 +190,7 @@
 		C96AC6982D9B500100369BAD /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C96AC6C42D9B551900369BAD /* Extensions */,
 				C96AC69C2D9B503E00369BAD /* Entities */,
 				C96AC69B2D9B503700369BAD /* Protocols */,
 				C96AC69A2D9B503100369BAD /* Tools */,
@@ -165,6 +202,7 @@
 		C96AC6992D9B502700369BAD /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				C96AC7D72D9B696400369BAD /* LoginUserCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -172,6 +210,8 @@
 		C96AC69A2D9B503100369BAD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C96AC7CC2D9B66A300369BAD /* ConstantsApp.swift */,
+				C96AC7D92D9B69DC00369BAD /* hrPersistenceKeyChain.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -179,6 +219,7 @@
 		C96AC69B2D9B503700369BAD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				C96AC7D52D9B693100369BAD /* LoginRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -202,6 +243,7 @@
 		C96AC69E2D9B505E00369BAD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C96AC7DE2D9B701400369BAD /* AppStateVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -209,8 +251,58 @@
 		C96AC69F2D9B506600369BAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C96AC6C72D9B5A1500369BAD /* Login */,
+				C96AC6A02D9B510900369BAD /* Splash */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C96AC6A02D9B510900369BAD /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC6A12D9B511300369BAD /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		C96AC6C42D9B551900369BAD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC6C52D9B552600369BAD /* Color-Theme.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C96AC6C72D9B5A1500369BAD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC6D42D9B5A4F00369BAD /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C96AC7C62D9B65EA00369BAD /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC7C72D9B65F500369BAD /* KeyChain */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		C96AC7C72D9B65F500369BAD /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC7D02D9B68B700369BAD /* KeyChainKC.swift */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		C96AC7DB2D9B6A8500369BAD /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +322,7 @@
 			);
 			name = "History Republic";
 			packageProductDependencies = (
+				C96AC7D32D9B68E000369BAD /* KeychainSwift */,
 			);
 			productName = "History Republic";
 			productReference = C96AC65D2D9B4F8200369BAD /* History Republic.app */;
@@ -313,6 +406,9 @@
 			);
 			mainGroup = C96AC6542D9B4F8200369BAD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C96AC7D22D9B68E000369BAD /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C96AC65E2D9B4F8200369BAD /* Products */;
 			projectDirPath = "";
@@ -356,8 +452,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */,
 				C96AC6902D9B4FC300369BAD /* ContentView.swift in Sources */,
+				C96AC7DD2D9B6AC700369BAD /* DefaultLoginRepository.swift in Sources */,
+				C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */,
 				C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */,
+				C96AC7D82D9B696400369BAD /* LoginUserCase.swift in Sources */,
+				C96AC7CF2D9B674D00369BAD /* NetworkLogin.swift in Sources */,
+				C96AC7D62D9B693100369BAD /* LoginRepositoryProtocol.swift in Sources */,
+				C96AC7C92D9B664C00369BAD /* HttpMethods.swift in Sources */,
+				C96AC6A22D9B511300369BAD /* SplashView.swift in Sources */,
+				C96AC7D12D9B68B700369BAD /* KeyChainKC.swift in Sources */,
+				C96AC6D52D9B5A4F00369BAD /* LoginView.swift in Sources */,
+				C96AC73F2D9B648400369BAD /* EndPoints.swift in Sources */,
+				C96AC6C62D9B552600369BAD /* Color-Theme.swift in Sources */,
+				C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */,
+				C96AC7CD2D9B66A300369BAD /* ConstantsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +790,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C96AC7D22D9B68E000369BAD /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C96AC7D32D9B68E000369BAD /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C96AC7D22D9B68E000369BAD /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C96AC6552D9B4F8200369BAD /* Project object */;
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct History_RepublicApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }
