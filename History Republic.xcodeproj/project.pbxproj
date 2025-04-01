@@ -30,6 +30,7 @@
 		C9B3E3502D9C93F000BC3096 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E34F2D9C93F000BC3096 /* RootView.swift */; };
 		C9B3E3532D9C9D7B00BC3096 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E3522D9C9D7B00BC3096 /* LoadingView.swift */; };
 		C9B3E3B62D9C9F9100BC3096 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E3B52D9C9F9100BC3096 /* ErrorView.swift */; };
+		C9B3E3BB2D9CA6A600BC3096 /* PodcastsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E3BA2D9CA6A600BC3096 /* PodcastsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		C9B3E34F2D9C93F000BC3096 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		C9B3E3522D9C9D7B00BC3096 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C9B3E3B52D9C9F9100BC3096 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		C9B3E3BA2D9CA6A600BC3096 /* PodcastsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -260,6 +262,7 @@
 		C96AC69F2D9B506600369BAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C9B3E3B92D9CA69400BC3096 /* Podcasts */,
 				C96AC6C72D9B5A1500369BAD /* Login */,
 				C96AC6A02D9B510900369BAD /* Splash */,
 				C9B3E3512D9C9D5800BC3096 /* Tools */,
@@ -323,6 +326,14 @@
 				C9B3E3B52D9C9F9100BC3096 /* ErrorView.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		C9B3E3B92D9CA69400BC3096 /* Podcasts */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3E3BA2D9CA6A600BC3096 /* PodcastsView.swift */,
+			);
+			path = Podcasts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,6 +494,7 @@
 				C96AC7D62D9B693100369BAD /* LoginRepositoryProtocol.swift in Sources */,
 				C96AC7C92D9B664C00369BAD /* HttpMethods.swift in Sources */,
 				C96AC6A22D9B511300369BAD /* SplashView.swift in Sources */,
+				C9B3E3BB2D9CA6A600BC3096 /* PodcastsView.swift in Sources */,
 				C96AC7D12D9B68B700369BAD /* KeyChainKC.swift in Sources */,
 				C96AC6D52D9B5A4F00369BAD /* LoginView.swift in Sources */,
 				C96AC73F2D9B648400369BAD /* EndPoints.swift in Sources */,

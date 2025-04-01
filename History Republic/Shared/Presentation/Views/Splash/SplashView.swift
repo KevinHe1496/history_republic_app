@@ -16,9 +16,9 @@ struct SplashView: View {
             
             Image(.logo)
         }
-        .onAppear {
-            appState.startSplashToLoginView()
-        }
+//        .onAppear {
+//            appState.startSplashToLoginView()
+//        }
 
     }
 }

@@ -20,13 +20,18 @@ struct RootView: View {
             withAnimation {
                 LoadingView()
             }
-        case .loaded:
+            
+        case .login:
             withAnimation {
                 LoginView()
             }
+        case .loaded:
+            withAnimation {
+                PodcastsView()
+            }
         case .error(error: let errorString):
             withAnimation {
-                Text("Error")
+                Text("Error \(errorString)")
             }
         }
     }

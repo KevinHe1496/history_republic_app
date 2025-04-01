@@ -10,8 +10,8 @@ import SwiftUI
 struct LoginView: View {
     @Environment(AppStateVM.self) var appState
     
-    @State private var email = ""
-    @State private var pass = ""
+    @State private var email = "andy_heredia2008@hotmail.com"
+    @State private var pass = "123456"
 
     var body: some View {
         NavigationStack {
