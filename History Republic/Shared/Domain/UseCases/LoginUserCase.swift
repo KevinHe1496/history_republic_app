@@ -10,14 +10,14 @@ import Foundation
 protocol LoginUserCaseProtocol {
     var repo: LoginRepositoryProtocol { get set }
     
-    func loginApp(user: String, password: String) async -> Bool
+    func loginApp(user: String, password: String) async throws -> Bool
     func logout() async -> Void
     func validateToken() async -> Bool
     
 }
 
 final class LoginUserCase: LoginUserCaseProtocol {
-    
+  
     var repo:  LoginRepositoryProtocol
     
     @hrPersistenceKeychain(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN)
@@ -27,8 +27,8 @@ final class LoginUserCase: LoginUserCaseProtocol {
         self.repo = repo
     }
     
-    func loginApp(user: String, password: String) async -> Bool {
-        let token = await repo.loginApp(user: user, password: password)
+    func loginApp(user: String, password: String) async throws -> Bool {
+        let token = try await repo.loginApp(user: user, password: password)
         
         if token != "" {
             tokenJWT = token

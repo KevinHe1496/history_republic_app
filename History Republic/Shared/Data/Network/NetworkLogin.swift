@@ -13,43 +13,49 @@ struct LoginResponse: Codable {
 }
 
 protocol NetworkLoginProtocol {
-    func loginApp(user: String, password: String) async -> String
+    func loginApp(user: String, password: String) async throws -> String
 }
 
 
 final class NetworkLogin: NetworkLoginProtocol {
     
     @MainActor
-    func loginApp(user: String, password: String) async -> String {
+    func loginApp(user: String, password: String) async throws -> String {
+        
         var tokenJWT = ""
         
         let urlCad = "\(ConstantsApp.CONS_API_URL)\(EndPoints.login.rawValue)"
-        let encodeCredentials = "\(user):\(password)".data(using: .utf8)?.base64EncodedString()
-        var segCredential = ""
         
-        if let credentials = encodeCredentials {
-            segCredential = "Basic \(credentials)"
+        
+        guard let url = URL(string: urlCad) else {
+            throw HRError.badUrl
         }
         
-        var request : URLRequest = URLRequest(url: URL(string: urlCad)!)
+        guard let encodeCredentials = "\(user):\(password)".data(using: .utf8)?.base64EncodedString() else {
+            throw HRError.authenticationFailed
+        }
+
+        var request : URLRequest = URLRequest(url: url)
         request.httpMethod = HttpMethods.post
-        
         request.addValue(HttpMethods.content, forHTTPHeaderField: HttpMethods.contentTypeID)
-        request.addValue(segCredential, forHTTPHeaderField: "Authorization")
+        request.addValue("Basic \(encodeCredentials)", forHTTPHeaderField: "Authorization")
         
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
             
-            if let resp = response as? HTTPURLResponse {
-                if resp.statusCode == HttpResponseCodes.SUCESS {
-                    let result = try JSONDecoder().decode(LoginResponse.self, from: data)
-                    tokenJWT = result.accessToken
-                } else {
-                    print("Error \(resp.statusCode)")
-                }
+            guard let httpResponse = response as? HTTPURLResponse else {
+                throw HRError.errorFromApi(statusCode: -1)
             }
-        } catch {
-            tokenJWT = ""
+            
+            guard httpResponse.statusCode == HttpResponseCodes.SUCESS else {
+                throw HRError.errorFromApi(statusCode: httpResponse.statusCode)
+            }
+            
+            let result = try JSONDecoder().decode(LoginResponse.self, from: data)
+            tokenJWT = result.accessToken
+            
+        } catch  {
+            print("error in fetch \(error.localizedDescription)")
         }
         return tokenJWT
     }
@@ -57,7 +63,7 @@ final class NetworkLogin: NetworkLoginProtocol {
 
 
 final class NetworkLoginMock: NetworkLoginProtocol {
-    func loginApp(user: String, password: String) async -> String {
+    func loginApp(user: String, password: String) async throws -> String {
         return UUID().uuidString
     }
 }

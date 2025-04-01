@@ -54,7 +54,7 @@ struct LoginView: View {
                         //MARK: Sign in button
                         Button {
                             Task {
-                               await NetworkLogin().loginApp(user: email, password: pass)
+                              try await NetworkLogin().loginApp(user: email, password: pass)
                             }
                         } label: {
                             Text("Sign in")

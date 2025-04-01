@@ -26,6 +26,7 @@
 		C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7D92D9B69DC00369BAD /* hrPersistenceKeyChain.swift */; };
 		C96AC7DD2D9B6AC700369BAD /* DefaultLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */; };
 		C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7DE2D9B701400369BAD /* AppStateVM.swift */; };
+		C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E2CF2D9C85AD00BC3096 /* HRError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		C96AC7D92D9B69DC00369BAD /* hrPersistenceKeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hrPersistenceKeyChain.swift; sourceTree = "<group>"; };
 		C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginRepository.swift; sourceTree = "<group>"; };
 		C96AC7DE2D9B701400369BAD /* AppStateVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateVM.swift; sourceTree = "<group>"; };
+		C9B3E2CF2D9C85AD00BC3096 /* HRError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -180,6 +182,7 @@
 		C96AC6972D9B4FE600369BAD /* BaseNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				C9B3E2CF2D9C85AD00BC3096 /* HRError.swift */,
 				C96AC73E2D9B648400369BAD /* EndPoints.swift */,
 				C96AC7C82D9B664C00369BAD /* HttpMethods.swift */,
 				C96AC7CA2D9B665C00369BAD /* HttpResponseCodes.swift */,
@@ -458,6 +461,7 @@
 				C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */,
 				C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */,
 				C96AC7D82D9B696400369BAD /* LoginUserCase.swift in Sources */,
+				C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */,
 				C96AC7CF2D9B674D00369BAD /* NetworkLogin.swift in Sources */,
 				C96AC7D62D9B693100369BAD /* LoginRepositoryProtocol.swift in Sources */,
 				C96AC7C92D9B664C00369BAD /* HttpMethods.swift in Sources */,

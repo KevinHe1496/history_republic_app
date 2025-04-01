@@ -14,20 +14,21 @@ final class DefaultLoginRepository: LoginRepositoryProtocol {
         self.Network = Network
     }
     
-    func loginApp(user: String, password: String) async -> String {
-        return await Network.loginApp(user: user, password: password)
+    func loginApp(user: String, password: String) async throws -> String {
+        return try await Network.loginApp(user: user, password: password)
     }
 }
 
 
 final class DefaultLoginRepositoryMock: LoginRepositoryProtocol {
+    
     private var Network: NetworkLoginProtocol
     
     init(Network: NetworkLoginProtocol = NetworkLoginMock()) {
         self.Network = Network
     }
     
-    func loginApp(user: String, password: String) async -> String {
-        return await Network.loginApp(user: user, password: password)
+    func loginApp(user: String, password: String) async throws -> String {
+        return try await Network.loginApp(user: user, password: password)
     }
 }
