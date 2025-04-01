@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol LoginUserCaseProtocol {
+protocol LoginUseCaseProtocol {
     var repo: LoginRepositoryProtocol { get set }
     
     func loginApp(user: String, password: String) async throws -> Bool
@@ -16,7 +16,7 @@ protocol LoginUserCaseProtocol {
     
 }
 
-final class LoginUserCase: LoginUserCaseProtocol {
+final class LoginUseCase: LoginUseCaseProtocol {
   
     var repo:  LoginRepositoryProtocol
     
