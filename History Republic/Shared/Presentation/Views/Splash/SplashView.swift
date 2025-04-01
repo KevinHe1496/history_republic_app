@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SplashView: View {
+    @Environment(AppStateVM.self) var appState
     var body: some View {
         ZStack {
             Color.greenSecondaryColor
@@ -15,10 +16,14 @@ struct SplashView: View {
             
             Image(.logo)
         }
+        .onAppear {
+            appState.startSplashToLoginView()
+        }
 
     }
 }
 
 #Preview {
     SplashView()
+        .environment(AppStateVM())
 }

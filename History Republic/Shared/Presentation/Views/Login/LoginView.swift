@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Environment(AppStateVM.self) var appState
     
-    @State var email = ""
-    @State var pass = ""
-    
+    @State private var email = ""
+    @State private var pass = ""
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -53,9 +54,7 @@ struct LoginView: View {
                         
                         //MARK: Sign in button
                         Button {
-                            Task {
-                              try await NetworkLogin().loginApp(user: email, password: pass)
-                            }
+                            appState.loginApp(user: email, pass: pass)
                         } label: {
                             Text("Sign in")
                                 
@@ -86,4 +85,5 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
+        .environment(AppStateVM())
 }

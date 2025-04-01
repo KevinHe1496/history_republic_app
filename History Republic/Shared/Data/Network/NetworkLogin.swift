@@ -19,7 +19,7 @@ protocol NetworkLoginProtocol {
 
 final class NetworkLogin: NetworkLoginProtocol {
     
-    @MainActor
+    
     func loginApp(user: String, password: String) async throws -> String {
         
         var tokenJWT = ""

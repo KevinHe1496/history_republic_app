@@ -20,10 +20,6 @@ final class AppStateVM {
     
     init(loginUC: LoginUseCaseProtocol = LoginUseCase()) {
         self.loginUseCase = loginUC
-        
-        Task {
-            await validateControlLogin()
-        }
     }
     
     @MainActor
@@ -49,6 +45,7 @@ final class AppStateVM {
     
     @MainActor
     func validateControlLogin(){
+        
         Task {
             if await loginUseCase.validateToken() == true {
                 self.status = .loaded
@@ -56,6 +53,18 @@ final class AppStateVM {
             } else {
                 self.status = .none
                 NSLog("Login ERROR")
+            }
+        }
+    }
+    
+
+    func startSplashToLoginView() {
+        
+        self.status = .none
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.async {
+                self.status = .loaded
             }
         }
     }
