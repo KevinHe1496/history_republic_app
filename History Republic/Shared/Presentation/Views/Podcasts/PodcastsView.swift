@@ -25,7 +25,7 @@ struct PodcastsView: View {
             ScrollView { // Scroll principal para todo el contenido
                 VStack(spacing: 16) {
                     // Sección de Heroes
-                    Section(header: Text("Heroes").font(.title2).padding()) {
+                    Section {
                         ScrollView(.horizontal, showsIndicators: false) { // Scroll horizontal para esta sección
                             LazyHGrid(rows: rows, spacing: 16) {
                                 ForEach(viewModel.podcastData.filter { $0.category == "Heroes" }, id: \.id) { podcast in
@@ -37,11 +37,16 @@ struct PodcastsView: View {
                                 }
                             }
                         }
+                    } header: {
+                        Text("Heroes")
+                            .font(.title)
+                            .padding(.horizontal)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     
                     
                     // Sección de Battles
-                    Section(header: Text("Battles").font(.title2).padding()) {
+                    Section {
                         ScrollView(.horizontal, showsIndicators: false) { // Scroll horizontal para esta sección
                             LazyHGrid(rows: rows, spacing: 16) {
                                 ForEach(viewModel.podcastData.filter { $0.category == "Battles" }, id: \.id) { podcast in
@@ -54,6 +59,11 @@ struct PodcastsView: View {
                             }
                         }
                         
+                    } header: {
+                        Text("Battles")
+                            .font(.title)
+                            .padding(.horizontal)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     
                     // Agrega más secciones aquí según lo necesites
