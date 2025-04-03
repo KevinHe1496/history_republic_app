@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C96154FE2D9ED4FD00BF755D /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96154FD2D9ED4FD00BF755D /* LoginResponse.swift */; };
+		C96155002D9ED50E00BF755D /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96154FF2D9ED50E00BF755D /* Podcast.swift */; };
+		C96155632D9ED67E00BF755D /* NetworkPodcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155622D9ED67E00BF755D /* NetworkPodcast.swift */; };
+		C96155652D9EDCAD00BF755D /* DefaultPodcastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155642D9EDCAD00BF755D /* DefaultPodcastRepository.swift */; };
+		C96155672D9EDCEA00BF755D /* PodcastRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155662D9EDCEA00BF755D /* PodcastRepositoryProtocol.swift */; };
+		C96155692D9EDFD400BF755D /* PodcastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155682D9EDFD400BF755D /* PodcastUseCase.swift */; };
+		C961556B2D9EE13700BF755D /* PodcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961556A2D9EE13700BF755D /* PodcastViewModel.swift */; };
+		C96155902D9EE25800BF755D /* PodcastRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961558F2D9EE25800BF755D /* PodcastRowView.swift */; };
 		C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC68E2D9B4FC300369BAD /* History_RepublicApp.swift */; };
 		C96AC6922D9B4FC300369BAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96AC68A2D9B4FC300369BAD /* Preview Assets.xcassets */; };
 		C96AC6932D9B4FC300369BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96AC68C2D9B4FC300369BAD /* Assets.xcassets */; };
@@ -51,6 +59,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C96154FD2D9ED4FD00BF755D /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		C96154FF2D9ED50E00BF755D /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		C96155622D9ED67E00BF755D /* NetworkPodcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPodcast.swift; sourceTree = "<group>"; };
+		C96155642D9EDCAD00BF755D /* DefaultPodcastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPodcastRepository.swift; sourceTree = "<group>"; };
+		C96155662D9EDCEA00BF755D /* PodcastRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastRepositoryProtocol.swift; sourceTree = "<group>"; };
+		C96155682D9EDFD400BF755D /* PodcastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastUseCase.swift; sourceTree = "<group>"; };
+		C961556A2D9EE13700BF755D /* PodcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewModel.swift; sourceTree = "<group>"; };
+		C961558F2D9EE25800BF755D /* PodcastRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastRowView.swift; sourceTree = "<group>"; };
 		C96AC65D2D9B4F8200369BAD /* History Republic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "History Republic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96AC66D2D9B4F8300369BAD /* History RepublicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "History RepublicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96AC6772D9B4F8300369BAD /* History RepublicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "History RepublicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C96154FC2D9ED4E200BF755D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C96154FD2D9ED4FD00BF755D /* LoginResponse.swift */,
+				C96154FF2D9ED50E00BF755D /* Podcast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C96AC6542D9B4F8200369BAD = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +207,7 @@
 				C96AC7C62D9B65EA00369BAD /* Local */,
 				C96AC6972D9B4FE600369BAD /* BaseNetwork */,
 				C96AC7CE2D9B674D00369BAD /* NetworkLogin.swift */,
+				C96155622D9ED67E00BF755D /* NetworkPodcast.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -200,6 +226,7 @@
 		C96AC6982D9B500100369BAD /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C96154FC2D9ED4E200BF755D /* Models */,
 				C96AC6C42D9B551900369BAD /* Extensions */,
 				C96AC69C2D9B503E00369BAD /* Entities */,
 				C96AC69B2D9B503700369BAD /* Protocols */,
@@ -213,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				C96AC7D72D9B696400369BAD /* LoginUseCase.swift */,
+				C96155682D9EDFD400BF755D /* PodcastUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -230,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				C96AC7D52D9B693100369BAD /* LoginRepositoryProtocol.swift */,
+				C96155662D9EDCEA00BF755D /* PodcastRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -255,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				C96AC7DE2D9B701400369BAD /* AppStateVM.swift */,
+				C961556A2D9EE13700BF755D /* PodcastViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -315,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */,
+				C96155642D9EDCAD00BF755D /* DefaultPodcastRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -332,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				C9B3E3BA2D9CA6A600BC3096 /* PodcastsView.swift */,
+				C961558F2D9EE25800BF755D /* PodcastRowView.swift */,
 			);
 			path = Podcasts;
 			sourceTree = "<group>";
@@ -487,8 +519,11 @@
 				C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */,
 				C96AC7DD2D9B6AC700369BAD /* DefaultLoginRepository.swift in Sources */,
 				C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */,
+				C96155002D9ED50E00BF755D /* Podcast.swift in Sources */,
 				C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */,
 				C96AC7D82D9B696400369BAD /* LoginUseCase.swift in Sources */,
+				C96155632D9ED67E00BF755D /* NetworkPodcast.swift in Sources */,
+				C96155672D9EDCEA00BF755D /* PodcastRepositoryProtocol.swift in Sources */,
 				C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */,
 				C96AC7CF2D9B674D00369BAD /* NetworkLogin.swift in Sources */,
 				C96AC7D62D9B693100369BAD /* LoginRepositoryProtocol.swift in Sources */,
@@ -498,12 +533,17 @@
 				C96AC7D12D9B68B700369BAD /* KeyChainKC.swift in Sources */,
 				C96AC6D52D9B5A4F00369BAD /* LoginView.swift in Sources */,
 				C96AC73F2D9B648400369BAD /* EndPoints.swift in Sources */,
+				C96155902D9EE25800BF755D /* PodcastRowView.swift in Sources */,
 				C96AC6C62D9B552600369BAD /* Color-Theme.swift in Sources */,
+				C96155692D9EDFD400BF755D /* PodcastUseCase.swift in Sources */,
 				C9B3E3502D9C93F000BC3096 /* RootView.swift in Sources */,
 				C9B3E34C2D9C918D00BC3096 /* StatusModel.swift in Sources */,
 				C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */,
 				C9B3E3532D9C9D7B00BC3096 /* LoadingView.swift in Sources */,
+				C96154FE2D9ED4FD00BF755D /* LoginResponse.swift in Sources */,
+				C96155652D9EDCAD00BF755D /* DefaultPodcastRepository.swift in Sources */,
 				C96AC7CD2D9B66A300369BAD /* ConstantsApp.swift in Sources */,
+				C961556B2D9EE13700BF755D /* PodcastViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,27 +8,27 @@
 import Foundation
 
 final class DefaultLoginRepository: LoginRepositoryProtocol {
-    private var Network: NetworkLoginProtocol
+    private var network: NetworkLoginProtocol
     
-    init(Network: NetworkLoginProtocol = NetworkLogin()) {
-        self.Network = Network
+    init(network: NetworkLoginProtocol = NetworkLogin()) {
+        self.network = network
     }
     
     func loginApp(user: String, password: String) async throws -> String {
-        return try await Network.loginApp(user: user, password: password)
+        return try await network.loginApp(user: user, password: password)
     }
 }
 
 
 final class DefaultLoginRepositoryMock: LoginRepositoryProtocol {
     
-    private var Network: NetworkLoginProtocol
+    private var network: NetworkLoginProtocol
     
-    init(Network: NetworkLoginProtocol = NetworkLoginMock()) {
-        self.Network = Network
+    init(network: NetworkLoginProtocol = NetworkLoginMock()) {
+        self.network = network
     }
     
     func loginApp(user: String, password: String) async throws -> String {
-        return try await Network.loginApp(user: user, password: password)
+        return try await network.loginApp(user: user, password: password)
     }
 }

@@ -7,10 +7,7 @@
 
 import Foundation
 
-struct LoginResponse: Codable {
-    let accessToken: String
-    let refreshToken: String
-}
+
 
 protocol NetworkLoginProtocol {
     func loginApp(user: String, password: String) async throws -> String
