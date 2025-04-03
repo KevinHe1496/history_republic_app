@@ -22,27 +22,50 @@ struct PodcastsView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView(.horizontal) {
-                VStack(alignment: .leading) {
-                    Text("Heroes")
-                        .font(.title)
-                        .padding(.leading)
-                        .padding(.top, 16)
-                    LazyHGrid(rows: rows, spacing: 16) {
-                        ForEach(viewModel.podcastData, id: \.id) { podcast in
-                            NavigationLink {
-                                Text("detail")
-                            } label: {
-                                PodcastRowView(podcasts: podcast)
+            ScrollView { // Scroll principal para todo el contenido
+                VStack(spacing: 16) {
+                    // Sección de Heroes
+                    Section(header: Text("Heroes").font(.title2).padding()) {
+                        ScrollView(.horizontal, showsIndicators: false) { // Scroll horizontal para esta sección
+                            LazyHGrid(rows: rows, spacing: 16) {
+                                ForEach(viewModel.podcastData.filter { $0.category == "Heroes" }, id: \.id) { podcast in
+                                    NavigationLink {
+                                        Text("detail")
+                                    } label: {
+                                        PodcastRowView(podcasts: podcast)
+                                    }
+                                }
                             }
                         }
                     }
+                    
+                    
+                    // Sección de Battles
+                    Section(header: Text("Battles").font(.title2).padding()) {
+                        ScrollView(.horizontal, showsIndicators: false) { // Scroll horizontal para esta sección
+                            LazyHGrid(rows: rows, spacing: 16) {
+                                ForEach(viewModel.podcastData.filter { $0.category == "Battles" }, id: \.id) { podcast in
+                                    NavigationLink {
+                                        Text("detail")
+                                    } label: {
+                                        PodcastRowView(podcasts: podcast)
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    
+                    // Agrega más secciones aquí según lo necesites
                 }
             }
             .navigationTitle("Podcasts")
-            .scrollIndicators(.hidden)
             .toolbar {
-                
+                Button {
+                    self.appState.closeSessionUser()
+                } label: {
+                    Label("LogOut", systemImage: "rectangle.portrait.and.arrow.right")
+                }
             }
         }
         
