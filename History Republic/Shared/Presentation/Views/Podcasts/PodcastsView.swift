@@ -26,11 +26,11 @@ struct PodcastsView: View {
                 VStack(spacing: 16) {
                     
                     // Sección de Heroes
-                    PodcastCategorySection(title: "Heroes", podcasts: viewModel.podcastData.filter { $0.category == "Heroes" }, rows: rows)
+                    PodcastCategorySection(title: "Heroes", podcasts: viewModel.heroesPodcasts , rows: rows)
                     
                     
                     // Sección de Battles
-                    PodcastCategorySection(title: "Battles", podcasts: viewModel.podcastData.filter { $0.category == "Battles" }, rows: rows)
+                    PodcastCategorySection(title: "Battles", podcasts: viewModel.battlesPodcasts, rows: rows)
                     
                     // Agrega más secciones aquí según lo necesites
                 }

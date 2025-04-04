@@ -15,6 +15,14 @@ final class PodcastViewModel {
     @ObservationIgnored
     private var podcastUseCase: PodcastUseCaseProtocol
     
+    var heroesPodcasts: [PodcastDetail] {
+        podcastData.filter { $0.category == "Heroes" }
+    }
+    
+    var battlesPodcasts: [PodcastDetail] {
+        podcastData.filter { $0.category == "Battles" }
+    }
+    
     init(podcastUseCase: PodcastUseCaseProtocol = PodcastUseCase()){
         self.podcastUseCase = podcastUseCase
         
