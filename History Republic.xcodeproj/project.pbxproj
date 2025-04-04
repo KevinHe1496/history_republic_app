@@ -39,6 +39,7 @@
 		C9B3E3532D9C9D7B00BC3096 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E3522D9C9D7B00BC3096 /* LoadingView.swift */; };
 		C9B3E3B62D9C9F9100BC3096 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E3B52D9C9F9100BC3096 /* ErrorView.swift */; };
 		C9B3E3BB2D9CA6A600BC3096 /* PodcastsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E3BA2D9CA6A600BC3096 /* PodcastsView.swift */; };
+		C9C037862DA06FA600B6E373 /* PodcastCategorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C037852DA06FA600B6E373 /* PodcastCategorySection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		C9B3E3522D9C9D7B00BC3096 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C9B3E3B52D9C9F9100BC3096 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		C9B3E3BA2D9CA6A600BC3096 /* PodcastsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsView.swift; sourceTree = "<group>"; };
+		C9C037852DA06FA600B6E373 /* PodcastCategorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCategorySection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -364,6 +366,7 @@
 			children = (
 				C9B3E3BA2D9CA6A600BC3096 /* PodcastsView.swift */,
 				C961558F2D9EE25800BF755D /* PodcastRowView.swift */,
+				C9C037852DA06FA600B6E373 /* PodcastCategorySection.swift */,
 			);
 			path = Podcasts;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */,
 				C9B3E3532D9C9D7B00BC3096 /* LoadingView.swift in Sources */,
 				C96154FE2D9ED4FD00BF755D /* LoginResponse.swift in Sources */,
+				C9C037862DA06FA600B6E373 /* PodcastCategorySection.swift in Sources */,
 				C96155652D9EDCAD00BF755D /* DefaultPodcastRepository.swift in Sources */,
 				C96AC7CD2D9B66A300369BAD /* ConstantsApp.swift in Sources */,
 				C961556B2D9EE13700BF755D /* PodcastViewModel.swift in Sources */,
