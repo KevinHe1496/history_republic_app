@@ -8,13 +8,13 @@
 import Foundation
 
 protocol NetworkPodcastProtocol {
-    func fetchPodcasts() async throws -> [PodcastDetail]
+    func fetchPodcasts() async throws -> [PodcastCategory]
 }
 
 final class NetworkPodcast: NetworkPodcastProtocol {
-    func fetchPodcasts() async throws -> [PodcastDetail] {
+    func fetchPodcasts() async throws -> [PodcastCategory] {
         
-        var modelReturn = [PodcastDetail]()
+        var modelReturn = [PodcastCategory]()
         
         let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.podcasts.rawValue)"
         
@@ -44,8 +44,8 @@ final class NetworkPodcast: NetworkPodcastProtocol {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             
-            let result = try decoder.decode(PodcastResponse.self, from: data)
-            modelReturn = result.items
+            let result = try decoder.decode(Welcome.self, from: data)
+            modelReturn = result
         } catch {
             print("Error in fetch podcasts \(error.localizedDescription)")
         }

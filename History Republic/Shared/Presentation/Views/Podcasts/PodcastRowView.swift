@@ -12,7 +12,7 @@ struct PodcastRowView: View {
     let columns = [
         GridItem(.adaptive(minimum: 150))
                  ]
-    let podcasts: PodcastDetail
+    let podcasts: Podcast
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -43,5 +43,5 @@ struct PodcastRowView: View {
 }
 
 #Preview {
-    PodcastRowView(podcasts: PodcastDetail(airedAt: Date(), category: "Heroes", imageURL: "https://historyrepublic.com/wp-content/uploads/2025/02/Hannibal.jpg", url: "https://historyrepublic.com/hannibal/", id: UUID().uuidString, title: "Hannibal", descriptionP: "Hannibal Barca was the Carthaginian general who not only challenged Rome at the height of its power but also mesmerized the ancient world by leading war elephants across the towering Alps."))
+    PodcastRowView(podcasts: Podcast(airedAt: Date(), imageURL: "https://historyrepublic.com/wp-content/uploads/2025/02/Hannibal.jpg", url: "https://historyrepublic.com/hannibal/", id: UUID().uuidString, title: "Hannibal", descriptionP: "Hannibal Barca was the Carthaginian general who not only challenged Rome at the height of its power but also mesmerized the ancient world by leading war elephants across the towering Alps."))
 }

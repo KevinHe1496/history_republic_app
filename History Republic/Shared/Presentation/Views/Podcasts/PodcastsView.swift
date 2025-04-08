@@ -25,30 +25,28 @@ struct PodcastsView: View {
             ScrollView { // Scroll principal para todo el contenido
                 VStack(spacing: 16) {
                     
-                    // Sección de Heroes
-                    PodcastCategorySection(title: "Heroes", podcasts: viewModel.heroesPodcasts , rows: rows)
-                    
-                    
-                    // Sección de Battles
-                    PodcastCategorySection(title: "Battles", podcasts: viewModel.battlesPodcasts, rows: rows)
-                    
-                    // Agrega más secciones aquí según lo necesites
+                    // Secciónes y Podcasts
+                    Section {
+                        ForEach(viewModel.categoriesData) { category in
+                            PodcastCategorySection(title: category.name, podcasts: category.podcasts , rows: rows)
+                        }
+                    }
+                }
+                .navigationTitle("Podcasts")
+                .toolbar {
+                    Button {
+                        self.appState.closeSessionUser()
+                    } label: {
+                        Label("LogOut", systemImage: "rectangle.portrait.and.arrow.right")
+                    }
                 }
             }
-            .navigationTitle("Podcasts")
-            .toolbar {
-                Button {
-                    self.appState.closeSessionUser()
-                } label: {
-                    Label("LogOut", systemImage: "rectangle.portrait.and.arrow.right")
-                }
-            }
+            
         }
-        
     }
 }
-
-#Preview {
-    PodcastsView()
-        .environment(AppStateVM())
-}
+    
+    #Preview {
+        PodcastsView()
+            .environment(AppStateVM())
+    }

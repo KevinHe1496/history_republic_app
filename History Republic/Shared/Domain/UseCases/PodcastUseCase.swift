@@ -9,7 +9,7 @@ import Foundation
 
 protocol PodcastUseCaseProtocol {
     var repo: PodcastRepositoryProtocol { get set }
-    func fetchPodcasts() async throws -> [PodcastDetail]
+    func fetchPodcasts() async throws -> [PodcastCategory]
 }
 
 final class PodcastUseCase: PodcastUseCaseProtocol {
@@ -19,7 +19,7 @@ final class PodcastUseCase: PodcastUseCaseProtocol {
         self.repo = repo
     }
     
-    func fetchPodcasts() async throws -> [PodcastDetail] {
+    func fetchPodcasts() async throws -> [PodcastCategory] {
         return try await repo.fetchPodcast()
     }
 }
@@ -32,7 +32,7 @@ final class PodcastUseCaseMock: PodcastUseCaseProtocol {
         self.repo = repo
     }
     
-    func fetchPodcasts() async throws -> [PodcastDetail] {
+    func fetchPodcasts() async throws -> [PodcastCategory] {
         return try await repo.fetchPodcast()
     }
 }

@@ -1,30 +1,32 @@
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
 //
-//  Podcast.swift
-//  History Republic
-//
-//  Created by Kevin Heredia on 3/4/25.
-//
+//   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
 
 import Foundation
 
-// MARK: - Welcome
-struct PodcastResponse: Codable {
-    let items: [PodcastDetail]
+// MARK: - WelcomeElement
+struct PodcastCategory: Codable, Identifiable {
+    let id: UUID
+    let name: String
+    let podcasts: [Podcast]
+    
 }
 
 // MARK: - Podcast
-struct PodcastDetail: Codable {
+struct Podcast: Codable, Identifiable {
     let airedAt: Date
-    let category: String
     let imageURL: String
     let url: String
     let id: String
     let title: String
     let descriptionP: String
-
+    
     enum CodingKeys: String, CodingKey {
-        case airedAt, category
+        case id, descriptionP, airedAt
         case imageURL = "imageUrl"
-        case url, id, title, descriptionP
+        case url, title
     }
 }
+
+typealias Welcome = [PodcastCategory]

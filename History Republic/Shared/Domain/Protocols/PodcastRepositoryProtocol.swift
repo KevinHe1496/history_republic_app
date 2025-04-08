@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PodcastRepositoryProtocol {
-    func fetchPodcast() async throws -> [PodcastDetail] 
+    func fetchPodcast() async throws -> [PodcastCategory] 
 }

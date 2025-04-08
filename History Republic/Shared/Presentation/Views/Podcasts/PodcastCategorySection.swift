@@ -9,16 +9,16 @@ import SwiftUI
 
 struct PodcastCategorySection: View {
     var title: String
-    var podcasts: [PodcastDetail]
+    var podcasts: [Podcast]
     var rows: [GridItem]
     
     var body: some View {
         Section {
             ScrollView(.horizontal, showsIndicators: false) { // Scroll horizontal para esta sección
                 LazyHGrid(rows: rows, spacing: 16) {
-                    ForEach(podcasts, id: \.id) { podcast in
+                    ForEach(podcasts) { podcast in
                         NavigationLink {
-                            Text("detail")
+                            Text(podcast.title)
                         } label: {
                             PodcastRowView(podcasts: podcast)
                         }

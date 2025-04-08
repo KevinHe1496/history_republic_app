@@ -10,30 +10,25 @@ import Foundation
 @Observable
 final class PodcastViewModel {
     
-    var podcastData = [PodcastDetail]()
+    var categoriesData = [PodcastCategory]()
+    
     
     @ObservationIgnored
     private var podcastUseCase: PodcastUseCaseProtocol
     
-    var heroesPodcasts: [PodcastDetail] {
-        podcastData.filter { $0.category == "Heroes" }
-    }
-    
-    var battlesPodcasts: [PodcastDetail] {
-        podcastData.filter { $0.category == "Battles" }
-    }
     
     init(podcastUseCase: PodcastUseCaseProtocol = PodcastUseCase()){
         self.podcastUseCase = podcastUseCase
         
         Task(priority: .high) {
-            try await getPodcasts()
+            try await getCategories()
         }
     }
     
     @MainActor
-    func getPodcasts() async throws {
+    func getCategories() async throws {
         let data = try await podcastUseCase.fetchPodcasts()
-        self.podcastData = data
+        self.categoriesData = data
     }
+    
 }
