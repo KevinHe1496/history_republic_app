@@ -11,6 +11,7 @@ struct PodcastsView: View {
     @Environment(AppStateVM.self) var appState
     
     @State var viewModel: PodcastViewModel
+    @State private var showUserProfile = false
     
     let rows = [
         GridItem(.fixed(150))
@@ -33,20 +34,33 @@ struct PodcastsView: View {
                     }
                 }
                 .navigationTitle("Podcasts")
-                .toolbar {
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        self.appState.closeSessionUser()
+                        showUserProfile = true
                     } label: {
-                        Label("LogOut", systemImage: "rectangle.portrait.and.arrow.right")
+                        Image(systemName: "person.fill")
+                            .font(.system(size: 16))
+                            .foregroundColor(.greenSecondaryColor)
+                            .padding()
+                            .background(
+                                Circle()
+                                    .stroke(Color.greenSecondaryColor, lineWidth: 1.5)
+                                    .frame(width: 32, height: 32)
+                            )
+                        
                     }
                 }
             }
-            
+            .sheet(isPresented: $showUserProfile) {
+                UserProfileView()
+            }
         }
     }
 }
-    
-    #Preview {
-        PodcastsView()
-            .environment(AppStateVM())
-    }
+
+#Preview {
+    PodcastsView()
+        .environment(AppStateVM())
+}
