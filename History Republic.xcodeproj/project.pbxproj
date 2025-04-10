@@ -39,6 +39,9 @@
 		C9B3E3532D9C9D7B00BC3096 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E3522D9C9D7B00BC3096 /* LoadingView.swift */; };
 		C9B3E3B62D9C9F9100BC3096 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E3B52D9C9F9100BC3096 /* ErrorView.swift */; };
 		C9B3E3BB2D9CA6A600BC3096 /* PodcastsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E3BA2D9CA6A600BC3096 /* PodcastsView.swift */; };
+		C9B6994D2DA7483C000CDB68 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6994C2DA7483C000CDB68 /* TabBarView.swift */; };
+		C9B6994F2DA74C59000CDB68 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6994E2DA74C59000CDB68 /* FavoriteView.swift */; };
+		C9B699532DA74C7A000CDB68 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B699522DA74C7A000CDB68 /* GameView.swift */; };
 		C9C037862DA06FA600B6E373 /* PodcastCategorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C037852DA06FA600B6E373 /* PodcastCategorySection.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +97,9 @@
 		C9B3E3522D9C9D7B00BC3096 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C9B3E3B52D9C9F9100BC3096 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		C9B3E3BA2D9CA6A600BC3096 /* PodcastsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsView.swift; sourceTree = "<group>"; };
+		C9B6994C2DA7483C000CDB68 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		C9B6994E2DA74C59000CDB68 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		C9B699522DA74C7A000CDB68 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		C9C037852DA06FA600B6E373 /* PodcastCategorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCategorySection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -294,10 +300,13 @@
 		C96AC69F2D9B506600369BAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C9B6994B2DA7482B000CDB68 /* TabBar */,
 				C9B3E3B92D9CA69400BC3096 /* Podcasts */,
 				C96AC6C72D9B5A1500369BAD /* Login */,
 				C96AC6A02D9B510900369BAD /* Splash */,
 				C9B3E3512D9C9D5800BC3096 /* Tools */,
+				C9B699512DA74C64000CDB68 /* Game */,
+				C9B699502DA74C5E000CDB68 /* Favorite */,
 				C9B3E34F2D9C93F000BC3096 /* RootView.swift */,
 			);
 			path = Views;
@@ -369,6 +378,30 @@
 				C9C037852DA06FA600B6E373 /* PodcastCategorySection.swift */,
 			);
 			path = Podcasts;
+			sourceTree = "<group>";
+		};
+		C9B6994B2DA7482B000CDB68 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C9B6994C2DA7483C000CDB68 /* TabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C9B699502DA74C5E000CDB68 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				C9B6994E2DA74C59000CDB68 /* FavoriteView.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		C9B699512DA74C64000CDB68 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				C9B699522DA74C7A000CDB68 /* GameView.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,12 +559,15 @@
 				C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */,
 				C96AC7D82D9B696400369BAD /* LoginUseCase.swift in Sources */,
 				C96155632D9ED67E00BF755D /* NetworkPodcast.swift in Sources */,
+				C9B6994F2DA74C59000CDB68 /* FavoriteView.swift in Sources */,
 				C96155672D9EDCEA00BF755D /* PodcastRepositoryProtocol.swift in Sources */,
+				C9B6994D2DA7483C000CDB68 /* TabBarView.swift in Sources */,
 				C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */,
 				C96AC7CF2D9B674D00369BAD /* NetworkLogin.swift in Sources */,
 				C96AC7D62D9B693100369BAD /* LoginRepositoryProtocol.swift in Sources */,
 				C96AC7C92D9B664C00369BAD /* HttpMethods.swift in Sources */,
 				C96AC6A22D9B511300369BAD /* SplashView.swift in Sources */,
+				C9B699532DA74C7A000CDB68 /* GameView.swift in Sources */,
 				C9B3E3BB2D9CA6A600BC3096 /* PodcastsView.swift in Sources */,
 				C96AC7D12D9B68B700369BAD /* KeyChainKC.swift in Sources */,
 				C96AC6D52D9B5A4F00369BAD /* LoginView.swift in Sources */,
@@ -716,6 +752,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -745,6 +782,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

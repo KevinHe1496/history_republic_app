@@ -27,7 +27,7 @@ struct RootView: View {
             }
         case .loaded:
             withAnimation {
-                PodcastsView()
+                TabBarView()
             }
         case .error(error: let errorString):
             withAnimation {

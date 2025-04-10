@@ -18,7 +18,7 @@ struct LoginView: View {
             ZStack {
                 //MARK: Background Color
                 Color.greenSecondaryColor
-                    .edgesIgnoringSafeArea(.all)
+                    .ignoresSafeArea()
                 
                 VStack {
                     

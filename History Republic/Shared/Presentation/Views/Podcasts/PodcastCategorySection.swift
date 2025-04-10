@@ -33,7 +33,11 @@ struct PodcastCategorySection: View {
         }
     }
 }
-//
-//#Preview {
-//    PodcastCategorySection(title: "Hannibal", podcasts: [PodcastResponse], rows: <#[GridItem]#>)
-//}
+
+#Preview {
+    let rows = [
+        GridItem(.fixed(150))
+    ]
+    
+    PodcastCategorySection(title: "Heroes", podcasts: [Podcast(airedAt: Date(), imageURL: "https://historyrepublic.com/wp-content/uploads/2025/02/Hannibal.jpg", url: "https://historyrepublic.com/hannibal/", id: UUID().uuidString, title: "Hannibal", descriptionP: "Hannibal Barca was the Carthaginian general who not only challenged Rome at the height of its power but also mesmerized the ancient world by leading war elephants across the towering Alps.")], rows: rows)
+}
