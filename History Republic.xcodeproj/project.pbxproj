@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C905B8092DA88D950034EB14 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905B8082DA88D950034EB14 /* UserProfileView.swift */; };
+		C938925C2DA9CCD90094C753 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925B2DA9CCD90094C753 /* RegisterView.swift */; };
+		C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925F2DA9CFA40094C753 /* CustomTextField.swift */; };
+		C93892622DA9D0E30094C753 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93892612DA9D0E30094C753 /* CustomSecureField.swift */; };
+		C93892642DA9D1AF0094C753 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93892632DA9D1AF0094C753 /* CustomButton.swift */; };
 		C96154FE2D9ED4FD00BF755D /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96154FD2D9ED4FD00BF755D /* LoginResponse.swift */; };
 		C96155002D9ED50E00BF755D /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96154FF2D9ED50E00BF755D /* Podcast.swift */; };
 		C96155632D9ED67E00BF755D /* NetworkPodcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155622D9ED67E00BF755D /* NetworkPodcast.swift */; };
@@ -65,6 +69,10 @@
 
 /* Begin PBXFileReference section */
 		C905B8082DA88D950034EB14 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		C938925B2DA9CCD90094C753 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		C938925F2DA9CFA40094C753 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		C93892612DA9D0E30094C753 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		C93892632DA9D1AF0094C753 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C96154FD2D9ED4FD00BF755D /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		C96154FF2D9ED50E00BF755D /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		C96155622D9ED67E00BF755D /* NetworkPodcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPodcast.swift; sourceTree = "<group>"; };
@@ -150,6 +158,14 @@
 				C905B8082DA88D950034EB14 /* UserProfileView.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		C938925A2DA9CCCE0094C753 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				C938925B2DA9CCD90094C753 /* RegisterView.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		C96154FC2D9ED4E200BF755D /* Models */ = {
@@ -310,6 +326,7 @@
 		C96AC69F2D9B506600369BAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C938925A2DA9CCCE0094C753 /* Register */,
 				C905B8072DA88D850034EB14 /* User */,
 				C9B6994B2DA7482B000CDB68 /* TabBar */,
 				C9B3E3B92D9CA69400BC3096 /* Podcasts */,
@@ -377,6 +394,9 @@
 			children = (
 				C9B3E3522D9C9D7B00BC3096 /* LoadingView.swift */,
 				C9B3E3B52D9C9F9100BC3096 /* ErrorView.swift */,
+				C938925F2DA9CFA40094C753 /* CustomTextField.swift */,
+				C93892612DA9D0E30094C753 /* CustomSecureField.swift */,
+				C93892632DA9D1AF0094C753 /* CustomButton.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -570,6 +590,7 @@
 				C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */,
 				C96AC7D82D9B696400369BAD /* LoginUseCase.swift in Sources */,
 				C96155632D9ED67E00BF755D /* NetworkPodcast.swift in Sources */,
+				C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */,
 				C9B6994F2DA74C59000CDB68 /* FavoriteView.swift in Sources */,
 				C96155672D9EDCEA00BF755D /* PodcastRepositoryProtocol.swift in Sources */,
 				C9B6994D2DA7483C000CDB68 /* TabBarView.swift in Sources */,
@@ -581,6 +602,7 @@
 				C9B699532DA74C7A000CDB68 /* GameView.swift in Sources */,
 				C9B3E3BB2D9CA6A600BC3096 /* PodcastsView.swift in Sources */,
 				C96AC7D12D9B68B700369BAD /* KeyChainKC.swift in Sources */,
+				C93892642DA9D1AF0094C753 /* CustomButton.swift in Sources */,
 				C96AC6D52D9B5A4F00369BAD /* LoginView.swift in Sources */,
 				C96AC73F2D9B648400369BAD /* EndPoints.swift in Sources */,
 				C96155902D9EE25800BF755D /* PodcastRowView.swift in Sources */,
@@ -593,9 +615,11 @@
 				C9B3E3532D9C9D7B00BC3096 /* LoadingView.swift in Sources */,
 				C96154FE2D9ED4FD00BF755D /* LoginResponse.swift in Sources */,
 				C9C037862DA06FA600B6E373 /* PodcastCategorySection.swift in Sources */,
+				C938925C2DA9CCD90094C753 /* RegisterView.swift in Sources */,
 				C96155652D9EDCAD00BF755D /* DefaultPodcastRepository.swift in Sources */,
 				C96AC7CD2D9B66A300369BAD /* ConstantsApp.swift in Sources */,
 				C961556B2D9EE13700BF755D /* PodcastViewModel.swift in Sources */,
+				C93892622DA9D0E30094C753 /* CustomSecureField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

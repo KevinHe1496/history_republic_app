@@ -12,75 +12,80 @@ struct LoginView: View {
     
     @State private var email = "andy_heredia2008@hotmail.com"
     @State private var pass = "123456"
-
+    
     var body: some View {
         NavigationStack {
-            ZStack {
-                //MARK: Background Color
-                Color.greenSecondaryColor
-                    .ignoresSafeArea()
+
                 
                 VStack {
                     
                     // MARK: History Republic Image
-                    Image(.logoHR)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300)
-                        .offset(y: 40)
-                        
-                    
-                    Spacer()
-                    
-                    
-                    Text("Login to your Account")
-                        .foregroundStyle(.white)
-                        .font(.system(size: 26).bold())
-                    
-                    
+                    VStack {
+                        Image(.logoHR)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300)
+                            .offset(y: 40)
+                    }
+                    .frame(maxHeight: .infinity, alignment: .top)
+
+                
                     // MARK: Login form
-                    VStack(spacing: 30) {
-                        TextField("Email", text: $email)
-                            .textFieldStyle(.roundedBorder)
-                            .keyboardType(.emailAddress)
-                            .autocorrectionDisabled()
-                            .textInputAutocapitalization(.never)
-                            .font(.system(size: 12))
-                            
+                    VStack(spacing: 10) {
                         
-                        SecureField("Password", text: $pass)
-                            .textFieldStyle(.roundedBorder)
-                            .font(.system(size: 12))
+                        Text("Login to your Account")
+                            .foregroundStyle(.white)
+                            .font(.system(size: 26).bold())
+                        
+                        CustomTextField(
+                            placeholder: "Email",
+                            text: $email,
+                            keyboardType: .emailAddress
+                        )
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                        
+                        CustomSecureField(
+                            placeholder: "Password",
+                            password: $pass
+                        )
                         
                         //MARK: Sign in button
-                        Button {
-                            appState.loginApp(user: email, pass: pass)
-                        } label: {
-                            Text("Sign in")
-                                
-                                .font(.system(size: 22).bold())
-                                .foregroundStyle(.white)
-                                .padding(.vertical, 7)
-                                .frame(maxWidth: .infinity)
-                                .background(.mainBrownColor)
+                        CustomButton(
+                            title: "Sign in",
+                            color: .mainBrown
+                        ) {
+                            appState
+                                .loginApp(
+                                    user: email,
+                                    pass: pass
+                                )
                         }
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                        Text("Forgot your password?")
+                    }
+                    .frame(maxHeight: .infinity, alignment: .center)
+                    
+                    
+                    
+                    HStack {
+                        Text("Don't have an account?")
                             .foregroundStyle(.white)
                             .font(.system(size: 16))
+                        
+                        // Navigation to registration view
+                        NavigationLink(destination: RegisterView()) {
+                            Text("Sign Up here")
+                                .foregroundStyle(.mainBrown)
+                                .underline()
+                        }
                     }
-                    .padding(16)
-                    
-                    Spacer()
-                    
-                    Text("Don't have an account? Sign up.")
-                        .foregroundStyle(.white)
-                        .font(.system(size: 16))
+                    .frame(maxHeight: .infinity, alignment: .bottom)
+                    .padding(.bottom, 30)
                 }
+                .padding(16)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(.greenSecondary)
             }
         }
-
-    }
 }
 
 #Preview {
