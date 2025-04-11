@@ -94,6 +94,7 @@ struct LoginView: View {
             .padding(16)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.greenSecondary) // Custom background color
+            .ignoresSafeArea(.keyboard)
         }
     }
 }
