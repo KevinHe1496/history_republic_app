@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @State private var name = ""
     @State private var email = ""
     @State private var password = ""
+    
+    var registerNetwork = NetworkRegister()
+    
     var body: some View {
         VStack {
             
@@ -23,14 +27,17 @@ struct RegisterView: View {
             Spacer()
             
             VStack(spacing: 10) {
+                CustomTextField(placeholder: "Name", text: $name, keyboardType: .default)
                 CustomTextField(placeholder: "Email", text: $email, keyboardType: .emailAddress)
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
                 CustomSecureField(placeholder: "Password", password: $password)
                 
                 CustomButton(title: "Sign up", color: .mainBrown) {
-                    print(email)
-                    print(password)
+                    Task{
+                        try await registerNetwork.registerUser(name: name, email: email, password: password)
+                }
+
                 }
             }
             Spacer()
