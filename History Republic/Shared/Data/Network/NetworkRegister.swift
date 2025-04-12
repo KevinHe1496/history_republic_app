@@ -26,7 +26,7 @@ final class NetworkRegister: NetworkRegisterProtocol {
         // 3. Configurar la petición
         var request = URLRequest(url: url)
         request.httpMethod = HttpMethods.post
-        request.setValue("\(HttpMethods.content)", forHTTPHeaderField: "\(HttpMethods.contentTypeID)")
+        request.setValue(HttpMethods.content, forHTTPHeaderField: HttpMethods.contentTypeID)
         request.httpBody = jsonData
         
         // 4. Hacer la llamada
@@ -41,8 +41,8 @@ final class NetworkRegister: NetworkRegisterProtocol {
         }
         
         // 6. Decodificar el token
-        let decodedReponse = try JSONDecoder().decode(RegisterReponse.self, from: data)
-        let token = decodedReponse.accessToken
+        let decodedResponse = try JSONDecoder().decode(RegisterResponse.self, from: data)
+        let token = decodedResponse.accessToken
         
         // 8. Devolver el token
         return token

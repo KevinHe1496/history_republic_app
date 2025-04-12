@@ -13,7 +13,7 @@ struct RegisterRequest: Codable {
     let password: String
 }
 
-struct RegisterReponse: Codable {
+struct RegisterResponse: Codable {
     let accessToken: String
     let refreshToken: String
 }
