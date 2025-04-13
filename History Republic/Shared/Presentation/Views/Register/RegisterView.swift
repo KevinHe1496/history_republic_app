@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @Environment(AppStateVM.self) private var appState
+    
     @State private var name = ""
     @State private var email = ""
     @State private var password = ""
     
-    var registerNetwork = NetworkRegister()
-    
     var body: some View {
+        
+        let viewModel = RegisterViewModel(appState: appState)
+        
         VStack {
             
             // MARK: - Logo (Top)
@@ -34,10 +37,9 @@ struct RegisterView: View {
                 CustomSecureField(placeholder: "Password", password: $password)
                 
                 CustomButton(title: "Sign up", color: .mainBrown) {
-                    Task{
-                        try await registerNetwork.registerUser(name: name, email: email, password: password)
-                }
-
+                    
+                    viewModel.registerUser(name: name, email: email, password: password)
+                    
                 }
             }
             Spacer()

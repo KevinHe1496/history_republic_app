@@ -25,6 +25,10 @@ struct RootView: View {
             withAnimation {
                 LoginView()
             }
+        case .register:
+            withAnimation {
+                RegisterView()
+            }
         case .loaded:
             withAnimation {
                 TabBarView()

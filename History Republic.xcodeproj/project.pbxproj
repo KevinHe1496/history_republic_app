@@ -40,6 +40,11 @@
 		C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7D92D9B69DC00369BAD /* hrPersistenceKeyChain.swift */; };
 		C96AC7DD2D9B6AC700369BAD /* DefaultLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */; };
 		C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7DE2D9B701400369BAD /* AppStateVM.swift */; };
+		C9AB7D352DAB3FAD003D6C5E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */; };
+		C9AB7D432DAB4316003D6C5E /* RegisterRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D422DAB4316003D6C5E /* RegisterRepositoryProtocol.swift */; };
+		C9AB7D452DAB4336003D6C5E /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D442DAB4336003D6C5E /* RegisterUseCase.swift */; };
+		C9AB7D472DAB43D7003D6C5E /* DefaultRegisterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D462DAB43D7003D6C5E /* DefaultRegisterRepository.swift */; };
+		C9AB7D492DAB49B8003D6C5E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D482DAB49B8003D6C5E /* RegisterViewModel.swift */; };
 		C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E2CF2D9C85AD00BC3096 /* HRError.swift */; };
 		C9B3E34C2D9C918D00BC3096 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E34B2D9C918D00BC3096 /* StatusModel.swift */; };
 		C9B3E3502D9C93F000BC3096 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E34F2D9C93F000BC3096 /* RootView.swift */; };
@@ -105,6 +110,11 @@
 		C96AC7D92D9B69DC00369BAD /* hrPersistenceKeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hrPersistenceKeyChain.swift; sourceTree = "<group>"; };
 		C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginRepository.swift; sourceTree = "<group>"; };
 		C96AC7DE2D9B701400369BAD /* AppStateVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateVM.swift; sourceTree = "<group>"; };
+		C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C9AB7D422DAB4316003D6C5E /* RegisterRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRepositoryProtocol.swift; sourceTree = "<group>"; };
+		C9AB7D442DAB4336003D6C5E /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		C9AB7D462DAB43D7003D6C5E /* DefaultRegisterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRegisterRepository.swift; sourceTree = "<group>"; };
+		C9AB7D482DAB49B8003D6C5E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		C9B3E2CF2D9C85AD00BC3096 /* HRError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRError.swift; sourceTree = "<group>"; };
 		C9B3E34B2D9C918D00BC3096 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		C9B3E34F2D9C93F000BC3096 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -248,6 +258,7 @@
 				C96AC7CE2D9B674D00369BAD /* NetworkLogin.swift */,
 				C95DD0532DAB0B26001366FC /* NetworkRegister.swift */,
 				C96155622D9ED67E00BF755D /* NetworkPodcast.swift */,
+				C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -281,6 +292,7 @@
 			children = (
 				C96AC7D72D9B696400369BAD /* LoginUseCase.swift */,
 				C96155682D9EDFD400BF755D /* PodcastUseCase.swift */,
+				C9AB7D442DAB4336003D6C5E /* RegisterUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -299,6 +311,7 @@
 			children = (
 				C96AC7D52D9B693100369BAD /* LoginRepositoryProtocol.swift */,
 				C96155662D9EDCEA00BF755D /* PodcastRepositoryProtocol.swift */,
+				C9AB7D422DAB4316003D6C5E /* RegisterRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -325,6 +338,7 @@
 			children = (
 				C96AC7DE2D9B701400369BAD /* AppStateVM.swift */,
 				C961556A2D9EE13700BF755D /* PodcastViewModel.swift */,
+				C9AB7D482DAB49B8003D6C5E /* RegisterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -391,6 +405,7 @@
 			children = (
 				C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */,
 				C96155642D9EDCAD00BF755D /* DefaultPodcastRepository.swift */,
+				C9AB7D462DAB43D7003D6C5E /* DefaultRegisterRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -588,9 +603,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AB7D452DAB4336003D6C5E /* RegisterUseCase.swift in Sources */,
 				C9B3E3B62D9C9F9100BC3096 /* ErrorView.swift in Sources */,
 				C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */,
 				C96AC7DD2D9B6AC700369BAD /* DefaultLoginRepository.swift in Sources */,
+				C9AB7D472DAB43D7003D6C5E /* DefaultRegisterRepository.swift in Sources */,
 				C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */,
 				C96155002D9ED50E00BF755D /* Podcast.swift in Sources */,
 				C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */,
@@ -602,6 +619,7 @@
 				C9B6994D2DA7483C000CDB68 /* TabBarView.swift in Sources */,
 				C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */,
 				C96AC7CF2D9B674D00369BAD /* NetworkLogin.swift in Sources */,
+				C9AB7D492DAB49B8003D6C5E /* RegisterViewModel.swift in Sources */,
 				C96AC7D62D9B693100369BAD /* LoginRepositoryProtocol.swift in Sources */,
 				C96AC7C92D9B664C00369BAD /* HttpMethods.swift in Sources */,
 				C96AC6A22D9B511300369BAD /* SplashView.swift in Sources */,
@@ -613,8 +631,10 @@
 				C95DD0562DAB0D7C001366FC /* RegisterRequest.swift in Sources */,
 				C96AC73F2D9B648400369BAD /* EndPoints.swift in Sources */,
 				C96155902D9EE25800BF755D /* PodcastRowView.swift in Sources */,
+				C9AB7D352DAB3FAD003D6C5E /* NetworkService.swift in Sources */,
 				C96AC6C62D9B552600369BAD /* Color-Theme.swift in Sources */,
 				C96155692D9EDFD400BF755D /* PodcastUseCase.swift in Sources */,
+				C9AB7D432DAB4316003D6C5E /* RegisterRepositoryProtocol.swift in Sources */,
 				C9B3E3502D9C93F000BC3096 /* RootView.swift in Sources */,
 				C9B3E34C2D9C918D00BC3096 /* StatusModel.swift in Sources */,
 				C95DD0542DAB0B26001366FC /* NetworkRegister.swift in Sources */,

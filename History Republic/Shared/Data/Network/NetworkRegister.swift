@@ -29,22 +29,15 @@ final class NetworkRegister: NetworkRegisterProtocol {
         request.setValue(HttpMethods.content, forHTTPHeaderField: HttpMethods.contentTypeID)
         request.httpBody = jsonData
         
-        // 4. Hacer la llamada
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let response: RegisterResponse = try await NetworkService().sendRequest(request, decodeTo: RegisterResponse.self)
         
-        // 5. Verificar que sea 200 OK
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw HRError.errorFromApi(statusCode: -1)
-        }
-        guard httpResponse.statusCode == HttpResponseCodes.SUCESS else {
-            throw HRError.errorFromApi(statusCode: httpResponse.statusCode)
-        }
-        
-        // 6. Decodificar el token
-        let decodedResponse = try JSONDecoder().decode(RegisterResponse.self, from: data)
-        let token = decodedResponse.accessToken
-        
-        // 8. Devolver el token
+        let token = response.accessToken
         return token
+    }
+}
+
+final class NetworkRegisterMock: NetworkRegisterProtocol {
+    func registerUser(name: String, email: String, password: String) async throws -> String {
+        return UUID().uuidString
     }
 }
