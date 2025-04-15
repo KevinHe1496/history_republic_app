@@ -4,7 +4,7 @@
 //
 //  Created by Kevin Heredia on 31/3/25.
 //
-
+import Foundation
 
 ///Server response codes
 struct HttpResponseCodes {

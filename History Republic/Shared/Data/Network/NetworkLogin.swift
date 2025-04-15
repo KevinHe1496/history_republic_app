@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 protocol NetworkLoginProtocol {
     func loginApp(user: String, password: String) async throws -> String
 }

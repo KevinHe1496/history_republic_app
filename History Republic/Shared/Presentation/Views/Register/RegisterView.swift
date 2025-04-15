@@ -14,9 +14,17 @@ struct RegisterView: View {
     @State private var email = ""
     @State private var password = ""
     
+    @State private var showRegisterSuccess = false
+    
+    @State private var viewModel: RegisterViewModel
+    
+    init(appState: AppStateVM) {
+            _viewModel = State(initialValue: RegisterViewModel(appState: appState))
+        }
+    
     var body: some View {
         
-        let viewModel = RegisterViewModel(appState: appState)
+//        let viewModel = RegisterViewModel(appState: appState)
         
         VStack {
             
@@ -37,9 +45,7 @@ struct RegisterView: View {
                 CustomSecureField(placeholder: "Password", password: $password)
                 
                 CustomButton(title: "Sign up", color: .mainBrown) {
-                    
                     viewModel.registerUser(name: name, email: email, password: password)
-                    
                 }
             }
             Spacer()
@@ -52,5 +58,5 @@ struct RegisterView: View {
 }
 
 #Preview {
-    RegisterView()
+    RegisterView(appState: AppStateVM())
 }

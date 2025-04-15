@@ -82,7 +82,7 @@ struct LoginView: View {
                         .font(.system(size: 16))
                     
                     // Navigation to the registration view
-                    NavigationLink(destination: RegisterView()) {
+                    NavigationLink(destination: RegisterView(appState: appState)) {
                         Text("Sign Up here")
                             .foregroundStyle(.mainBrown)
                             .underline()

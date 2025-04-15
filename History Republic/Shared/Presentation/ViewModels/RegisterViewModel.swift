@@ -14,7 +14,7 @@ final class RegisterViewModel {
     private var registerUseCase: RegisterUsecaseProtocol
     private var appState: AppStateVM
     
-    init(registerUC: RegisterUsecaseProtocol = RegisterUseCase(), appState: AppStateVM = AppStateVM()) {
+    init(registerUC: RegisterUsecaseProtocol = RegisterUseCase(), appState: AppStateVM) {
         self.registerUseCase = registerUC
         self.appState = appState
     }
@@ -28,7 +28,7 @@ final class RegisterViewModel {
             if try await registerUseCase.registerUser(name: name, email: email, password: password) == true {
                 appState.status = .login
             } else {
-                appState.status = .error(error: "ncorrect username or password")
+                appState.status = .error(error: "incorrect username or password")
             }
         }
     }
