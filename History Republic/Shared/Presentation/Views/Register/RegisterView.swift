@@ -24,8 +24,6 @@ struct RegisterView: View {
     
     var body: some View {
         
-//        let viewModel = RegisterViewModel(appState: appState)
-        
         VStack {
             
             // MARK: - Logo (Top)
@@ -35,7 +33,8 @@ struct RegisterView: View {
                     .scaledToFit()
                     .frame(width: 300)
             }
-            Spacer()
+            .ignoresSafeArea(.keyboard)
+            Spacer().frame(height: 50)
             
             VStack(spacing: 10) {
                 CustomTextField(placeholder: "Name", text: $name, keyboardType: .default)
@@ -48,15 +47,17 @@ struct RegisterView: View {
                     viewModel.registerUser(name: name, email: email, password: password)
                 }
             }
-            Spacer()
+            Spacer().frame(height: 200)
             
         }
         .padding(16)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.greenSecondary)
+        .ignoresSafeArea(.keyboard)
     }
 }
 
 #Preview {
     RegisterView(appState: AppStateVM())
+        .environment(AppStateVM())
 }

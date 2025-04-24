@@ -33,7 +33,8 @@ struct LoginView: View {
                         .frame(width: 300)
                         
                 }
-                .frame(maxHeight: .infinity, alignment: .top)
+//                .frame(maxHeight: .infinity, alignment: .top)
+                Spacer().frame(height: 100)
                 
                 // MARK: - Login Form (Center)
                 VStack(spacing: 10) {
@@ -73,7 +74,8 @@ struct LoginView: View {
                             .font(.caption)
                     }
                 }
-                .frame(maxHeight: .infinity, alignment: .center)
+                Spacer().frame(height: 200)
+//                .frame(maxHeight: .infinity, alignment: .center)
                 
                 // MARK: - Sign Up Prompt (Bottom)
                 HStack {
@@ -88,8 +90,8 @@ struct LoginView: View {
                             .underline()
                     }
                 }
-                .frame(maxHeight: .infinity, alignment: .bottom)
-                .padding(.bottom, 30)
+//                .frame(maxHeight: .infinity, alignment: .bottom)
+//                .padding(.bottom, 30)
             }
             .padding(16)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
