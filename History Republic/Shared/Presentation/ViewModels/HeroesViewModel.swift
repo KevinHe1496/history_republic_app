@@ -10,13 +10,13 @@ import Foundation
 @Observable
 final class HeroesViewModel {
     
-    var heroesData = [Heroes]()
+    var heroesData = [HeroResponse]()
 
     @ObservationIgnored
-    private var podcastUseCase: HeroesUseCaseProtocol
+    private var podcastUseCase: HeroServiceUseCaseProtocol
     
     
-    init(podcastUseCase: HeroesUseCaseProtocol = PodcastUseCase()){
+    init(podcastUseCase: HeroServiceUseCaseProtocol = HeroServiceUseCase()){
         self.podcastUseCase = podcastUseCase
         
         Task(priority: .high) {

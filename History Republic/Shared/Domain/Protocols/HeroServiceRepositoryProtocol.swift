@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol HeroesRepositoryProtocol {
-    func fetchHeroes() async throws -> [Heroes] 
+protocol HeroServiceRepositoryProtocol {
+    func fetchHeroes() async throws -> [HeroResponse] 
 }

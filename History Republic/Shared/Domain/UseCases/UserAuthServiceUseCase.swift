@@ -1,30 +1,39 @@
 //
-//  LoginUserCase.swift
+//  RegisterReposotory.swift
 //  History Republic
 //
-//  Created by Kevin Heredia on 31/3/25.
+//  Created by Kevin Heredia on 12/4/25.
 //
 
 import Foundation
 
-protocol LoginUseCaseProtocol {
-    var repo: LoginRepositoryProtocol { get set }
-    
+protocol UserAuthServiceUsecaseProtocol {
+    var repo: UserAuthServiceRepositoryProtocol { get set }
+    func registerUser(name: String,email: String, password: String) async throws -> Bool
     func loginApp(user: String, password: String) async throws -> Bool
     func logout() async -> Void
     func validateToken() async -> Bool
-    
 }
 
-final class LoginUseCase: LoginUseCaseProtocol {
-  
-    var repo:  LoginRepositoryProtocol
+final class UserAuthServiceUseCase: UserAuthServiceUsecaseProtocol {
+    var repo: UserAuthServiceRepositoryProtocol
     
     @hrPersistenceKeychain(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN)
     var tokenJWT
     
-    init(repo: LoginRepositoryProtocol = DefaultLoginRepository()) {
+    init(repo: UserAuthServiceRepositoryProtocol = UserAuthServiceRepository()) {
         self.repo = repo
+    }
+    func registerUser(name: String, email: String, password: String) async throws -> Bool {
+        let user = try await repo.registerUser(name: name, email: email, password: password)
+        
+        if user != "" {
+            
+            return true
+        } else {
+            
+            return false
+        }
     }
     
     func loginApp(user: String, password: String) async throws -> Bool {
@@ -50,4 +59,5 @@ final class LoginUseCase: LoginUseCaseProtocol {
             return false
         }
     }
+
 }

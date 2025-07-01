@@ -12,14 +12,14 @@
 		C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925F2DA9CFA40094C753 /* CustomTextField.swift */; };
 		C93892622DA9D0E30094C753 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93892612DA9D0E30094C753 /* CustomSecureField.swift */; };
 		C93892642DA9D1AF0094C753 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93892632DA9D1AF0094C753 /* CustomButton.swift */; };
-		C95DD0542DAB0B26001366FC /* NetworkRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95DD0532DAB0B26001366FC /* NetworkRegister.swift */; };
+		C95DD0542DAB0B26001366FC /* UserAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95DD0532DAB0B26001366FC /* UserAuthService.swift */; };
 		C95DD0562DAB0D7C001366FC /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95DD0552DAB0D7C001366FC /* RegisterRequest.swift */; };
 		C96154FE2D9ED4FD00BF755D /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96154FD2D9ED4FD00BF755D /* LoginResponse.swift */; };
-		C96155002D9ED50E00BF755D /* Heroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96154FF2D9ED50E00BF755D /* Heroes.swift */; };
-		C96155632D9ED67E00BF755D /* NetworkHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155622D9ED67E00BF755D /* NetworkHeroes.swift */; };
-		C96155652D9EDCAD00BF755D /* DefaultPodcastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155642D9EDCAD00BF755D /* DefaultPodcastRepository.swift */; };
-		C96155672D9EDCEA00BF755D /* HeroesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155662D9EDCEA00BF755D /* HeroesRepositoryProtocol.swift */; };
-		C96155692D9EDFD400BF755D /* PodcastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155682D9EDFD400BF755D /* PodcastUseCase.swift */; };
+		C96155002D9ED50E00BF755D /* HeroResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96154FF2D9ED50E00BF755D /* HeroResponse.swift */; };
+		C96155632D9ED67E00BF755D /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155622D9ED67E00BF755D /* HeroService.swift */; };
+		C96155652D9EDCAD00BF755D /* HeroServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155642D9EDCAD00BF755D /* HeroServiceRepository.swift */; };
+		C96155672D9EDCEA00BF755D /* HeroServiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155662D9EDCEA00BF755D /* HeroServiceRepositoryProtocol.swift */; };
+		C96155692D9EDFD400BF755D /* HeroServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155682D9EDFD400BF755D /* HeroServiceUseCase.swift */; };
 		C961556B2D9EE13700BF755D /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961556A2D9EE13700BF755D /* HeroesViewModel.swift */; };
 		C96155902D9EE25800BF755D /* PodcastRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961558F2D9EE25800BF755D /* PodcastRowView.swift */; };
 		C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC68E2D9B4FC300369BAD /* History_RepublicApp.swift */; };
@@ -32,18 +32,14 @@
 		C96AC7C92D9B664C00369BAD /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7C82D9B664C00369BAD /* HttpMethods.swift */; };
 		C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7CA2D9B665C00369BAD /* HttpResponseCodes.swift */; };
 		C96AC7CD2D9B66A300369BAD /* ConstantsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7CC2D9B66A300369BAD /* ConstantsApp.swift */; };
-		C96AC7CF2D9B674D00369BAD /* NetworkLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7CE2D9B674D00369BAD /* NetworkLogin.swift */; };
 		C96AC7D12D9B68B700369BAD /* KeyChainKC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7D02D9B68B700369BAD /* KeyChainKC.swift */; };
 		C96AC7D42D9B68E000369BAD /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C96AC7D32D9B68E000369BAD /* KeychainSwift */; };
-		C96AC7D62D9B693100369BAD /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7D52D9B693100369BAD /* LoginRepositoryProtocol.swift */; };
-		C96AC7D82D9B696400369BAD /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7D72D9B696400369BAD /* LoginUseCase.swift */; };
 		C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7D92D9B69DC00369BAD /* hrPersistenceKeyChain.swift */; };
-		C96AC7DD2D9B6AC700369BAD /* DefaultLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */; };
 		C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7DE2D9B701400369BAD /* AppStateVM.swift */; };
 		C9AB7D352DAB3FAD003D6C5E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */; };
-		C9AB7D432DAB4316003D6C5E /* RegisterRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D422DAB4316003D6C5E /* RegisterRepositoryProtocol.swift */; };
-		C9AB7D452DAB4336003D6C5E /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D442DAB4336003D6C5E /* RegisterUseCase.swift */; };
-		C9AB7D472DAB43D7003D6C5E /* DefaultRegisterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D462DAB43D7003D6C5E /* DefaultRegisterRepository.swift */; };
+		C9AB7D432DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D422DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift */; };
+		C9AB7D452DAB4336003D6C5E /* UserAuthServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D442DAB4336003D6C5E /* UserAuthServiceUseCase.swift */; };
+		C9AB7D472DAB43D7003D6C5E /* UserAuthServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D462DAB43D7003D6C5E /* UserAuthServiceRepository.swift */; };
 		C9AB7D492DAB49B8003D6C5E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D482DAB49B8003D6C5E /* RegisterViewModel.swift */; };
 		C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E2CF2D9C85AD00BC3096 /* HRError.swift */; };
 		C9B3E34C2D9C918D00BC3096 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E34B2D9C918D00BC3096 /* StatusModel.swift */; };
@@ -54,7 +50,6 @@
 		C9B6994D2DA7483C000CDB68 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6994C2DA7483C000CDB68 /* TabBarView.swift */; };
 		C9B6994F2DA74C59000CDB68 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6994E2DA74C59000CDB68 /* FavoriteView.swift */; };
 		C9B699532DA74C7A000CDB68 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B699522DA74C7A000CDB68 /* GameView.swift */; };
-		C9C037862DA06FA600B6E373 /* PodcastCategorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C037852DA06FA600B6E373 /* PodcastCategorySection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,14 +75,14 @@
 		C938925F2DA9CFA40094C753 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C93892612DA9D0E30094C753 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		C93892632DA9D1AF0094C753 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		C95DD0532DAB0B26001366FC /* NetworkRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRegister.swift; sourceTree = "<group>"; };
+		C95DD0532DAB0B26001366FC /* UserAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthService.swift; sourceTree = "<group>"; };
 		C95DD0552DAB0D7C001366FC /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		C96154FD2D9ED4FD00BF755D /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
-		C96154FF2D9ED50E00BF755D /* Heroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroes.swift; sourceTree = "<group>"; };
-		C96155622D9ED67E00BF755D /* NetworkHeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeroes.swift; sourceTree = "<group>"; };
-		C96155642D9EDCAD00BF755D /* DefaultPodcastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPodcastRepository.swift; sourceTree = "<group>"; };
-		C96155662D9EDCEA00BF755D /* HeroesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRepositoryProtocol.swift; sourceTree = "<group>"; };
-		C96155682D9EDFD400BF755D /* PodcastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastUseCase.swift; sourceTree = "<group>"; };
+		C96154FF2D9ED50E00BF755D /* HeroResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroResponse.swift; sourceTree = "<group>"; };
+		C96155622D9ED67E00BF755D /* HeroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
+		C96155642D9EDCAD00BF755D /* HeroServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroServiceRepository.swift; sourceTree = "<group>"; };
+		C96155662D9EDCEA00BF755D /* HeroServiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroServiceRepositoryProtocol.swift; sourceTree = "<group>"; };
+		C96155682D9EDFD400BF755D /* HeroServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroServiceUseCase.swift; sourceTree = "<group>"; };
 		C961556A2D9EE13700BF755D /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
 		C961558F2D9EE25800BF755D /* PodcastRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastRowView.swift; sourceTree = "<group>"; };
 		C96AC65D2D9B4F8200369BAD /* History Republic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "History Republic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,17 +98,13 @@
 		C96AC7C82D9B664C00369BAD /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
 		C96AC7CA2D9B665C00369BAD /* HttpResponseCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseCodes.swift; sourceTree = "<group>"; };
 		C96AC7CC2D9B66A300369BAD /* ConstantsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsApp.swift; sourceTree = "<group>"; };
-		C96AC7CE2D9B674D00369BAD /* NetworkLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogin.swift; sourceTree = "<group>"; };
 		C96AC7D02D9B68B700369BAD /* KeyChainKC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainKC.swift; sourceTree = "<group>"; };
-		C96AC7D52D9B693100369BAD /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
-		C96AC7D72D9B696400369BAD /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		C96AC7D92D9B69DC00369BAD /* hrPersistenceKeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hrPersistenceKeyChain.swift; sourceTree = "<group>"; };
-		C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginRepository.swift; sourceTree = "<group>"; };
 		C96AC7DE2D9B701400369BAD /* AppStateVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateVM.swift; sourceTree = "<group>"; };
 		C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		C9AB7D422DAB4316003D6C5E /* RegisterRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRepositoryProtocol.swift; sourceTree = "<group>"; };
-		C9AB7D442DAB4336003D6C5E /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
-		C9AB7D462DAB43D7003D6C5E /* DefaultRegisterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRegisterRepository.swift; sourceTree = "<group>"; };
+		C9AB7D422DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthServiceRepositoryProtocol.swift; sourceTree = "<group>"; };
+		C9AB7D442DAB4336003D6C5E /* UserAuthServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthServiceUseCase.swift; sourceTree = "<group>"; };
+		C9AB7D462DAB43D7003D6C5E /* UserAuthServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthServiceRepository.swift; sourceTree = "<group>"; };
 		C9AB7D482DAB49B8003D6C5E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		C9B3E2CF2D9C85AD00BC3096 /* HRError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRError.swift; sourceTree = "<group>"; };
 		C9B3E34B2D9C918D00BC3096 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
@@ -124,7 +115,6 @@
 		C9B6994C2DA7483C000CDB68 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C9B6994E2DA74C59000CDB68 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		C9B699522DA74C7A000CDB68 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		C9C037852DA06FA600B6E373 /* PodcastCategorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCategorySection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -186,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				C96154FD2D9ED4FD00BF755D /* LoginResponse.swift */,
-				C96154FF2D9ED50E00BF755D /* Heroes.swift */,
+				C96154FF2D9ED50E00BF755D /* HeroResponse.swift */,
 				C95DD0552DAB0D7C001366FC /* RegisterRequest.swift */,
 			);
 			path = Models;
@@ -255,9 +245,8 @@
 			children = (
 				C96AC7C62D9B65EA00369BAD /* Local */,
 				C96AC6972D9B4FE600369BAD /* BaseNetwork */,
-				C96AC7CE2D9B674D00369BAD /* NetworkLogin.swift */,
-				C95DD0532DAB0B26001366FC /* NetworkRegister.swift */,
-				C96155622D9ED67E00BF755D /* NetworkHeroes.swift */,
+				C95DD0532DAB0B26001366FC /* UserAuthService.swift */,
+				C96155622D9ED67E00BF755D /* HeroService.swift */,
 				C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */,
 			);
 			path = Network;
@@ -290,9 +279,8 @@
 		C96AC6992D9B502700369BAD /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				C96AC7D72D9B696400369BAD /* LoginUseCase.swift */,
-				C96155682D9EDFD400BF755D /* PodcastUseCase.swift */,
-				C9AB7D442DAB4336003D6C5E /* RegisterUseCase.swift */,
+				C96155682D9EDFD400BF755D /* HeroServiceUseCase.swift */,
+				C9AB7D442DAB4336003D6C5E /* UserAuthServiceUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -309,9 +297,8 @@
 		C96AC69B2D9B503700369BAD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C96AC7D52D9B693100369BAD /* LoginRepositoryProtocol.swift */,
-				C96155662D9EDCEA00BF755D /* HeroesRepositoryProtocol.swift */,
-				C9AB7D422DAB4316003D6C5E /* RegisterRepositoryProtocol.swift */,
+				C96155662D9EDCEA00BF755D /* HeroServiceRepositoryProtocol.swift */,
+				C9AB7D422DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -403,9 +390,8 @@
 		C96AC7DB2D9B6A8500369BAD /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				C96AC7DC2D9B6AC700369BAD /* DefaultLoginRepository.swift */,
-				C96155642D9EDCAD00BF755D /* DefaultPodcastRepository.swift */,
-				C9AB7D462DAB43D7003D6C5E /* DefaultRegisterRepository.swift */,
+				C96155642D9EDCAD00BF755D /* HeroServiceRepository.swift */,
+				C9AB7D462DAB43D7003D6C5E /* UserAuthServiceRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -427,7 +413,6 @@
 			children = (
 				C9B3E3BA2D9CA6A600BC3096 /* HeroesView.swift */,
 				C961558F2D9EE25800BF755D /* PodcastRowView.swift */,
-				C9C037852DA06FA600B6E373 /* PodcastCategorySection.swift */,
 			);
 			path = Podcasts;
 			sourceTree = "<group>";
@@ -603,24 +588,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9AB7D452DAB4336003D6C5E /* RegisterUseCase.swift in Sources */,
+				C9AB7D452DAB4336003D6C5E /* UserAuthServiceUseCase.swift in Sources */,
 				C9B3E3B62D9C9F9100BC3096 /* ErrorView.swift in Sources */,
 				C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */,
-				C96AC7DD2D9B6AC700369BAD /* DefaultLoginRepository.swift in Sources */,
-				C9AB7D472DAB43D7003D6C5E /* DefaultRegisterRepository.swift in Sources */,
+				C9AB7D472DAB43D7003D6C5E /* UserAuthServiceRepository.swift in Sources */,
 				C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */,
-				C96155002D9ED50E00BF755D /* Heroes.swift in Sources */,
+				C96155002D9ED50E00BF755D /* HeroResponse.swift in Sources */,
 				C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */,
-				C96AC7D82D9B696400369BAD /* LoginUseCase.swift in Sources */,
-				C96155632D9ED67E00BF755D /* NetworkHeroes.swift in Sources */,
+				C96155632D9ED67E00BF755D /* HeroService.swift in Sources */,
 				C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */,
 				C9B6994F2DA74C59000CDB68 /* FavoriteView.swift in Sources */,
-				C96155672D9EDCEA00BF755D /* HeroesRepositoryProtocol.swift in Sources */,
+				C96155672D9EDCEA00BF755D /* HeroServiceRepositoryProtocol.swift in Sources */,
 				C9B6994D2DA7483C000CDB68 /* TabBarView.swift in Sources */,
 				C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */,
-				C96AC7CF2D9B674D00369BAD /* NetworkLogin.swift in Sources */,
 				C9AB7D492DAB49B8003D6C5E /* RegisterViewModel.swift in Sources */,
-				C96AC7D62D9B693100369BAD /* LoginRepositoryProtocol.swift in Sources */,
 				C96AC7C92D9B664C00369BAD /* HttpMethods.swift in Sources */,
 				C96AC6A22D9B511300369BAD /* SplashView.swift in Sources */,
 				C9B699532DA74C7A000CDB68 /* GameView.swift in Sources */,
@@ -633,18 +614,17 @@
 				C96155902D9EE25800BF755D /* PodcastRowView.swift in Sources */,
 				C9AB7D352DAB3FAD003D6C5E /* NetworkService.swift in Sources */,
 				C96AC6C62D9B552600369BAD /* Color-Theme.swift in Sources */,
-				C96155692D9EDFD400BF755D /* PodcastUseCase.swift in Sources */,
-				C9AB7D432DAB4316003D6C5E /* RegisterRepositoryProtocol.swift in Sources */,
+				C96155692D9EDFD400BF755D /* HeroServiceUseCase.swift in Sources */,
+				C9AB7D432DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift in Sources */,
 				C9B3E3502D9C93F000BC3096 /* RootView.swift in Sources */,
 				C9B3E34C2D9C918D00BC3096 /* StatusModel.swift in Sources */,
-				C95DD0542DAB0B26001366FC /* NetworkRegister.swift in Sources */,
+				C95DD0542DAB0B26001366FC /* UserAuthService.swift in Sources */,
 				C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */,
 				C905B8092DA88D950034EB14 /* UserProfileView.swift in Sources */,
 				C9B3E3532D9C9D7B00BC3096 /* LoadingView.swift in Sources */,
 				C96154FE2D9ED4FD00BF755D /* LoginResponse.swift in Sources */,
-				C9C037862DA06FA600B6E373 /* PodcastCategorySection.swift in Sources */,
 				C938925C2DA9CCD90094C753 /* RegisterView.swift in Sources */,
-				C96155652D9EDCAD00BF755D /* DefaultPodcastRepository.swift in Sources */,
+				C96155652D9EDCAD00BF755D /* HeroServiceRepository.swift in Sources */,
 				C96AC7CD2D9B66A300369BAD /* ConstantsApp.swift in Sources */,
 				C961556B2D9EE13700BF755D /* HeroesViewModel.swift in Sources */,
 				C93892622DA9D0E30094C753 /* CustomSecureField.swift in Sources */,
