@@ -48,7 +48,6 @@ final class NetworkLogin: NetworkLoginProtocol {
             
             let result = try JSONDecoder().decode(LoginResponse.self, from: data)
             tokenJWT = result.accessToken
-            
         } catch  {
             print("error in fetch \(error.localizedDescription)")
         }
