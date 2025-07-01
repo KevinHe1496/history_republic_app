@@ -7,32 +7,19 @@
 
 import Foundation
 
-protocol PodcastUseCaseProtocol {
-    var repo: PodcastRepositoryProtocol { get set }
-    func fetchPodcasts() async throws -> [PodcastCategory]
+protocol HeroesUseCaseProtocol {
+    var repo: HeroesRepositoryProtocol { get set }
+    func fetchHeroes() async throws -> [Heroes]
 }
 
-final class PodcastUseCase: PodcastUseCaseProtocol {
-    var repo: PodcastRepositoryProtocol
+final class PodcastUseCase: HeroesUseCaseProtocol {
+    var repo: HeroesRepositoryProtocol
     
-    init(repo: PodcastRepositoryProtocol = DefaultPodcastRepository(network: NetworkPodcast())) {
+    init(repo: HeroesRepositoryProtocol = DefaultPodcastRepository(network: NetworkHeroes())) {
         self.repo = repo
     }
     
-    func fetchPodcasts() async throws -> [PodcastCategory] {
-        return try await repo.fetchPodcast()
-    }
-}
-
-
-final class PodcastUseCaseMock: PodcastUseCaseProtocol {
-    var repo: PodcastRepositoryProtocol
-    
-    init(repo: PodcastRepositoryProtocol = DefaultPodcastRepository(network: NetworkPodcastMock())) {
-        self.repo = repo
-    }
-    
-    func fetchPodcasts() async throws -> [PodcastCategory] {
-        return try await repo.fetchPodcast()
+    func fetchHeroes() async throws -> [Heroes] {
+        return try await repo.fetchHeroes()
     }
 }

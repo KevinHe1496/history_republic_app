@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol NetworkPodcastProtocol {
-    func fetchPodcasts() async throws -> [PodcastCategory]
+protocol NetworkHeroesProtocol {
+    func fetchPodcasts() async throws -> [Heroes]
 }
 
-final class NetworkPodcast: NetworkPodcastProtocol {
-    func fetchPodcasts() async throws -> [PodcastCategory] {
+final class NetworkHeroes: NetworkHeroesProtocol {
+    func fetchPodcasts() async throws -> [Heroes] {
         
-        var modelReturn = [PodcastCategory]()
+        var modelReturn = [Heroes]()
         
         let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.podcasts.rawValue)"
         
@@ -24,9 +24,6 @@ final class NetworkPodcast: NetworkPodcastProtocol {
         
         var request : URLRequest = URLRequest(url: url)
         request.httpMethod = HttpMethods.get
-        
-        let jwtToken = KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN)
-        request.addValue("Bearer \(jwtToken)", forHTTPHeaderField: "Authorization")
         
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
@@ -44,10 +41,10 @@ final class NetworkPodcast: NetworkPodcastProtocol {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             
-            let result = try decoder.decode(Welcome.self, from: data)
+            let result = try decoder.decode([Heroes].self, from: data)
             modelReturn = result
         } catch {
-            print("Error in fetch podcasts \(error.localizedDescription)")
+            print("Error in fetch heroes \(error.localizedDescription)")
         }
         return modelReturn
     }

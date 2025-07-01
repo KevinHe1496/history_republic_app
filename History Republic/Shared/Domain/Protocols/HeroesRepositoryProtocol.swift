@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol PodcastRepositoryProtocol {
-    func fetchPodcast() async throws -> [PodcastCategory] 
+protocol HeroesRepositoryProtocol {
+    func fetchHeroes() async throws -> [Heroes] 
 }

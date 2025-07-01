@@ -12,11 +12,11 @@ struct PodcastRowView: View {
     let columns = [
         GridItem(.adaptive(minimum: 150))
                  ]
-    let podcasts: Podcast
+    let heroes: Heroes
     
     var body: some View {
         VStack(alignment: .leading) {
-            AsyncImage(url: URL(string: podcasts.imageURL) ) { image in
+            AsyncImage(url: heroes.imageURL) { image in
                 image
                     .resizable()
                     .scaledToFill()
@@ -33,7 +33,7 @@ struct PodcastRowView: View {
                     
             }
             VStack {
-                Text(podcasts.title)
+                Text(heroes.title)
                     .font(.system(size: 20))
                     .foregroundStyle(.black)
             }
@@ -43,5 +43,5 @@ struct PodcastRowView: View {
 }
 
 #Preview {
-    PodcastRowView(podcasts: Podcast(airedAt: Date(), imageURL: "https://historyrepublic.com/wp-content/uploads/2025/02/Hannibal.jpg", url: "https://historyrepublic.com/hannibal/", id: UUID().uuidString, title: "Hannibal", descriptionP: "Hannibal Barca was the Carthaginian general who not only challenged Rome at the height of its power but also mesmerized the ancient world by leading war elephants across the towering Alps."))
+    PodcastRowView(heroes: .sampleHero)
 }

@@ -8,16 +8,15 @@
 import Foundation
 
 @Observable
-final class PodcastViewModel {
+final class HeroesViewModel {
     
-    var categoriesData = [PodcastCategory]()
-    
-    
+    var heroesData = [Heroes]()
+
     @ObservationIgnored
-    private var podcastUseCase: PodcastUseCaseProtocol
+    private var podcastUseCase: HeroesUseCaseProtocol
     
     
-    init(podcastUseCase: PodcastUseCaseProtocol = PodcastUseCase()){
+    init(podcastUseCase: HeroesUseCaseProtocol = PodcastUseCase()){
         self.podcastUseCase = podcastUseCase
         
         Task(priority: .high) {
@@ -27,8 +26,8 @@ final class PodcastViewModel {
     
     @MainActor
     func getCategories() async throws {
-        let data = try await podcastUseCase.fetchPodcasts()
-        self.categoriesData = data
+        let data = try await podcastUseCase.fetchHeroes()
+        self.heroesData = data
     }
     
 }

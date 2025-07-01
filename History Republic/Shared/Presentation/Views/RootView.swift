@@ -23,7 +23,7 @@ struct RootView: View {
             
         case .login:
             withAnimation {
-                LoginView()
+                TabBarView()
             }
         case .register:
             withAnimation {

@@ -39,12 +39,12 @@ struct TabBarView: View {
         
         TabView {
             Tab("Home", systemImage: "house.fill") {
-                PodcastsView()
+                HeroesView()
             }
             Tab("Favorite", systemImage: "heart.fill") {
                 FavoriteView()
             }
-            Tab("Game", systemImage: "gamecontroller.fill") {
+            Tab("Game", systemImage: "person.fill") {
                 GameView()
                     .padding()
             }
@@ -54,4 +54,5 @@ struct TabBarView: View {
 
 #Preview {
     TabBarView()
+        .environment(AppStateVM())
 }

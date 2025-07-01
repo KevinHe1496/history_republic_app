@@ -1,0 +1,30 @@
+
+import Foundation
+
+// MARK: - Heroes List
+struct Heroes: Codable, Identifiable {
+    let id: UUID
+    let nameHero: String
+    let title: String
+    let information: String
+    let image: String
+    let url: String
+    
+    var imageURL: URL? {
+        if let url = URL(string: image) {
+            return url
+        } else {
+            return nil
+        }
+    }
+    
+    static let sampleHero = Heroes(
+        id: UUID(uuidString: "12345678-1234-1234-1234-1234567890AB")!,
+        nameHero: "Goku",
+        title: "Saiyan Warrior",
+        information: "Goku is a Saiyan raised on Earth and one of the most powerful warriors in the universe.",
+        image: "goku_image", // Suponiendo que es el nombre de una imagen en tus assets
+        url: "https://dragonball.fandom.com/wiki/Goku"
+    )
+}
+
