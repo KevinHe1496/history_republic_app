@@ -7,6 +7,7 @@
 
 import Foundation
 
-protocol RegisterRepositoryProtocol {
+protocol UserAuthServiceRepositoryProtocol {
     func registerUser(name: String,email: String, password: String) async throws -> String
+    func loginApp(user: String, password: String) async throws -> String
 }

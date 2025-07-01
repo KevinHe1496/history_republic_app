@@ -2,7 +2,7 @@
 import Foundation
 
 // MARK: - Heroes List
-struct Heroes: Codable, Identifiable {
+struct HeroResponse: Codable, Identifiable {
     let id: UUID
     let nameHero: String
     let title: String
@@ -19,7 +19,7 @@ struct Heroes: Codable, Identifiable {
         }
     }
     
-    static let sampleHero = Heroes(
+    static let sampleHero = HeroResponse(
         id: UUID(uuidString: "12345678-1234-1234-1234-1234567890AB")!,
         nameHero: "Goku",
         title: "Saiyan Warrior",

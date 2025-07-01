@@ -12,7 +12,7 @@ struct PodcastRowView: View {
     let columns = [
         GridItem(.adaptive(minimum: 150))
                  ]
-    let heroes: Heroes
+    let heroes: HeroResponse
     
     var body: some View {
         VStack(alignment: .leading) {

@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol NetworkHeroesProtocol {
-    func fetchPodcasts() async throws -> [Heroes]
+protocol HeroServiceProtocol {
+    func fetchAllHeroes() async throws -> [HeroResponse]
 }
 
-final class HeroService: NetworkHeroesProtocol {
-    func fetchPodcasts() async throws -> [Heroes] {
+final class HeroService: HeroServiceProtocol {
+    func fetchAllHeroes() async throws -> [HeroResponse] {
         
-        var modelReturn = [Heroes]()
+        var modelReturn = [HeroResponse]()
         
         let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.podcasts.rawValue)"
         
@@ -41,7 +41,7 @@ final class HeroService: NetworkHeroesProtocol {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             
-            let result = try decoder.decode([Heroes].self, from: data)
+            let result = try decoder.decode([HeroResponse].self, from: data)
             modelReturn = result
         } catch {
             print("Error in fetch heroes \(error.localizedDescription)")

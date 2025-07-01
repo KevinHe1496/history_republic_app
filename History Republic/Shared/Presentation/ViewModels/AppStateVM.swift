@@ -36,12 +36,12 @@ final class AppStateVM {
     
     /// Use case responsible for handling login and token validation logic
     @ObservationIgnored
-    private var loginUseCase: LoginUseCaseProtocol
+    private var loginUseCase: UserAuthServiceUsecaseProtocol
     
     // MARK: - Initializer
     
     /// Initializes the ViewModel with a LoginUseCase dependency
-    init(loginUC: LoginUseCaseProtocol = LoginUseCase()) {
+    init(loginUC: UserAuthServiceUsecaseProtocol = UserAuthServiceUseCase()) {
         self.loginUseCase = loginUC
         
         // Validate user session on initialization

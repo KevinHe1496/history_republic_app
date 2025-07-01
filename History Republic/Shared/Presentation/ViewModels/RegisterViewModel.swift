@@ -11,10 +11,10 @@ import Foundation
 final class RegisterViewModel {
 
     @ObservationIgnored
-    private var registerUseCase: RegisterUsecaseProtocol
+    private var registerUseCase: UserAuthServiceUsecaseProtocol
     private var appState: AppStateVM
     
-    init(registerUC: RegisterUsecaseProtocol = RegisterUseCase(), appState: AppStateVM) {
+    init(registerUC: UserAuthServiceUsecaseProtocol = UserAuthServiceUseCase(), appState: AppStateVM) {
         self.registerUseCase = registerUC
         self.appState = appState
     }
