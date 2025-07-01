@@ -14,6 +14,7 @@ struct Heroes: Codable, Identifiable {
         if let url = URL(string: image) {
             return url
         } else {
+            print("No tenia imagen")
             return nil
         }
     }
