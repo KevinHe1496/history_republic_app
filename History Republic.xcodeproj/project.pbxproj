@@ -10,7 +10,17 @@
 		BF1C72AA2E1579430008D806 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72A92E1579400008D806 /* WebView.swift */; };
 		BF1C72AC2E1579630008D806 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AB2E1579630008D806 /* HeroDetailView.swift */; };
 		BF1C72AE2E1587E40008D806 /* Font-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AD2E1587DE0008D806 /* Font-Theme.swift */; };
+
+		BF1C72B02E15A1FA0008D806 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AF2E15A1F50008D806 /* UserProfileService.swift */; };
+		BF1C72B22E15A4CF0008D806 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72B12E15A4C20008D806 /* UserResponse.swift */; };
+		BF1C72B42E15A6250008D806 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72B32E15A6210008D806 /* UserRequest.swift */; };
+		BFAD1BCE2E15BE070036C2A3 /* UserProfileServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BCD2E15BE010036C2A3 /* UserProfileServiceRepository.swift */; };
+		BFAD1BD02E15BFFE0036C2A3 /* UserProfileServiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */; };
+		BFAD1BD22E15C0A90036C2A3 /* UserProfileServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */; };
+		C905B8092DA88D950034EB14 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905B8082DA88D950034EB14 /* UserProfileView.swift */; };
+
 		C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905B8082DA88D950034EB14 /* DefaultProfileView.swift */; };
+
 		C938925C2DA9CCD90094C753 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925B2DA9CCD90094C753 /* RegisterUserView.swift */; };
 		C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925F2DA9CFA40094C753 /* CustomTextField.swift */; };
 		C93892622DA9D0E30094C753 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93892612DA9D0E30094C753 /* CustomSecureField.swift */; };
@@ -76,7 +86,17 @@
 		BF1C72A92E1579400008D806 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		BF1C72AB2E1579630008D806 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
 		BF1C72AD2E1587DE0008D806 /* Font-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font-Theme.swift"; sourceTree = "<group>"; };
+
+		BF1C72AF2E15A1F50008D806 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		BF1C72B12E15A4C20008D806 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		BF1C72B32E15A6210008D806 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		BFAD1BCD2E15BE010036C2A3 /* UserProfileServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceRepository.swift; sourceTree = "<group>"; };
+		BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceRepositoryProtocol.swift; sourceTree = "<group>"; };
+		BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceUseCase.swift; sourceTree = "<group>"; };
+		C905B8082DA88D950034EB14 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+
 		C905B8082DA88D950034EB14 /* DefaultProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProfileView.swift; sourceTree = "<group>"; };
+
 		C938925B2DA9CCD90094C753 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
 		C938925F2DA9CFA40094C753 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C93892612DA9D0E30094C753 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
@@ -304,6 +324,7 @@
 				C95DD0532DAB0B26001366FC /* UserAuthService.swift */,
 				C96155622D9ED67E00BF755D /* HeroService.swift */,
 				C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */,
+				BF1C72AF2E15A1F50008D806 /* UserProfileService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -334,6 +355,7 @@
 		C96AC6992D9B502700369BAD /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */,
 				C96155682D9EDFD400BF755D /* HeroServiceUseCase.swift */,
 				C9AB7D442DAB4336003D6C5E /* UserAuthServiceUseCase.swift */,
 			);
@@ -352,6 +374,7 @@
 		C96AC69B2D9B503700369BAD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */,
 				C96155662D9EDCEA00BF755D /* HeroServiceRepositoryProtocol.swift */,
 				C9AB7D422DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift */,
 			);
@@ -361,6 +384,8 @@
 		C96AC69C2D9B503E00369BAD /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				BF1C72B32E15A6210008D806 /* UserRequest.swift */,
+				BF1C72B12E15A4C20008D806 /* UserResponse.swift */,
 				C96154FD2D9ED4FD00BF755D /* AuthTokenResponse.swift */,
 				C96154FF2D9ED50E00BF755D /* HeroResponse.swift */,
 				C95DD0552DAB0D7C001366FC /* RegisterRequest.swift */,
@@ -408,6 +433,7 @@
 		C96AC7DB2D9B6A8500369BAD /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				BFAD1BCD2E15BE010036C2A3 /* UserProfileServiceRepository.swift */,
 				C96155642D9EDCAD00BF755D /* HeroServiceRepository.swift */,
 				C9AB7D462DAB43D7003D6C5E /* UserAuthServiceRepository.swift */,
 			);
@@ -602,10 +628,13 @@
 				C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */,
 				C9B6994F2DA74C59000CDB68 /* FavoriteView.swift in Sources */,
 				C96155672D9EDCEA00BF755D /* HeroServiceRepositoryProtocol.swift in Sources */,
+				BFAD1BD02E15BFFE0036C2A3 /* UserProfileServiceRepositoryProtocol.swift in Sources */,
 				C9B6994D2DA7483C000CDB68 /* TabBarView.swift in Sources */,
 				C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */,
 				C9AB7D492DAB49B8003D6C5E /* UserAuthViewModel.swift in Sources */,
 				C96AC7C92D9B664C00369BAD /* HttpMethods.swift in Sources */,
+				BFAD1BCE2E15BE070036C2A3 /* UserProfileServiceRepository.swift in Sources */,
+				BF1C72B02E15A1FA0008D806 /* UserProfileService.swift in Sources */,
 				BF1C72AC2E1579630008D806 /* HeroDetailView.swift in Sources */,
 				C96AC6A22D9B511300369BAD /* SplashView.swift in Sources */,
 				C9B3E3BB2D9CA6A600BC3096 /* HeroListView.swift in Sources */,
@@ -623,15 +652,18 @@
 				C9B3E3502D9C93F000BC3096 /* RootView.swift in Sources */,
 				C9B3E34C2D9C918D00BC3096 /* StatusModel.swift in Sources */,
 				C95DD0542DAB0B26001366FC /* UserAuthService.swift in Sources */,
+				BFAD1BD22E15C0A90036C2A3 /* UserProfileServiceUseCase.swift in Sources */,
 				C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */,
 				C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */,
 				C9B3E3532D9C9D7B00BC3096 /* LoadingView.swift in Sources */,
 				C96154FE2D9ED4FD00BF755D /* AuthTokenResponse.swift in Sources */,
+				BF1C72B42E15A6250008D806 /* UserRequest.swift in Sources */,
 				C938925C2DA9CCD90094C753 /* RegisterUserView.swift in Sources */,
 				C96155652D9EDCAD00BF755D /* HeroServiceRepository.swift in Sources */,
 				C96AC7CD2D9B66A300369BAD /* ConstantsApp.swift in Sources */,
 				C961556B2D9EE13700BF755D /* HeroesViewModel.swift in Sources */,
 				C93892622DA9D0E30094C753 /* CustomSecureField.swift in Sources */,
+				BF1C72B22E15A4CF0008D806 /* UserResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
