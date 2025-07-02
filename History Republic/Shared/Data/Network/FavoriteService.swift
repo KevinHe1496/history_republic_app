@@ -12,32 +12,29 @@ protocol FavoriteServiceProtocol {
 }
 
 final class FavoriteService: FavoriteServiceProtocol {
+    private let session: URLSession = .shared
+
     func addFavorite(with idHero: UUID) async throws {
-        let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.addFavorite.rawValue)/\(idHero)"
-        
+        // 1. URL segura
+        let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.addFavorite.rawValue)/\(idHero.uuidString)"
+
         guard let url = URL(string: urlString) else {
             throw HRError.badUrl
         }
-        
-        var request: URLRequest = URLRequest(url: url)
-        request.httpMethod = HttpMethods.post
-        request.addValue(HttpMethods.content, forHTTPHeaderField: HttpMethods.contentTypeID)
-        
+        // 2. Request
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        // 3. Token
         let jwToken = KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN)
         request.setValue("Bearer \(jwToken)", forHTTPHeaderField: "Authorization")
-        
-        do {
-            let (_, response) = try await URLSession.shared.data(for: request)
-            
-            guard let res = response as? HTTPURLResponse else {
-                throw HRError.errorFromApi(statusCode: -1)
-            }
-            
-            guard res.statusCode == HttpResponseCodes.SUCESS else {
-                throw HRError.errorFromApi(statusCode: res.statusCode)
-            }
-        } catch {
-            print("Hubo un error haciendo favorito \(error.localizedDescription)")
+
+        // 4. Call
+        let (_, response) = try await session.data(for: request)
+
+        guard let res = response as? HTTPURLResponse,
+              res.statusCode == HttpResponseCodes.SUCESS else {
+            throw HRError.errorFromApi(statusCode: (response as? HTTPURLResponse)?.statusCode ?? -1)
         }
     }
 }
