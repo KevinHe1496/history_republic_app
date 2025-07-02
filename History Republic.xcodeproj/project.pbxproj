@@ -16,8 +16,13 @@
 		BFAD1BCE2E15BE070036C2A3 /* UserProfileServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BCD2E15BE010036C2A3 /* UserProfileServiceRepository.swift */; };
 		BFAD1BD02E15BFFE0036C2A3 /* UserProfileServiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */; };
 		BFAD1BD22E15C0A90036C2A3 /* UserProfileServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */; };
+
 		C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905B8082DA88D950034EB14 /* DefaultProfileView.swift */; };
 		C92E12D92E15CCB3001BEA10 /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92E12D82E15CCB3001BEA10 /* FavoriteService.swift */; };
+
+		BFAD1BDA2E15CE130036C2A3 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */; };
+
+
 		C938925C2DA9CCD90094C753 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925B2DA9CCD90094C753 /* RegisterUserView.swift */; };
 		C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925F2DA9CFA40094C753 /* CustomTextField.swift */; };
 		C93892622DA9D0E30094C753 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93892612DA9D0E30094C753 /* CustomSecureField.swift */; };
@@ -89,8 +94,13 @@
 		BFAD1BCD2E15BE010036C2A3 /* UserProfileServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceRepository.swift; sourceTree = "<group>"; };
 		BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceRepositoryProtocol.swift; sourceTree = "<group>"; };
 		BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceUseCase.swift; sourceTree = "<group>"; };
+
 		C905B8082DA88D950034EB14 /* DefaultProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProfileView.swift; sourceTree = "<group>"; };
 		C92E12D82E15CCB3001BEA10 /* FavoriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
+
+		BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+
+
 		C938925B2DA9CCD90094C753 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
 		C938925F2DA9CFA40094C753 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C93892612DA9D0E30094C753 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
@@ -236,6 +246,7 @@
 		C905B8072DA88D850034EB14 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */,
 				C905B8082DA88D950034EB14 /* DefaultProfileView.swift */,
 				C961B62D2E15BC6B00738076 /* UserProfileView.swift */,
 			);
@@ -648,6 +659,7 @@
 				C9B3E3502D9C93F000BC3096 /* RootView.swift in Sources */,
 				C9B3E34C2D9C918D00BC3096 /* StatusModel.swift in Sources */,
 				C95DD0542DAB0B26001366FC /* UserAuthService.swift in Sources */,
+				BFAD1BDA2E15CE130036C2A3 /* UserProfileViewModel.swift in Sources */,
 				BFAD1BD22E15C0A90036C2A3 /* UserProfileServiceUseCase.swift in Sources */,
 				C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */,
 				C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */,
