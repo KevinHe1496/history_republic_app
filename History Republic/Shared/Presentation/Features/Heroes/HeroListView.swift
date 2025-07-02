@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HeroesView: View {
+struct HeroListView: View {
     @Environment(AppStateVM.self) var appState
     
     @State var viewModel: HeroesViewModel
@@ -29,7 +29,7 @@ struct HeroesView: View {
                     // Secciónes y Podcasts
                     Section {
                         ForEach(viewModel.heroesData) { hero in
-                           PodcastRowView(heroes: hero)
+                           HeroRowView(heroes: hero)
                         }
                     }
                 }
@@ -41,6 +41,6 @@ struct HeroesView: View {
 
 
 #Preview {
-    HeroesView()
+    HeroListView()
         .environment(AppStateVM())
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PodcastRowView: View {
+struct HeroRowView: View {
     
     let columns = [
         GridItem(.adaptive(minimum: 150))
@@ -43,5 +43,5 @@ struct PodcastRowView: View {
 }
 
 #Preview {
-    PodcastRowView(heroes: .sampleHero)
+    HeroRowView(heroes: .sampleHero)
 }

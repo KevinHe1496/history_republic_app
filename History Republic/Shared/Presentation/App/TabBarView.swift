@@ -39,13 +39,13 @@ struct TabBarView: View {
         
         TabView {
             Tab("Home", systemImage: "house.fill") {
-                HeroesView()
+                HeroListView()
             }
             Tab("Favorite", systemImage: "heart.fill") {
                 FavoriteView()
             }
             Tab("Game", systemImage: "person.fill") {
-                GameView()
+                UserProfileView()
                     .padding()
             }
         }
