@@ -12,8 +12,3 @@ struct RegisterRequest: Codable {
     let email: String
     let password: String
 }
-
-struct RegisterResponse: Codable {
-    let accessToken: String
-    let refreshToken: String
-}

@@ -17,7 +17,7 @@
 		C93892642DA9D1AF0094C753 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93892632DA9D1AF0094C753 /* CustomButton.swift */; };
 		C95DD0542DAB0B26001366FC /* UserAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95DD0532DAB0B26001366FC /* UserAuthService.swift */; };
 		C95DD0562DAB0D7C001366FC /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95DD0552DAB0D7C001366FC /* RegisterRequest.swift */; };
-		C96154FE2D9ED4FD00BF755D /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96154FD2D9ED4FD00BF755D /* LoginResponse.swift */; };
+		C96154FE2D9ED4FD00BF755D /* AuthTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96154FD2D9ED4FD00BF755D /* AuthTokenResponse.swift */; };
 		C96155002D9ED50E00BF755D /* HeroResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96154FF2D9ED50E00BF755D /* HeroResponse.swift */; };
 		C96155632D9ED67E00BF755D /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155622D9ED67E00BF755D /* HeroService.swift */; };
 		C96155652D9EDCAD00BF755D /* HeroServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155642D9EDCAD00BF755D /* HeroServiceRepository.swift */; };
@@ -82,7 +82,7 @@
 		C93892632DA9D1AF0094C753 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C95DD0532DAB0B26001366FC /* UserAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthService.swift; sourceTree = "<group>"; };
 		C95DD0552DAB0D7C001366FC /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
-		C96154FD2D9ED4FD00BF755D /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		C96154FD2D9ED4FD00BF755D /* AuthTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenResponse.swift; sourceTree = "<group>"; };
 		C96154FF2D9ED50E00BF755D /* HeroResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroResponse.swift; sourceTree = "<group>"; };
 		C96155622D9ED67E00BF755D /* HeroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
 		C96155642D9EDCAD00BF755D /* HeroServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroServiceRepository.swift; sourceTree = "<group>"; };
@@ -235,16 +235,6 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		C96154FC2D9ED4E200BF755D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C96154FD2D9ED4FD00BF755D /* LoginResponse.swift */,
-				C96154FF2D9ED50E00BF755D /* HeroResponse.swift */,
-				C95DD0552DAB0D7C001366FC /* RegisterRequest.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		C96AC6542D9B4F8200369BAD = {
 			isa = PBXGroup;
 			children = (
@@ -329,7 +319,6 @@
 		C96AC6982D9B500100369BAD /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				C96154FC2D9ED4E200BF755D /* Models */,
 				C96AC6C42D9B551900369BAD /* Extensions */,
 				C96AC69C2D9B503E00369BAD /* Entities */,
 				C96AC69B2D9B503700369BAD /* Protocols */,
@@ -369,6 +358,9 @@
 		C96AC69C2D9B503E00369BAD /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				C96154FD2D9ED4FD00BF755D /* AuthTokenResponse.swift */,
+				C96154FF2D9ED50E00BF755D /* HeroResponse.swift */,
+				C95DD0552DAB0D7C001366FC /* RegisterRequest.swift */,
 				C9B3E34B2D9C918D00BC3096 /* StatusModel.swift */,
 			);
 			path = Entities;
@@ -630,7 +622,7 @@
 				C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */,
 				C905B8092DA88D950034EB14 /* UserProfileView.swift in Sources */,
 				C9B3E3532D9C9D7B00BC3096 /* LoadingView.swift in Sources */,
-				C96154FE2D9ED4FD00BF755D /* LoginResponse.swift in Sources */,
+				C96154FE2D9ED4FD00BF755D /* AuthTokenResponse.swift in Sources */,
 				C938925C2DA9CCD90094C753 /* RegisterUserView.swift in Sources */,
 				C96155652D9EDCAD00BF755D /* HeroServiceRepository.swift in Sources */,
 				C96AC7CD2D9B66A300369BAD /* ConstantsApp.swift in Sources */,

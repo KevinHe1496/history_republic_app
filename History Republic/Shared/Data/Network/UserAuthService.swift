@@ -30,7 +30,7 @@ final class UserAuthService: AuthServiceProtocol {
         request.setValue(HttpMethods.content, forHTTPHeaderField: HttpMethods.contentTypeID)
         request.httpBody = jsonData
         
-        let response: RegisterResponse = try await NetworkService().sendRequest(request, decodeTo: RegisterResponse.self)
+        let response: AuthTokenResponse = try await NetworkService().sendRequest(request, decodeTo: AuthTokenResponse.self)
         
         let token = response.accessToken
         return token
@@ -67,7 +67,7 @@ final class UserAuthService: AuthServiceProtocol {
                 throw HRError.errorFromApi(statusCode: httpResponse.statusCode)
             }
             
-            let result = try JSONDecoder().decode(LoginResponse.self, from: data)
+            let result = try JSONDecoder().decode(AuthTokenResponse.self, from: data)
             tokenJWT = result.accessToken
         } catch  {
             print("error in fetch \(error.localizedDescription)")
