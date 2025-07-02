@@ -16,7 +16,7 @@ final class HeroService: HeroServiceProtocol {
         
         var modelReturn = [HeroResponse]()
         
-        let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.podcasts.rawValue)"
+        let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.heroes.rawValue)"
         
         guard let url = URL(string: urlString) else {
             throw HRError.badUrl
