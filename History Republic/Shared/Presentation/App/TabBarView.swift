@@ -38,15 +38,14 @@ struct TabBarView: View {
     var body: some View {
         
         TabView {
-            Tab("Home", systemImage: "house.fill") {
+            Tab("Inicio", systemImage: "house.fill") {
                 HeroListView()
             }
-            Tab("Favorite", systemImage: "heart.fill") {
+            Tab("Favoritos", systemImage: "heart.fill") {
                 FavoriteView()
             }
-            Tab("Game", systemImage: "person.fill") {
-                UserProfileView()
-                    .padding()
+            Tab("Perfil", systemImage: "person.fill") {
+                DefaultProfileView()
             }
         }
     }
