@@ -13,32 +13,27 @@ struct HeroListView: View {
     @State var viewModel: HeroesViewModel
     @State private var showUserProfile = false
     
-    let rows = [
-        GridItem(.fixed(150))
-    ]
-    
     init(viewModel: HeroesViewModel = HeroesViewModel()) {
         self.viewModel = viewModel
     }
     
     var body: some View {
         NavigationStack {
-            ScrollView { // Scroll principal para todo el contenido
+          
                 VStack(spacing: 16) {
                     
                     // Secciónes y Podcasts
-                 
-                        ForEach(viewModel.heroesData) { hero in
-                            NavigationLink {
-                                HeroDetailView(url: hero.url)
-                            } label: {
-                                HeroRowView(heroes: hero)
-                            }
-                           
+                    List(viewModel.heroesData) { hero in
+                        
+                        NavigationLink {
+                            HeroDetailView(url: hero.url)
+                        } label: {
+                            HeroRowView(heroes: hero)
                         }
+                    }
+                    .listStyle(.plain)
                 }
                 .navigationTitle("Heroes")
-            }
         }
     }
 }
