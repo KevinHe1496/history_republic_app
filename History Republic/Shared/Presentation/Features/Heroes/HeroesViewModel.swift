@@ -13,20 +13,20 @@ final class HeroesViewModel {
     var heroesData = [HeroResponse]()
 
     @ObservationIgnored
-    private var podcastUseCase: HeroServiceUseCaseProtocol
+    private var useCase: HeroServiceUseCaseProtocol
     
     
-    init(podcastUseCase: HeroServiceUseCaseProtocol = HeroServiceUseCase()){
-        self.podcastUseCase = podcastUseCase
+    init(useCase: HeroServiceUseCaseProtocol = HeroServiceUseCase()){
+        self.useCase = useCase
         
         Task(priority: .high) {
-            try await getCategories()
+            try await fetchAllHeroes()
         }
     }
     
     @MainActor
-    func getCategories() async throws {
-        let data = try await podcastUseCase.fetchHeroes()
+    func fetchAllHeroes() async throws {
+        let data = try await useCase.fetchHeroes()
         self.heroesData = data
     }
     

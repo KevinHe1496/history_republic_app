@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RegisterView: View {
+struct RegisterUserView: View {
     @Environment(AppStateVM.self) private var appState
     
     @State private var name = ""
@@ -16,10 +16,10 @@ struct RegisterView: View {
     
     @State private var showRegisterSuccess = false
     
-    @State private var viewModel: RegisterViewModel
+    @State private var viewModel: UserAuthViewModel
     
     init(appState: AppStateVM) {
-            _viewModel = State(initialValue: RegisterViewModel(appState: appState))
+            _viewModel = State(initialValue: UserAuthViewModel(appState: appState))
         }
     
     var body: some View {
@@ -58,6 +58,6 @@ struct RegisterView: View {
 }
 
 #Preview {
-    RegisterView(appState: AppStateVM())
+    RegisterUserView(appState: AppStateVM())
         .environment(AppStateVM())
 }

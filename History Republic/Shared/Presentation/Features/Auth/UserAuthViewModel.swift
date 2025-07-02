@@ -8,7 +8,7 @@
 import Foundation
 
 @Observable
-final class RegisterViewModel {
+final class UserAuthViewModel {
 
     @ObservationIgnored
     private var registerUseCase: UserAuthServiceUsecaseProtocol

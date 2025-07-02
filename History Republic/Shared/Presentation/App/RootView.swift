@@ -27,7 +27,7 @@ struct RootView: View {
             }
         case .register:
             withAnimation {
-                RegisterView(appState: appState)
+                RegisterUserView(appState: appState)
             }
         case .loaded:
             withAnimation {
