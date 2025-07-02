@@ -25,7 +25,7 @@ struct HeroResponse: Codable, Identifiable {
         title: "Saiyan Warrior",
         information: "Goku is a Saiyan raised on Earth and one of the most powerful warriors in the universe.",
         image: "goku_image", // Suponiendo que es el nombre de una imagen en tus assets
-        url: "https://dragonball.fandom.com/wiki/Goku"
+        url: "https://historyrepublic.com/wp-content/uploads/2025/05/St_Olga_by_Nesterov_in_1892.jpg"
     )
 }
 
