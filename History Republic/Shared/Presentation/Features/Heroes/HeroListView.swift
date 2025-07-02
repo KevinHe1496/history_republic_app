@@ -27,13 +27,17 @@ struct HeroListView: View {
                 VStack(spacing: 16) {
                     
                     // Secciónes y Podcasts
-                    Section {
+                 
                         ForEach(viewModel.heroesData) { hero in
-                           HeroRowView(heroes: hero)
+                            NavigationLink {
+                                HeroDetailView(url: hero.url)
+                            } label: {
+                                HeroRowView(heroes: hero)
+                            }
+                           
                         }
-                    }
                 }
-                .navigationTitle("Podcasts")
+                .navigationTitle("Heroes")
             }
         }
     }

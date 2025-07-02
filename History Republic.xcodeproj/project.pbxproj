@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1C72AA2E1579430008D806 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72A92E1579400008D806 /* WebView.swift */; };
+		BF1C72AC2E1579630008D806 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AB2E1579630008D806 /* HeroDetailView.swift */; };
 		C905B8092DA88D950034EB14 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905B8082DA88D950034EB14 /* UserProfileView.swift */; };
 		C938925C2DA9CCD90094C753 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925B2DA9CCD90094C753 /* RegisterUserView.swift */; };
 		C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925F2DA9CFA40094C753 /* CustomTextField.swift */; };
@@ -69,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF1C72A92E1579400008D806 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		BF1C72AB2E1579630008D806 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
 		C905B8082DA88D950034EB14 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		C938925B2DA9CCD90094C753 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
 		C938925F2DA9CFA40094C753 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 		BF1C729F2E1576CA0008D806 /* ReusableUI */ = {
 			isa = PBXGroup;
 			children = (
+				BF1C72A92E1579400008D806 /* WebView.swift */,
 			);
 			path = ReusableUI;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 				C961556A2D9EE13700BF755D /* HeroesViewModel.swift */,
 				C9B3E3BA2D9CA6A600BC3096 /* HeroListView.swift */,
 				C961558F2D9EE25800BF755D /* HeroRowView.swift */,
+				BF1C72AB2E1579630008D806 /* HeroDetailView.swift */,
 			);
 			path = Heroes;
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AB7D452DAB4336003D6C5E /* UserAuthServiceUseCase.swift in Sources */,
+				BF1C72AA2E1579430008D806 /* WebView.swift in Sources */,
 				C9B3E3B62D9C9F9100BC3096 /* ErrorView.swift in Sources */,
 				C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */,
 				C9AB7D472DAB43D7003D6C5E /* UserAuthServiceRepository.swift in Sources */,
@@ -600,6 +607,7 @@
 				C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */,
 				C9AB7D492DAB49B8003D6C5E /* UserAuthViewModel.swift in Sources */,
 				C96AC7C92D9B664C00369BAD /* HttpMethods.swift in Sources */,
+				BF1C72AC2E1579630008D806 /* HeroDetailView.swift in Sources */,
 				C96AC6A22D9B511300369BAD /* SplashView.swift in Sources */,
 				C9B3E3BB2D9CA6A600BC3096 /* HeroListView.swift in Sources */,
 				C96AC7D12D9B68B700369BAD /* KeyChainKC.swift in Sources */,
