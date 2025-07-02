@@ -56,7 +56,7 @@ final class UserAuthService: AuthServiceProtocol {
         request.addValue(HttpMethods.content, forHTTPHeaderField: HttpMethods.contentTypeID)
         request.addValue("Basic \(encodeCredentials)", forHTTPHeaderField: "Authorization")
         
-        do {
+        
             let (data, response) = try await URLSession.shared.data(for: request)
             
             guard let httpResponse = response as? HTTPURLResponse else {
@@ -66,7 +66,7 @@ final class UserAuthService: AuthServiceProtocol {
             guard httpResponse.statusCode == HttpResponseCodes.SUCESS else {
                 throw HRError.errorFromApi(statusCode: httpResponse.statusCode)
             }
-            
+        do {
             let result = try JSONDecoder().decode(AuthTokenResponse.self, from: data)
             tokenJWT = result.accessToken
         } catch  {

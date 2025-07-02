@@ -16,7 +16,7 @@ struct LoginView: View {
     @Environment(AppStateVM.self) var appState
     
     /// Email input from user
-    @State private var email = "andy_heredia2008@hotmail.com"
+    @State private var email = "kevin@example.com"
     
     /// Password input from user
     @State private var pass = "123456"
@@ -77,19 +77,6 @@ struct LoginView: View {
                 Spacer().frame(height: 200)
 //                .frame(maxHeight: .infinity, alignment: .center)
                 
-                // MARK: - Sign Up Prompt (Bottom)
-                HStack {
-                    Text("Don't have an account?")
-                        .foregroundStyle(.white)
-                        .font(.system(size: 16))
-                    
-                    // Navigation to the registration view
-                    NavigationLink(destination: RegisterUserView(appState: appState)) {
-                        Text("Sign Up here")
-                            .foregroundStyle(.mainBrown)
-                            .underline()
-                    }
-                }
 //                .frame(maxHeight: .infinity, alignment: .bottom)
 //                .padding(.bottom, 30)
             }

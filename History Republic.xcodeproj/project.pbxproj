@@ -10,7 +10,7 @@
 		BF1C72AA2E1579430008D806 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72A92E1579400008D806 /* WebView.swift */; };
 		BF1C72AC2E1579630008D806 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AB2E1579630008D806 /* HeroDetailView.swift */; };
 		BF1C72AE2E1587E40008D806 /* Font-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AD2E1587DE0008D806 /* Font-Theme.swift */; };
-		C905B8092DA88D950034EB14 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905B8082DA88D950034EB14 /* UserProfileView.swift */; };
+		C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905B8082DA88D950034EB14 /* DefaultProfileView.swift */; };
 		C938925C2DA9CCD90094C753 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925B2DA9CCD90094C753 /* RegisterUserView.swift */; };
 		C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925F2DA9CFA40094C753 /* CustomTextField.swift */; };
 		C93892622DA9D0E30094C753 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93892612DA9D0E30094C753 /* CustomSecureField.swift */; };
@@ -25,6 +25,7 @@
 		C96155692D9EDFD400BF755D /* HeroServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96155682D9EDFD400BF755D /* HeroServiceUseCase.swift */; };
 		C961556B2D9EE13700BF755D /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961556A2D9EE13700BF755D /* HeroesViewModel.swift */; };
 		C96155902D9EE25800BF755D /* HeroRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961558F2D9EE25800BF755D /* HeroRowView.swift */; };
+		C961B62E2E15BC6B00738076 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B62D2E15BC6B00738076 /* UserProfileView.swift */; };
 		C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC68E2D9B4FC300369BAD /* History_RepublicApp.swift */; };
 		C96AC6922D9B4FC300369BAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96AC68A2D9B4FC300369BAD /* Preview Assets.xcassets */; };
 		C96AC6932D9B4FC300369BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96AC68C2D9B4FC300369BAD /* Assets.xcassets */; };
@@ -75,7 +76,7 @@
 		BF1C72A92E1579400008D806 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		BF1C72AB2E1579630008D806 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
 		BF1C72AD2E1587DE0008D806 /* Font-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font-Theme.swift"; sourceTree = "<group>"; };
-		C905B8082DA88D950034EB14 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		C905B8082DA88D950034EB14 /* DefaultProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProfileView.swift; sourceTree = "<group>"; };
 		C938925B2DA9CCD90094C753 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
 		C938925F2DA9CFA40094C753 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C93892612DA9D0E30094C753 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		C96155682D9EDFD400BF755D /* HeroServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroServiceUseCase.swift; sourceTree = "<group>"; };
 		C961556A2D9EE13700BF755D /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
 		C961558F2D9EE25800BF755D /* HeroRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRowView.swift; sourceTree = "<group>"; };
+		C961B62D2E15BC6B00738076 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		C96AC65D2D9B4F8200369BAD /* History Republic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "History Republic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96AC66D2D9B4F8300369BAD /* History RepublicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "History RepublicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96AC6772D9B4F8300369BAD /* History RepublicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "History RepublicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,7 +222,8 @@
 		C905B8072DA88D850034EB14 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				C905B8082DA88D950034EB14 /* UserProfileView.swift */,
+				C905B8082DA88D950034EB14 /* DefaultProfileView.swift */,
+				C961B62D2E15BC6B00738076 /* UserProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				C96AC6A22D9B511300369BAD /* SplashView.swift in Sources */,
 				C9B3E3BB2D9CA6A600BC3096 /* HeroListView.swift in Sources */,
 				C96AC7D12D9B68B700369BAD /* KeyChainKC.swift in Sources */,
+				C961B62E2E15BC6B00738076 /* UserProfileView.swift in Sources */,
 				C93892642DA9D1AF0094C753 /* CustomButton.swift in Sources */,
 				C96AC6D52D9B5A4F00369BAD /* LoginView.swift in Sources */,
 				C95DD0562DAB0D7C001366FC /* RegisterRequest.swift in Sources */,
@@ -620,7 +624,7 @@
 				C9B3E34C2D9C918D00BC3096 /* StatusModel.swift in Sources */,
 				C95DD0542DAB0B26001366FC /* UserAuthService.swift in Sources */,
 				C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */,
-				C905B8092DA88D950034EB14 /* UserProfileView.swift in Sources */,
+				C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */,
 				C9B3E3532D9C9D7B00BC3096 /* LoadingView.swift in Sources */,
 				C96154FE2D9ED4FD00BF755D /* AuthTokenResponse.swift in Sources */,
 				C938925C2DA9CCD90094C753 /* RegisterUserView.swift in Sources */,

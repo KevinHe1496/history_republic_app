@@ -10,6 +10,6 @@ import Foundation
 /// Server Side Endpoints 
 enum EndPoints: String {
     case login = "/api/auth/login"
-    case register = "/api/auth/register "
+    case register = "/api/auth/register"
     case podcasts = "/api/heroes"
 }
