@@ -28,6 +28,7 @@ struct HeroListView: View {
                         NavigationLink {
                             HeroDetailView(url: hero.url)
                         } label: {
+                            
                             HeroRowView(heroes: hero)
                         }
                     }
