@@ -45,7 +45,7 @@ struct TabBarView: View {
                 FavoriteView()
             }
             Tab("Perfil", systemImage: "person.fill") {
-                DefaultProfileView()
+                UserProfileView()
             }
         }
     }

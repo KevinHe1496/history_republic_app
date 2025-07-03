@@ -17,6 +17,8 @@
 		BFAD1BD02E15BFFE0036C2A3 /* UserProfileServiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */; };
 		BFAD1BD22E15C0A90036C2A3 /* UserProfileServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */; };
 		BFAD1BDA2E15CE130036C2A3 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */; };
+		BFFACBE62E16C56D0027FEA6 /* EditUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFACBE52E16C56D0027FEA6 /* EditUserProfileView.swift */; };
+		BFFACBE82E16DC170027FEA6 /* TermsOfUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFACBE72E16DC170027FEA6 /* TermsOfUseView.swift */; };
 		C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905B8082DA88D950034EB14 /* DefaultProfileView.swift */; };
 		C938925C2DA9CCD90094C753 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925B2DA9CCD90094C753 /* RegisterUserView.swift */; };
 		C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925F2DA9CFA40094C753 /* CustomTextField.swift */; };
@@ -90,6 +92,8 @@
 		BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceRepositoryProtocol.swift; sourceTree = "<group>"; };
 		BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceUseCase.swift; sourceTree = "<group>"; };
 		BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		BFFACBE52E16C56D0027FEA6 /* EditUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserProfileView.swift; sourceTree = "<group>"; };
+		BFFACBE72E16DC170027FEA6 /* TermsOfUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseView.swift; sourceTree = "<group>"; };
 		C905B8082DA88D950034EB14 /* DefaultProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProfileView.swift; sourceTree = "<group>"; };
 		C938925B2DA9CCD90094C753 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
 		C938925F2DA9CFA40094C753 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 				BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */,
 				C905B8082DA88D950034EB14 /* DefaultProfileView.swift */,
 				C961B62D2E15BC6B00738076 /* UserProfileView.swift */,
+				BFFACBE52E16C56D0027FEA6 /* EditUserProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 			children = (
 				C9B3E3522D9C9D7B00BC3096 /* LoadingView.swift */,
 				C9B3E3B52D9C9F9100BC3096 /* ErrorView.swift */,
+				BFFACBE72E16DC170027FEA6 /* TermsOfUseView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -613,6 +619,7 @@
 				C9AB7D452DAB4336003D6C5E /* UserAuthServiceUseCase.swift in Sources */,
 				BF1C72AA2E1579430008D806 /* WebView.swift in Sources */,
 				C9B3E3B62D9C9F9100BC3096 /* ErrorView.swift in Sources */,
+				BFFACBE82E16DC170027FEA6 /* TermsOfUseView.swift in Sources */,
 				C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */,
 				C9AB7D472DAB43D7003D6C5E /* UserAuthServiceRepository.swift in Sources */,
 				C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */,
@@ -637,6 +644,7 @@
 				C961B62E2E15BC6B00738076 /* UserProfileView.swift in Sources */,
 				C93892642DA9D1AF0094C753 /* CustomButton.swift in Sources */,
 				C96AC6D52D9B5A4F00369BAD /* LoginView.swift in Sources */,
+				BFFACBE62E16C56D0027FEA6 /* EditUserProfileView.swift in Sources */,
 				C95DD0562DAB0D7C001366FC /* RegisterRequest.swift in Sources */,
 				C96AC73F2D9B648400369BAD /* EndPoints.swift in Sources */,
 				C96155902D9EE25800BF755D /* HeroRowView.swift in Sources */,
