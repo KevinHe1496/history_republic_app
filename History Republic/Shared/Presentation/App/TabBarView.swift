@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
-    
+    @Environment(AppStateVM.self) var appState
     init() {
         // Create a custom appearance
         let appearance = UITabBarAppearance()
@@ -45,7 +45,11 @@ struct TabBarView: View {
                 FavoriteView()
             }
             Tab("Perfil", systemImage: "person.fill") {
-                UserProfileView()
+                if KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN) != "" {
+                    UserProfileView()
+                } else {
+                    DefaultProfileView()
+                }
             }
         }
     }
