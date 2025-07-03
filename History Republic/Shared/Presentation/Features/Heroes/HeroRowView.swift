@@ -41,24 +41,25 @@ struct HeroRowView: View {
                 .padding(.horizontal)
             }
             .padding(.horizontal)
-
-            // Botón de favorito (arriba a la derecha)
-            Button(action: {
-                Task {
-                 try await FavoriteService().addFavorite(with: heroes.id)
+            if KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN) != "" {
+                // Botón de favorito (arriba a la derecha)
+                Button(action: {
+                    Task {
+                        try await FavoriteService().addFavorite(with: heroes.id)
+                    }
+                    isFavorite.toggle()
+                    // Aquí podrías llamar a tu FavoriteService
+                }) {
+                    Image(systemName: isFavorite ? "heart.fill" : "heart")
+                        .font(.system(size: 24))
+                        .padding(8)
+                        .background(.white.opacity(0.8))
+                        .clipShape(Circle())
+                        .foregroundStyle(isFavorite ? .red : .gray)
                 }
-                isFavorite.toggle()
-                // Aquí podrías llamar a tu FavoriteService
-            }) {
-                Image(systemName: isFavorite ? "heart.fill" : "heart")
-                    .font(.system(size: 24))
-                    .padding(8)
-                    .background(.white.opacity(0.8))
-                    .clipShape(Circle())
-                    .foregroundStyle(isFavorite ? .red : .gray)
+                .buttonStyle(.borderless)
+                .padding(8)
             }
-            .buttonStyle(.borderless)
-            .padding(8)
         }
     }
 }

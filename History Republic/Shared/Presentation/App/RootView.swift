@@ -30,13 +30,21 @@ struct RootView: View {
             withAnimation {
                 RegisterUserView(appState: appState)
             }
-        case .loaded:
+        case .inicio:
             withAnimation {
                 TabBarView()
             }
         case .error(error: let errorString):
             withAnimation {
                 Text("Error \(errorString)")
+            }
+        case .userProfile:
+            withAnimation {
+                UserProfileView()
+            }
+        case .defaultProfile:
+            withAnimation {
+                DefaultProfileView()
             }
         }
     }

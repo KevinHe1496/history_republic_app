@@ -16,13 +16,9 @@
 		BFAD1BCE2E15BE070036C2A3 /* UserProfileServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BCD2E15BE010036C2A3 /* UserProfileServiceRepository.swift */; };
 		BFAD1BD02E15BFFE0036C2A3 /* UserProfileServiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */; };
 		BFAD1BD22E15C0A90036C2A3 /* UserProfileServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */; };
-
+		BFAD1BDA2E15CE130036C2A3 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */; };
 		C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905B8082DA88D950034EB14 /* DefaultProfileView.swift */; };
 		C92E12D92E15CCB3001BEA10 /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92E12D82E15CCB3001BEA10 /* FavoriteService.swift */; };
-
-		BFAD1BDA2E15CE130036C2A3 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */; };
-
-
 		C938925C2DA9CCD90094C753 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925B2DA9CCD90094C753 /* RegisterUserView.swift */; };
 		C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925F2DA9CFA40094C753 /* CustomTextField.swift */; };
 		C93892622DA9D0E30094C753 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93892612DA9D0E30094C753 /* CustomSecureField.swift */; };
@@ -52,6 +48,8 @@
 		C96AC7D42D9B68E000369BAD /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C96AC7D32D9B68E000369BAD /* KeychainSwift */; };
 		C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7D92D9B69DC00369BAD /* hrPersistenceKeyChain.swift */; };
 		C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7DE2D9B701400369BAD /* AppStateVM.swift */; };
+		C9A0AD0E2E16CE97003E843D /* LoadingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0AD0D2E16CE97003E843D /* LoadingProgressView.swift */; };
+		C9A0AD102E16D035003E843D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0AD0F2E16D035003E843D /* Enums.swift */; };
 		C9AB7D352DAB3FAD003D6C5E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */; };
 		C9AB7D432DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D422DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift */; };
 		C9AB7D452DAB4336003D6C5E /* UserAuthServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D442DAB4336003D6C5E /* UserAuthServiceUseCase.swift */; };
@@ -94,13 +92,9 @@
 		BFAD1BCD2E15BE010036C2A3 /* UserProfileServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceRepository.swift; sourceTree = "<group>"; };
 		BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceRepositoryProtocol.swift; sourceTree = "<group>"; };
 		BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceUseCase.swift; sourceTree = "<group>"; };
-
+		BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		C905B8082DA88D950034EB14 /* DefaultProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProfileView.swift; sourceTree = "<group>"; };
 		C92E12D82E15CCB3001BEA10 /* FavoriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
-
-		BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
-
-
 		C938925B2DA9CCD90094C753 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
 		C938925F2DA9CFA40094C753 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C93892612DA9D0E30094C753 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
@@ -132,6 +126,8 @@
 		C96AC7D02D9B68B700369BAD /* KeyChainKC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainKC.swift; sourceTree = "<group>"; };
 		C96AC7D92D9B69DC00369BAD /* hrPersistenceKeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hrPersistenceKeyChain.swift; sourceTree = "<group>"; };
 		C96AC7DE2D9B701400369BAD /* AppStateVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateVM.swift; sourceTree = "<group>"; };
+		C9A0AD0D2E16CE97003E843D /* LoadingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProgressView.swift; sourceTree = "<group>"; };
+		C9A0AD0F2E16D035003E843D /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C9AB7D422DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthServiceRepositoryProtocol.swift; sourceTree = "<group>"; };
 		C9AB7D442DAB4336003D6C5E /* UserAuthServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthServiceUseCase.swift; sourceTree = "<group>"; };
@@ -229,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				BF1C72A92E1579400008D806 /* WebView.swift */,
+				C9A0AD0D2E16CE97003E843D /* LoadingProgressView.swift */,
 			);
 			path = ReusableUI;
 			sourceTree = "<group>";
@@ -396,6 +393,7 @@
 				C96154FF2D9ED50E00BF755D /* HeroResponse.swift */,
 				C95DD0552DAB0D7C001366FC /* RegisterRequest.swift */,
 				C9B3E34B2D9C918D00BC3096 /* StatusModel.swift */,
+				C9A0AD0F2E16D035003E843D /* Enums.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -627,6 +625,7 @@
 				C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */,
 				C9AB7D472DAB43D7003D6C5E /* UserAuthServiceRepository.swift in Sources */,
 				C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */,
+				C9A0AD0E2E16CE97003E843D /* LoadingProgressView.swift in Sources */,
 				C96155002D9ED50E00BF755D /* HeroResponse.swift in Sources */,
 				C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */,
 				BF1C72AE2E1587E40008D806 /* Font-Theme.swift in Sources */,
@@ -660,6 +659,7 @@
 				C9B3E34C2D9C918D00BC3096 /* StatusModel.swift in Sources */,
 				C95DD0542DAB0B26001366FC /* UserAuthService.swift in Sources */,
 				BFAD1BDA2E15CE130036C2A3 /* UserProfileViewModel.swift in Sources */,
+				C9A0AD102E16D035003E843D /* Enums.swift in Sources */,
 				BFAD1BD22E15C0A90036C2A3 /* UserProfileServiceUseCase.swift in Sources */,
 				C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */,
 				C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */,

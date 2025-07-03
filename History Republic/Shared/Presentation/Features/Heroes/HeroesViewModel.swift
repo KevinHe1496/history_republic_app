@@ -10,7 +10,7 @@ import Foundation
 @Observable
 final class HeroesViewModel {
     
-    var heroesData = [HeroResponse]()
+    var status: ViewState<[HeroResponse]> = .idle
 
     @ObservationIgnored
     private var useCase: HeroServiceUseCaseProtocol
@@ -26,8 +26,12 @@ final class HeroesViewModel {
     
     @MainActor
     func fetchAllHeroes() async throws {
-        let data = try await useCase.fetchHeroes()
-        self.heroesData = data
+        status = .loading
+        do {
+            let data = try await useCase.fetchHeroes()
+            status = .success(data)
+        } catch {
+            status = .error("No se pudo cargar los heroes")
+        }
     }
-    
 }
