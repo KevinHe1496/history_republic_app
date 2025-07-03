@@ -51,6 +51,7 @@ final class UserProfileService: UserProfileServiceProtocol {
         request.httpMethod = HttpMethods.put
         let jwToken = KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN)
         request.setValue("Bearer \(jwToken)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = jsonData
         
        
