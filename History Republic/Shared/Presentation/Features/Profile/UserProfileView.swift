@@ -17,7 +17,7 @@ struct UserProfileView: View {
         NavigationStack {
             List {
                 VStack(alignment: .center) {
-                    Text("Profile")
+                    Text("Perfil")
                         .font(.appTitle)
                     Image(systemName: "person.fill")
                         .resizable()
