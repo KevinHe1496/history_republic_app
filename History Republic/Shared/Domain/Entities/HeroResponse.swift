@@ -24,7 +24,7 @@ struct HeroResponse: Codable, Identifiable {
         id: UUID(uuidString: "12345678-1234-1234-1234-1234567890AB")!,
         nameHero: "Goku",
         title: "Saiyan Warrior",
-        information: "",
+        information: "ashiodiasdh asidas0 ashd haishdasiop dhasipodsahidpyais udhjapsd ashd pshd aoshd",
         image: "goku_image", // Suponiendo que es el nombre de una imagen en tus assets
         url: "https://historyrepublic.com/wp-content/uploads/2025/05/St_Olga_by_Nesterov_in_1892.jpg", favoriteHero: false
     )

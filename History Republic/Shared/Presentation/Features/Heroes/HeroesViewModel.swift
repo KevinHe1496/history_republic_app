@@ -9,23 +9,17 @@ import Foundation
 
 @Observable
 final class HeroesViewModel {
-    
+
     var status: ViewState<[HeroResponse]> = .idle
-    var heroes = [HeroResponse]()
-    var favoriteHeroSelected: Bool = false
-    
-    @ObservationIgnored
-    private var useCase: HeroServiceUseCaseProtocol
-    
-    
-    init(useCase: HeroServiceUseCaseProtocol = HeroServiceUseCase()){
+    var heroes: [HeroResponse] = []
+
+    @ObservationIgnored private var useCase: HeroServiceUseCaseProtocol
+
+    init(useCase: HeroServiceUseCaseProtocol = HeroServiceUseCase()) {
         self.useCase = useCase
-        
-        Task(priority: .high) {
-            try await fetchAllHeroes()
-        }
+        Task { try await fetchAllHeroes() }
     }
-    
+
     @MainActor
     func fetchAllHeroes() async throws {
         status = .loading
@@ -33,47 +27,33 @@ final class HeroesViewModel {
             heroes = try await useCase.fetchHeroes()
             status = .success(heroes)
         } catch {
-            status = .error("No se pudo cargar los heroes")
+            status = .error("No se pudo cargar los héroes")
         }
     }
-    
+
+    /// Alterna favorito con actualización optimista
     @MainActor
-    func setLike(with heroID: UUID) async throws {
+    func toggleFavorite(heroID: UUID, newValue: Bool) async throws {
+        guard let idx = heroes.firstIndex(where: { $0.id == heroID }) else { return }
+
+        // ① cambiamos en memoria
+        heroes[idx].favoriteHero = newValue
+
         do {
-            _ = try await useCase.addFavorite(with: heroID)
-        } catch {
-            print("Hubo un error haciendo like al heroe: \(error.localizedDescription)")
-        }
-    }
-    @MainActor
-    func removeLike(with heroID: UUID) async throws {
-        do {
-            _ = try await useCase.removeFavorite(with: heroID)
-        } catch {
-            print("Hubo un error removiendo el like del hero: \(error.localizedDescription)")
-        }
-    }
-    
-    @MainActor
-    func toggleFavorite(_ id: UUID, current: Bool) async throws {
-        guard let idx = heroes.firstIndex(where: { $0.id == id }) else {
-            return
-        }
-        
-        heroes[idx].favoriteHero.toggle()
-        
-        do {
-            if current == false {
-                try await useCase.removeFavorite(with: id)
+            if newValue {
+                try await useCase.addFavorite(with: heroID)
             } else {
-                try await useCase.addFavorite(with: id)
+                try await useCase.removeFavorite(with: heroID)
             }
         } catch {
-            // 2️⃣  Si falla, revertir y mostrar alerta
-            heroes[idx].favoriteHero = current
-            print("Error al cambiar favorito: \(error.localizedDescription)")
-            // Podrías usar `@State var alert` para notificar al usuario
+            // ② revertimos si falla
+            heroes[idx].favoriteHero.toggle()
+            throw error
         }
     }
-    
+
+    /// Conveniencia para las vistas
+    func isFavorite(heroID: UUID) -> Bool {
+        heroes.first(where: { $0.id == heroID })?.favoriteHero ?? false
+    }
 }

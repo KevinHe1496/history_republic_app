@@ -26,16 +26,17 @@ struct HeroListView: View {
                 VStack(spacing: 16) {
                     
                     // Secciónes y Podcasts
-                    List(heroes) { hero in
-                        
+                    // HeroListView.swift  (solo la parte de la lista)
+                    List($viewModel.heroes, id: \.id) { $hero in     // ← $viewModel.heroes
                         NavigationLink {
                             HeroDetailView(url: hero.url)
                         } label: {
-                            
-                            HeroRowView(hero: hero, viewModel: viewModel)
+                            HeroRowView(hero: $hero,                 // ← ahora sí hay $hero
+                                        viewModel: viewModel)
                         }
                     }
                     .listStyle(.plain)
+
                 }
                 .navigationTitle("Heroes")
             case .error(let message):

@@ -67,6 +67,7 @@
 		C9B3E3BB2D9CA6A600BC3096 /* HeroListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E3BA2D9CA6A600BC3096 /* HeroListView.swift */; };
 		C9B6994D2DA7483C000CDB68 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6994C2DA7483C000CDB68 /* TabBarView.swift */; };
 		C9B6994F2DA74C59000CDB68 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6994E2DA74C59000CDB68 /* FavoriteView.swift */; };
+		C9CF863A2E1C764600348736 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF86392E1C764600348736 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		C9B3E3BA2D9CA6A600BC3096 /* HeroListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListView.swift; sourceTree = "<group>"; };
 		C9B6994C2DA7483C000CDB68 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C9B6994E2DA74C59000CDB68 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		C9CF86392E1C764600348736 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -232,6 +234,7 @@
 		BF1C729F2E1576CA0008D806 /* ReusableUI */ = {
 			isa = PBXGroup;
 			children = (
+				C9CF86392E1C764600348736 /* FavoriteButton.swift */,
 				BF1C72A92E1579400008D806 /* WebView.swift */,
 				C9A0AD0D2E16CE97003E843D /* LoadingProgressView.swift */,
 			);
@@ -684,6 +687,7 @@
 				C95DD0542DAB0B26001366FC /* UserAuthService.swift in Sources */,
 				BFAD1BDA2E15CE130036C2A3 /* UserProfileViewModel.swift in Sources */,
 				C9A0AD102E16D035003E843D /* Enums.swift in Sources */,
+				C9CF863A2E1C764600348736 /* FavoriteButton.swift in Sources */,
 				BFAD1BD22E15C0A90036C2A3 /* UserProfileServiceUseCase.swift in Sources */,
 				C96AC7CB2D9B665C00369BAD /* HttpResponseCodes.swift in Sources */,
 				C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */,
