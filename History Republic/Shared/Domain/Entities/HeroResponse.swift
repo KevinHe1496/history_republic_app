@@ -9,6 +9,7 @@ struct HeroResponse: Codable, Identifiable {
     let information: String
     let image: String
     let url: String
+    var favoriteHero: Bool
     
     var imageURL: URL? {
         if let url = URL(string: image) {
@@ -25,7 +26,7 @@ struct HeroResponse: Codable, Identifiable {
         title: "Saiyan Warrior",
         information: "",
         image: "goku_image", // Suponiendo que es el nombre de una imagen en tus assets
-        url: "https://historyrepublic.com/wp-content/uploads/2025/05/St_Olga_by_Nesterov_in_1892.jpg"
+        url: "https://historyrepublic.com/wp-content/uploads/2025/05/St_Olga_by_Nesterov_in_1892.jpg", favoriteHero: false
     )
 }
 

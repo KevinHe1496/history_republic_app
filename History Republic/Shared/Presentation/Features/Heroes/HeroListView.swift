@@ -32,7 +32,7 @@ struct HeroListView: View {
                             HeroDetailView(url: hero.url)
                         } label: {
                             
-                            HeroRowView(heroes: hero)
+                            HeroRowView(hero: hero, viewModel: viewModel)
                         }
                     }
                     .listStyle(.plain)

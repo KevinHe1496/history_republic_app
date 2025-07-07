@@ -50,6 +50,10 @@
 		C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AC7DE2D9B701400369BAD /* AppStateVM.swift */; };
 		C9A0AD0E2E16CE97003E843D /* LoadingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0AD0D2E16CE97003E843D /* LoadingProgressView.swift */; };
 		C9A0AD102E16D035003E843D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0AD0F2E16D035003E843D /* Enums.swift */; };
+		C9A0AD132E16DA6A003E843D /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0AD122E16DA6A003E843D /* FavoritesManager.swift */; };
+		C9A0AD152E16F5DB003E843D /* FavoriteServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0AD142E16F5DB003E843D /* FavoriteServiceRepository.swift */; };
+		C9A0AD172E16F638003E843D /* FavoriteServiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0AD162E16F638003E843D /* FavoriteServiceRepositoryProtocol.swift */; };
+		C9A0AD192E16F6A1003E843D /* FavoriteServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0AD182E16F6A1003E843D /* FavoriteServiceUseCase.swift */; };
 		C9AB7D352DAB3FAD003D6C5E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */; };
 		C9AB7D432DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D422DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift */; };
 		C9AB7D452DAB4336003D6C5E /* UserAuthServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB7D442DAB4336003D6C5E /* UserAuthServiceUseCase.swift */; };
@@ -128,6 +132,10 @@
 		C96AC7DE2D9B701400369BAD /* AppStateVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateVM.swift; sourceTree = "<group>"; };
 		C9A0AD0D2E16CE97003E843D /* LoadingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProgressView.swift; sourceTree = "<group>"; };
 		C9A0AD0F2E16D035003E843D /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		C9A0AD122E16DA6A003E843D /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		C9A0AD142E16F5DB003E843D /* FavoriteServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteServiceRepository.swift; sourceTree = "<group>"; };
+		C9A0AD162E16F638003E843D /* FavoriteServiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteServiceRepositoryProtocol.swift; sourceTree = "<group>"; };
+		C9A0AD182E16F6A1003E843D /* FavoriteServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteServiceUseCase.swift; sourceTree = "<group>"; };
 		C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C9AB7D422DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthServiceRepositoryProtocol.swift; sourceTree = "<group>"; };
 		C9AB7D442DAB4336003D6C5E /* UserAuthServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthServiceUseCase.swift; sourceTree = "<group>"; };
@@ -302,6 +310,7 @@
 		C96AC6942D9B4FCD00369BAD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C9A0AD112E16DA5C003E843D /* Helpers */,
 				C96AC6952D9B4FD400369BAD /* Data */,
 				C96AC6982D9B500100369BAD /* Domain */,
 				C96AC69D2D9B504700369BAD /* Presentation */,
@@ -325,9 +334,9 @@
 				C96AC6972D9B4FE600369BAD /* BaseNetwork */,
 				C95DD0532DAB0B26001366FC /* UserAuthService.swift */,
 				C96155622D9ED67E00BF755D /* HeroService.swift */,
+				C92E12D82E15CCB3001BEA10 /* FavoriteService.swift */,
 				C9AB7D342DAB3FAD003D6C5E /* NetworkService.swift */,
 				BF1C72AF2E15A1F50008D806 /* UserProfileService.swift */,
-				C92E12D82E15CCB3001BEA10 /* FavoriteService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -361,6 +370,7 @@
 				BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */,
 				C96155682D9EDFD400BF755D /* HeroServiceUseCase.swift */,
 				C9AB7D442DAB4336003D6C5E /* UserAuthServiceUseCase.swift */,
+				C9A0AD182E16F6A1003E843D /* FavoriteServiceUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -377,6 +387,7 @@
 		C96AC69B2D9B503700369BAD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				C9A0AD162E16F638003E843D /* FavoriteServiceRepositoryProtocol.swift */,
 				BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */,
 				C96155662D9EDCEA00BF755D /* HeroServiceRepositoryProtocol.swift */,
 				C9AB7D422DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift */,
@@ -440,8 +451,17 @@
 				BFAD1BCD2E15BE010036C2A3 /* UserProfileServiceRepository.swift */,
 				C96155642D9EDCAD00BF755D /* HeroServiceRepository.swift */,
 				C9AB7D462DAB43D7003D6C5E /* UserAuthServiceRepository.swift */,
+				C9A0AD142E16F5DB003E843D /* FavoriteServiceRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		C9A0AD112E16DA5C003E843D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C9A0AD122E16DA6A003E843D /* FavoritesManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C9B3E3512D9C9D5800BC3096 /* Utilities */ = {
@@ -622,10 +642,13 @@
 				C9AB7D452DAB4336003D6C5E /* UserAuthServiceUseCase.swift in Sources */,
 				BF1C72AA2E1579430008D806 /* WebView.swift in Sources */,
 				C9B3E3B62D9C9F9100BC3096 /* ErrorView.swift in Sources */,
+				C9A0AD152E16F5DB003E843D /* FavoriteServiceRepository.swift in Sources */,
 				C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */,
+				C9A0AD172E16F638003E843D /* FavoriteServiceRepositoryProtocol.swift in Sources */,
 				C9AB7D472DAB43D7003D6C5E /* UserAuthServiceRepository.swift in Sources */,
 				C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */,
 				C9A0AD0E2E16CE97003E843D /* LoadingProgressView.swift in Sources */,
+				C9A0AD132E16DA6A003E843D /* FavoritesManager.swift in Sources */,
 				C96155002D9ED50E00BF755D /* HeroResponse.swift in Sources */,
 				C96AC6912D9B4FC300369BAD /* History_RepublicApp.swift in Sources */,
 				BF1C72AE2E1587E40008D806 /* Font-Theme.swift in Sources */,
@@ -657,6 +680,7 @@
 				C9AB7D432DAB4316003D6C5E /* UserAuthServiceRepositoryProtocol.swift in Sources */,
 				C9B3E3502D9C93F000BC3096 /* RootView.swift in Sources */,
 				C9B3E34C2D9C918D00BC3096 /* StatusModel.swift in Sources */,
+				C9A0AD192E16F6A1003E843D /* FavoriteServiceUseCase.swift in Sources */,
 				C95DD0542DAB0B26001366FC /* UserAuthService.swift in Sources */,
 				BFAD1BDA2E15CE130036C2A3 /* UserProfileViewModel.swift in Sources */,
 				C9A0AD102E16D035003E843D /* Enums.swift in Sources */,

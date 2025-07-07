@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct HeroRowView: View {
-    let heroes: HeroResponse
+    let hero: HeroResponse
     @State private var isFavorite = false
-
+    @State var viewModel: HeroesViewModel
+    
     var body: some View {
         ZStack(alignment: .topTrailing) {
             HStack {
-                AsyncImage(url: heroes.imageURL) { image in
+                AsyncImage(url: hero.imageURL) { image in
                     image
                         .resizable()
                         .scaledToFill()
@@ -30,7 +31,7 @@ struct HeroRowView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 10) {
-                    Text(heroes.title)
+                    Text(hero.title)
                         .font(.appTitle)
                         .foregroundStyle(.black)
                     
@@ -42,14 +43,12 @@ struct HeroRowView: View {
             }
             .padding(.horizontal)
             if KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN) != "" {
-                // Botón de favorito (arriba a la derecha)
-                Button(action: {
-                    Task {
-                        try await FavoriteService().addFavorite(with: heroes.id)
-                    }
+                Button {
                     isFavorite.toggle()
-                    // Aquí podrías llamar a tu FavoriteService
-                }) {
+                    Task {
+                       try await viewModel.toggleFavorite(hero.id, current: isFavorite)
+                    }
+                } label: {
                     Image(systemName: isFavorite ? "heart.fill" : "heart")
                         .font(.system(size: 24))
                         .padding(8)
@@ -65,5 +64,5 @@ struct HeroRowView: View {
 }
 
 #Preview {
-    HeroRowView(heroes: .sampleHero)
+    HeroRowView(hero: .sampleHero, viewModel: HeroesViewModel())
 }
