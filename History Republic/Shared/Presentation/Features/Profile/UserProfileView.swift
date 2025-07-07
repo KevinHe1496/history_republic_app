@@ -11,21 +11,23 @@ struct UserProfileView: View {
     @Environment(AppStateVM.self) var appState
     
     @State var viewModel = UserProfileViewModel()
+    @State var showAlert: Bool = false
     
     var body: some View {
         NavigationStack {
             List {
                 VStack(alignment: .center) {
-                    Text("Profile")
+                    Text("Perfil")
                         .font(.appTitle)
                     Image(systemName: "person.fill")
                         .resizable()
+                        .foregroundStyle(.white)
                         .scaledToFit()
                         .frame(width: 80, height: 80)
                         .padding(16)
                         .background(
                             Circle()
-                                .fill(Color.red)
+                                .fill(Color.greenSecondary)
                         )
                     
                     Text(viewModel.userData.name)
@@ -33,34 +35,51 @@ struct UserProfileView: View {
                     Text(viewModel.userData.email)
                         .font(.appDescription)
                     
-                    Button("Edit Profile") {
-                        //Todo
-                    }
-                    .frame(width: 150, height: 40)
-                    .background(Color.blue)
-                    .foregroundStyle(.white)
-                    .font(.appButton)
-                    .clipShape(.buttonBorder)
-                    .padding()
                     
-                    
+                  
                 }
                 .frame(maxWidth: .infinity)
                 
+                Section {
+                    NavigationLink("Editar perfil") {
+                        EditUserProfileView(name: viewModel.userData.name)
+                    }
+                    .font(.appDescription)
+                    
+                    NavigationLink("Condiciones de uso") {
+                        TermsOfUseView()
+                    }
+                    .font(.appDescription)
+                }
+                
                 
                 Section {
-                    Button("Logout") {
+                    Button("Cerrar sesión") {
                         appState.closeSessionUser()
                     }
                     .foregroundStyle(.greenSecondary)
                     .font(.appButton)
-                    Button("Delete Account") {
-                        Task {
-                          try await viewModel.deleteUser()
-                        }
+                    Button("Borrar cuenta") {
+                       showAlert = true
                     }
                     .font(.appButton)
-                    .foregroundStyle(.red)
+                    .foregroundStyle(.greenSecondary)
+                    .alert("Borrar mi cuenta", isPresented: $showAlert) {
+                        Button("Eliminar", role: .destructive) {
+                            Task {
+                                try await viewModel.deleteUser()
+                            }
+                        }
+                        
+                        Button("Cancelar", role: .cancel) { }
+                    } message: {
+                        Text("¿Estás seguro que quieres eliminar tu cuenta?")
+                    }
+                }
+            }
+            .onAppear {
+                Task {
+                    try await viewModel.fetchUser()
                 }
             }
         }

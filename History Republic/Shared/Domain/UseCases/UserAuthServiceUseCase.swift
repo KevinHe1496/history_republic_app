@@ -25,10 +25,10 @@ final class UserAuthServiceUseCase: UserAuthServiceUsecaseProtocol {
         self.repo = repo
     }
     func registerUser(name: String, email: String, password: String) async throws -> Bool {
-        let user = try await repo.registerUser(name: name, email: email, password: password)
+        let token = try await repo.registerUser(name: name, email: email, password: password)
         
-        if user != "" {
-            
+        if token != "" {
+            tokenJWT = token
             return true
         } else {
             

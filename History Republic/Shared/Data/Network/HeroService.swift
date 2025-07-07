@@ -15,7 +15,13 @@ protocol HeroServiceProtocol {
 
 final class HeroService: HeroServiceProtocol {
     
-    private let session: URLSession = .shared
+
+    private let session: URLSession
+    
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
+
     
     func fetchAllHeroes() async throws -> [HeroResponse] {
         
@@ -49,6 +55,7 @@ final class HeroService: HeroServiceProtocol {
             modelReturn = result
         } catch {
             print("Error in fetch heroes \(error.localizedDescription)")
+            throw HRError.errorParsingData
         }
         
         return modelReturn

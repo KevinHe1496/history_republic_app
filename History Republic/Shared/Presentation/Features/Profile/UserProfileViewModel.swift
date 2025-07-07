@@ -20,7 +20,7 @@ final class UserProfileViewModel {
             let data = try await useCase.fetchUser()
             userData = data
         } catch {
-            print("Error en ViewModel o no se")
+            print("Error Fetching user in viewModel")
         }
     }
     

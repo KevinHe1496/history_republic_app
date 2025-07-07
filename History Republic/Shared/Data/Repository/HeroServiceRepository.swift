@@ -8,9 +8,9 @@
 import Foundation
 
 final class HeroServiceRepository: HeroServiceRepositoryProtocol {
-    private var network: HeroService
+    private var network: HeroServiceProtocol
     
-    init(network: HeroService = HeroService()) {
+    init(network: HeroServiceProtocol = HeroService()) {
         self.network = network
     }
     
@@ -26,4 +26,3 @@ final class HeroServiceRepository: HeroServiceRepositoryProtocol {
         return try await network.removeFavorite(with: idHero)
     }
 }
-
