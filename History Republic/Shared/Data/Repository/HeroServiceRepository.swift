@@ -17,4 +17,12 @@ final class HeroServiceRepository: HeroServiceRepositoryProtocol {
     func fetchHeroes() async throws -> [HeroResponse] {
         return try await network.fetchAllHeroes()
     }
+    
+    func addFavorite(with idHero: UUID) async throws {
+        return try await network.addFavorite(with: idHero)
+    }
+    
+    func removeFavorite(with idHero: UUID) async throws {
+        return try await network.removeFavorite(with: idHero)
+    }
 }

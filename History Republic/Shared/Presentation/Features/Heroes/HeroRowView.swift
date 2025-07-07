@@ -8,61 +8,48 @@
 import SwiftUI
 
 struct HeroRowView: View {
-    let heroes: HeroResponse
-    @State private var isFavorite = false
+    @Binding var hero: HeroResponse          // ← enlace directo
+    @State var viewModel: HeroesViewModel
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
             HStack {
-                AsyncImage(url: heroes.imageURL) { image in
-                    image
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 100, height: 150)
-                        .clipped()
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                AsyncImage(url: hero.imageURL) { image in
+                    image.resizable()
+                         .scaledToFill()
+                         .frame(width: 100, height: 150)
+                         .clipShape(RoundedRectangle(cornerRadius: 8))
                 } placeholder: {
                     ProgressView()
-                        .tint(.white)
                         .frame(width: 100, height: 150)
-                        .background(.gray)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
                 }
-                
+
                 VStack(alignment: .leading, spacing: 10) {
-                    Text(heroes.title)
+                    Text(hero.title)
                         .font(.appTitle)
-                        .foregroundStyle(.black)
-                    
-                    Text("Joan of Arc was a teen who helped turn the tide of the Hundred Years’ War.")
+                    Text(hero.information)
                         .font(.appDescription)
-                        .foregroundStyle(.black)
                 }
                 .padding(.horizontal)
             }
             .padding(.horizontal)
 
-            // Botón de favorito (arriba a la derecha)
-            Button(action: {
-                Task {
-                 try await FavoriteService().addFavorite(with: heroes.id)
+            // ❤️ Botón favorito
+            if !KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN).isEmpty {
+                FavoriteButton(isFavorite: $hero.favoriteHero) { newValue in
+                    Task {
+                        try await viewModel.toggleFavorite(heroID: hero.id,
+                                                           newValue: newValue)
+                    }
                 }
-                isFavorite.toggle()
-                // Aquí podrías llamar a tu FavoriteService
-            }) {
-                Image(systemName: isFavorite ? "heart.fill" : "heart")
-                    .font(.system(size: 24))
-                    .padding(8)
-                    .background(.white.opacity(0.8))
-                    .clipShape(Circle())
-                    .foregroundStyle(isFavorite ? .red : .gray)
+                .padding(8)
             }
-            .buttonStyle(.borderless)
-            .padding(8)
         }
     }
 }
 
+
+
 #Preview {
-    HeroRowView(heroes: .sampleHero)
+    HeroRowView(hero: .constant(.sampleHero), viewModel: HeroesViewModel())
 }

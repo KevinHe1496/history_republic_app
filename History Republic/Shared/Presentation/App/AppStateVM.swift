@@ -70,7 +70,7 @@ final class AppStateVM {
         
         Task {
             if try await loginUseCase.loginApp(user: user, password: pass) == true {
-                self.status = .loaded
+                self.status = .inicio
             } else {
                 self.status = .error(error: "Incorrect username or password")
             }
@@ -91,7 +91,7 @@ final class AppStateVM {
     func validateControlLogin() {
         Task {
             if await loginUseCase.validateToken() == true {
-                self.status = .loaded
+                self.status = .inicio
                 NSLog("Login OK")
             } else {
                 self.startSplashToLoginView()
