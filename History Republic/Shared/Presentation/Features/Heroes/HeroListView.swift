@@ -22,7 +22,7 @@ struct HeroListView: View {
             switch viewModel.status {
             case .idle, .loading:
                 LoadingProgressView()
-            case .success(let heroes):
+            case .success:
                 VStack(spacing: 16) {
                     
                     // Secciónes y Podcasts
