@@ -11,6 +11,10 @@
 		BF0C0FA72E1C2476000F43CB /* MockHeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FA62E1C246A000F43CB /* MockHeroService.swift */; };
 		BF0C0FA92E1C262C000F43CB /* HeroServiceUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FA82E1C262C000F43CB /* HeroServiceUseCaseTests.swift */; };
 		BF0C0FAB2E1C2BD2000F43CB /* HeroServiceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FAA2E1C2BD2000F43CB /* HeroServiceViewModelTests.swift */; };
+		BF0C0FAF2E1C33CD000F43CB /* UserAuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FAE2E1C33CD000F43CB /* UserAuthServiceTests.swift */; };
+		BF0C0FB12E1C374B000F43CB /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FB02E1C3748000F43CB /* MockAuthService.swift */; };
+		BF0C0FB32E1C3880000F43CB /* UserAuthServiceUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FB22E1C3880000F43CB /* UserAuthServiceUseCaseTests.swift */; };
+		BF0C0FB52E1C3E1C000F43CB /* UserAuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FB42E1C3E1C000F43CB /* UserAuthViewModelTests.swift */; };
 		BF1C72AA2E1579430008D806 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72A92E1579400008D806 /* WebView.swift */; };
 		BF1C72AC2E1579630008D806 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AB2E1579630008D806 /* HeroDetailView.swift */; };
 		BF1C72AE2E1587E40008D806 /* Font-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AD2E1587DE0008D806 /* Font-Theme.swift */; };
@@ -94,6 +98,10 @@
 		BF0C0FA62E1C246A000F43CB /* MockHeroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeroService.swift; sourceTree = "<group>"; };
 		BF0C0FA82E1C262C000F43CB /* HeroServiceUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroServiceUseCaseTests.swift; sourceTree = "<group>"; };
 		BF0C0FAA2E1C2BD2000F43CB /* HeroServiceViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroServiceViewModelTests.swift; sourceTree = "<group>"; };
+		BF0C0FAE2E1C33CD000F43CB /* UserAuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthServiceTests.swift; sourceTree = "<group>"; };
+		BF0C0FB02E1C3748000F43CB /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
+		BF0C0FB22E1C3880000F43CB /* UserAuthServiceUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthServiceUseCaseTests.swift; sourceTree = "<group>"; };
+		BF0C0FB42E1C3E1C000F43CB /* UserAuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthViewModelTests.swift; sourceTree = "<group>"; };
 		BF1C72A92E1579400008D806 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		BF1C72AB2E1579630008D806 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
 		BF1C72AD2E1587DE0008D806 /* Font-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font-Theme.swift"; sourceTree = "<group>"; };
@@ -273,6 +281,7 @@
 		BFC045C72E1C17AB003D3130 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				BF0C0FB02E1C3748000F43CB /* MockAuthService.swift */,
 				BF0C0FA62E1C246A000F43CB /* MockHeroService.swift */,
 				BFC045D22E1C1AEC003D3130 /* JSON */,
 			);
@@ -283,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				BFC045CD2E1C196E003D3130 /* HeroServiceTests.swift */,
+				BF0C0FAE2E1C33CD000F43CB /* UserAuthServiceTests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -298,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				BF0C0FA82E1C262C000F43CB /* HeroServiceUseCaseTests.swift */,
+				BF0C0FB22E1C3880000F43CB /* UserAuthServiceUseCaseTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -306,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				BF0C0FAA2E1C2BD2000F43CB /* HeroServiceViewModelTests.swift */,
+				BF0C0FB42E1C3E1C000F43CB /* UserAuthViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -757,12 +769,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0C0FB32E1C3880000F43CB /* UserAuthServiceUseCaseTests.swift in Sources */,
 				BF0C0FA92E1C262C000F43CB /* HeroServiceUseCaseTests.swift in Sources */,
 				BFC045CE2E1C196E003D3130 /* HeroServiceTests.swift in Sources */,
 				BF0C0FA72E1C2476000F43CB /* MockHeroService.swift in Sources */,
 				BFC045D12E1C1A4B003D3130 /* MockData.swift in Sources */,
+				BF0C0FAF2E1C33CD000F43CB /* UserAuthServiceTests.swift in Sources */,
+				BF0C0FB12E1C374B000F43CB /* MockAuthService.swift in Sources */,
 				BF0C0FAB2E1C2BD2000F43CB /* HeroServiceViewModelTests.swift in Sources */,
 				BFC045CF2E1C19D2003D3130 /* URLProtocol.swift in Sources */,
+				BF0C0FB52E1C3E1C000F43CB /* UserAuthViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
