@@ -91,11 +91,9 @@ final class UserProfileServiceTests: XCTestCase {
         URLProtocolStub.stubStatusCode = 200
         URLProtocolStub.stubResponseData = "Delete success".data(using: .utf8)
         // Act & Assert
-        do {
-            try await sut.deleteUser()
-        } catch {
-            XCTFail("Expected delete to succeed, but got error: \(error)")
-        }
+      
+        try await sut.deleteUser()
+       
     }
     
     func test_DeleteUser_ShouldThrowError_WhenStatusCodeIs400() async throws {

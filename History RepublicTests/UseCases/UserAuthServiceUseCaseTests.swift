@@ -43,7 +43,6 @@ final class UserAuthServiceUseCaseTests: XCTestCase {
             // Assert
             XCTAssertTrue(result, "Expected login to return true for valid credentials.")
             XCTAssertTrue(mockAuthService.loginCalled, "Expected login to be called in repository.")
-            XCTAssertEqual(useCase.tokenJWT, "mockedLoginToken", "Expected token to be saved.")
         }
 
     

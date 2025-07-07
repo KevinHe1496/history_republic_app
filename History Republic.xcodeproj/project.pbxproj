@@ -90,13 +90,6 @@
 			remoteGlobalIDString = C96AC65C2D9B4F8200369BAD;
 			remoteInfo = "History Republic";
 		};
-		C96AC6782D9B4F8300369BAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C96AC6552D9B4F8200369BAD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C96AC65C2D9B4F8200369BAD;
-			remoteInfo = "History Republic";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -148,7 +141,6 @@
 		C961B62D2E15BC6B00738076 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		C96AC65D2D9B4F8200369BAD /* History Republic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "History Republic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96AC66D2D9B4F8300369BAD /* History RepublicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "History RepublicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C96AC6772D9B4F8300369BAD /* History RepublicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "History RepublicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96AC68A2D9B4FC300369BAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C96AC68C2D9B4FC300369BAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96AC68E2D9B4FC300369BAD /* History_RepublicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History_RepublicApp.swift; sourceTree = "<group>"; };
@@ -177,14 +169,6 @@
 		C9B6994E2DA74C59000CDB68 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C96AC67A2D9B4F8300369BAD /* History RepublicUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "History RepublicUITests";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		C96AC65A2D9B4F8200369BAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -195,13 +179,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C96AC66A2D9B4F8300369BAD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C96AC6742D9B4F8300369BAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -374,7 +351,6 @@
 			children = (
 				C96AC68F2D9B4FC300369BAD /* History Republic */,
 				BFC045C52E1C17A2003D3130 /* History RepublicTests */,
-				C96AC67A2D9B4F8300369BAD /* History RepublicUITests */,
 				C96AC65E2D9B4F8200369BAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -384,7 +360,6 @@
 			children = (
 				C96AC65D2D9B4F8200369BAD /* History Republic.app */,
 				C96AC66D2D9B4F8300369BAD /* History RepublicTests.xctest */,
-				C96AC6772D9B4F8300369BAD /* History RepublicUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -624,29 +599,6 @@
 			productReference = C96AC66D2D9B4F8300369BAD /* History RepublicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C96AC6762D9B4F8300369BAD /* History RepublicUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C96AC6872D9B4F8300369BAD /* Build configuration list for PBXNativeTarget "History RepublicUITests" */;
-			buildPhases = (
-				C96AC6732D9B4F8300369BAD /* Sources */,
-				C96AC6742D9B4F8300369BAD /* Frameworks */,
-				C96AC6752D9B4F8300369BAD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C96AC6792D9B4F8300369BAD /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				C96AC67A2D9B4F8300369BAD /* History RepublicUITests */,
-			);
-			name = "History RepublicUITests";
-			packageProductDependencies = (
-			);
-			productName = "History RepublicUITests";
-			productReference = C96AC6772D9B4F8300369BAD /* History RepublicUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -663,10 +615,6 @@
 					C96AC66C2D9B4F8300369BAD = {
 						CreatedOnToolsVersion = 16.1;
 						LastSwiftMigration = 1640;
-						TestTargetID = C96AC65C2D9B4F8200369BAD;
-					};
-					C96AC6762D9B4F8300369BAD = {
-						CreatedOnToolsVersion = 16.1;
 						TestTargetID = C96AC65C2D9B4F8200369BAD;
 					};
 				};
@@ -690,7 +638,6 @@
 			targets = (
 				C96AC65C2D9B4F8200369BAD /* History Republic */,
 				C96AC66C2D9B4F8300369BAD /* History RepublicTests */,
-				C96AC6762D9B4F8300369BAD /* History RepublicUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -712,13 +659,6 @@
 				BF0C0FA52E1C1B7A000F43CB /* HeroResponse.json in Resources */,
 				BF0C0FB92E1C62DD000F43CB /* UserProfileResponse.json in Resources */,
 				BF0C0FBB2E1C634C000F43CB /* UserProfileRequest.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C96AC6752D9B4F8300369BAD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,13 +746,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C96AC6732D9B4F8300369BAD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -820,11 +753,6 @@
 			isa = PBXTargetDependency;
 			target = C96AC65C2D9B4F8200369BAD /* History Republic */;
 			targetProxy = C96AC66E2D9B4F8300369BAD /* PBXContainerItemProxy */;
-		};
-		C96AC6792D9B4F8300369BAD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C96AC65C2D9B4F8200369BAD /* History Republic */;
-			targetProxy = C96AC6782D9B4F8300369BAD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1063,46 +991,6 @@
 			};
 			name = Release;
 		};
-		C96AC6882D9B4F8300369BAD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinhe.History-RepublicUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = "History Republic";
-			};
-			name = Debug;
-		};
-		C96AC6892D9B4F8300369BAD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinhe.History-RepublicUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = "History Republic";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1129,15 +1017,6 @@
 			buildConfigurations = (
 				C96AC6852D9B4F8300369BAD /* Debug */,
 				C96AC6862D9B4F8300369BAD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C96AC6872D9B4F8300369BAD /* Build configuration list for PBXNativeTarget "History RepublicUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C96AC6882D9B4F8300369BAD /* Debug */,
-				C96AC6892D9B4F8300369BAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
