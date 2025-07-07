@@ -7,6 +7,13 @@ protocol UserProfileServiceProtocol {
 }
 
 final class UserProfileService: UserProfileServiceProtocol {
+    
+    private let session: URLSession
+    
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
+    
     func fetchUser() async throws -> UserResponse {
         let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.fetchMe.rawValue)"
         
@@ -20,7 +27,7 @@ final class UserProfileService: UserProfileServiceProtocol {
         let jwToken = KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN)
         request.setValue("Bearer \(jwToken)", forHTTPHeaderField: "Authorization")
         do {
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await session.data(for: request)
             
             guard let res = response as? HTTPURLResponse else {
                 throw HRError.errorFromApi(statusCode: -1)
@@ -57,7 +64,7 @@ final class UserProfileService: UserProfileServiceProtocol {
        
         
         do {
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await session.data(for: request)
             
             guard let res = response as? HTTPURLResponse else {
                 throw HRError.errorFromApi(statusCode: -1)
@@ -88,7 +95,7 @@ final class UserProfileService: UserProfileServiceProtocol {
         request.setValue("Bearer \(jwToken)", forHTTPHeaderField: "Authorization")
         
         do {
-            let (_, response) = try await URLSession.shared.data(for: request)
+            let (_, response) = try await session.data(for: request)
             
             guard let res = response as? HTTPURLResponse else {
                 throw HRError.errorFromApi(statusCode: -1)
