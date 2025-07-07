@@ -7,20 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF0C0FA52E1C1B7A000F43CB /* HeroResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = BF0C0FA42E1C1B71000F43CB /* HeroResponse.json */; };
-		BF0C0FA72E1C2476000F43CB /* MockHeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FA62E1C246A000F43CB /* MockHeroService.swift */; };
-		BF0C0FA92E1C262C000F43CB /* HeroServiceUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FA82E1C262C000F43CB /* HeroServiceUseCaseTests.swift */; };
-		BF0C0FAB2E1C2BD2000F43CB /* HeroServiceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FAA2E1C2BD2000F43CB /* HeroServiceViewModelTests.swift */; };
-		BF0C0FAF2E1C33CD000F43CB /* UserAuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FAE2E1C33CD000F43CB /* UserAuthServiceTests.swift */; };
-		BF0C0FB12E1C374B000F43CB /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FB02E1C3748000F43CB /* MockAuthService.swift */; };
-		BF0C0FB32E1C3880000F43CB /* UserAuthServiceUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FB22E1C3880000F43CB /* UserAuthServiceUseCaseTests.swift */; };
-		BF0C0FB52E1C3E1C000F43CB /* UserAuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FB42E1C3E1C000F43CB /* UserAuthViewModelTests.swift */; };
-		BF0C0FB72E1C5FAD000F43CB /* UserProfileServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FB62E1C5FAD000F43CB /* UserProfileServiceTests.swift */; };
-		BF0C0FB92E1C62DD000F43CB /* UserProfileResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = BF0C0FB82E1C62CC000F43CB /* UserProfileResponse.json */; };
-		BF0C0FBB2E1C634C000F43CB /* UserProfileRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = BF0C0FBA2E1C6344000F43CB /* UserProfileRequest.json */; };
-		BF0C0FBD2E1C648A000F43CB /* MockUserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FBC2E1C6484000F43CB /* MockUserProfileService.swift */; };
-		BF0C0FBF2E1C652A000F43CB /* UserProfileServiceUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FBE2E1C652A000F43CB /* UserProfileServiceUseCaseTests.swift */; };
-		BF0C0FC12E1C6652000F43CB /* UserProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C0FC02E1C6652000F43CB /* UserProfileViewModelTests.swift */; };
 		BF1C72AA2E1579430008D806 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72A92E1579400008D806 /* WebView.swift */; };
 		BF1C72AC2E1579630008D806 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AB2E1579630008D806 /* HeroDetailView.swift */; };
 		BF1C72AE2E1587E40008D806 /* Font-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AD2E1587DE0008D806 /* Font-Theme.swift */; };
@@ -31,13 +17,6 @@
 		BFAD1BD02E15BFFE0036C2A3 /* UserProfileServiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */; };
 		BFAD1BD22E15C0A90036C2A3 /* UserProfileServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */; };
 		BFAD1BDA2E15CE130036C2A3 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */; };
-
-		BFC045CE2E1C196E003D3130 /* HeroServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC045CD2E1C196E003D3130 /* HeroServiceTests.swift */; };
-		BFC045CF2E1C19D2003D3130 /* URLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC045CC2E1C1857003D3130 /* URLProtocol.swift */; };
-		BFC045D12E1C1A4B003D3130 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC045D02E1C1A48003D3130 /* MockData.swift */; };
-		BFFACBE62E16C56D0027FEA6 /* EditUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFACBE52E16C56D0027FEA6 /* EditUserProfileView.swift */; };
-		BFFACBE82E16DC170027FEA6 /* TermsOfUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFACBE72E16DC170027FEA6 /* TermsOfUseView.swift */; };
-
 		C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905B8082DA88D950034EB14 /* DefaultProfileView.swift */; };
 		C92E12D92E15CCB3001BEA10 /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92E12D82E15CCB3001BEA10 /* FavoriteService.swift */; };
 		C938925C2DA9CCD90094C753 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925B2DA9CCD90094C753 /* RegisterUserView.swift */; };
@@ -89,6 +68,8 @@
 		C9B6994D2DA7483C000CDB68 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6994C2DA7483C000CDB68 /* TabBarView.swift */; };
 		C9B6994F2DA74C59000CDB68 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B6994E2DA74C59000CDB68 /* FavoriteView.swift */; };
 		C9CF863A2E1C764600348736 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF86392E1C764600348736 /* FavoriteButton.swift */; };
+		C9CF86642E1C787700348736 /* EditUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF86632E1C787700348736 /* EditUserProfileView.swift */; };
+		C9CF86662E1C78AA00348736 /* TermsOfUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF86652E1C78AA00348736 /* TermsOfUseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,23 +80,16 @@
 			remoteGlobalIDString = C96AC65C2D9B4F8200369BAD;
 			remoteInfo = "History Republic";
 		};
+		C96AC6782D9B4F8300369BAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C96AC6552D9B4F8200369BAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C96AC65C2D9B4F8200369BAD;
+			remoteInfo = "History Republic";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BF0C0FA42E1C1B71000F43CB /* HeroResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HeroResponse.json; sourceTree = "<group>"; };
-		BF0C0FA62E1C246A000F43CB /* MockHeroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeroService.swift; sourceTree = "<group>"; };
-		BF0C0FA82E1C262C000F43CB /* HeroServiceUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroServiceUseCaseTests.swift; sourceTree = "<group>"; };
-		BF0C0FAA2E1C2BD2000F43CB /* HeroServiceViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroServiceViewModelTests.swift; sourceTree = "<group>"; };
-		BF0C0FAE2E1C33CD000F43CB /* UserAuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthServiceTests.swift; sourceTree = "<group>"; };
-		BF0C0FB02E1C3748000F43CB /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
-		BF0C0FB22E1C3880000F43CB /* UserAuthServiceUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthServiceUseCaseTests.swift; sourceTree = "<group>"; };
-		BF0C0FB42E1C3E1C000F43CB /* UserAuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthViewModelTests.swift; sourceTree = "<group>"; };
-		BF0C0FB62E1C5FAD000F43CB /* UserProfileServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceTests.swift; sourceTree = "<group>"; };
-		BF0C0FB82E1C62CC000F43CB /* UserProfileResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserProfileResponse.json; sourceTree = "<group>"; };
-		BF0C0FBA2E1C6344000F43CB /* UserProfileRequest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserProfileRequest.json; sourceTree = "<group>"; };
-		BF0C0FBC2E1C6484000F43CB /* MockUserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserProfileService.swift; sourceTree = "<group>"; };
-		BF0C0FBE2E1C652A000F43CB /* UserProfileServiceUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceUseCaseTests.swift; sourceTree = "<group>"; };
-		BF0C0FC02E1C6652000F43CB /* UserProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModelTests.swift; sourceTree = "<group>"; };
 		BF1C72A92E1579400008D806 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		BF1C72AB2E1579630008D806 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
 		BF1C72AD2E1587DE0008D806 /* Font-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font-Theme.swift"; sourceTree = "<group>"; };
@@ -126,13 +100,6 @@
 		BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceRepositoryProtocol.swift; sourceTree = "<group>"; };
 		BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceUseCase.swift; sourceTree = "<group>"; };
 		BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
-
-		BFC045CC2E1C1857003D3130 /* URLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocol.swift; sourceTree = "<group>"; };
-		BFC045CD2E1C196E003D3130 /* HeroServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroServiceTests.swift; sourceTree = "<group>"; };
-		BFC045D02E1C1A48003D3130 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
-		BFFACBE52E16C56D0027FEA6 /* EditUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserProfileView.swift; sourceTree = "<group>"; };
-		BFFACBE72E16DC170027FEA6 /* TermsOfUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseView.swift; sourceTree = "<group>"; };
-
 		C905B8082DA88D950034EB14 /* DefaultProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProfileView.swift; sourceTree = "<group>"; };
 		C92E12D82E15CCB3001BEA10 /* FavoriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
 		C938925B2DA9CCD90094C753 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
@@ -152,6 +119,7 @@
 		C961B62D2E15BC6B00738076 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		C96AC65D2D9B4F8200369BAD /* History Republic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "History Republic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96AC66D2D9B4F8300369BAD /* History RepublicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "History RepublicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96AC6772D9B4F8300369BAD /* History RepublicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "History RepublicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96AC68A2D9B4FC300369BAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C96AC68C2D9B4FC300369BAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96AC68E2D9B4FC300369BAD /* History_RepublicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History_RepublicApp.swift; sourceTree = "<group>"; };
@@ -185,7 +153,22 @@
 		C9B6994C2DA7483C000CDB68 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C9B6994E2DA74C59000CDB68 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		C9CF86392E1C764600348736 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		C9CF86632E1C787700348736 /* EditUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserProfileView.swift; sourceTree = "<group>"; };
+		C9CF86652E1C78AA00348736 /* TermsOfUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C96AC6702D9B4F8300369BAD /* History RepublicTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "History RepublicTests";
+			sourceTree = "<group>";
+		};
+		C96AC67A2D9B4F8300369BAD /* History RepublicUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "History RepublicUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C96AC65A2D9B4F8200369BAD /* Frameworks */ = {
@@ -197,6 +180,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C96AC66A2D9B4F8300369BAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96AC6742D9B4F8300369BAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -265,93 +255,14 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
-		BFC045C52E1C17A2003D3130 /* History RepublicTests */ = {
-			isa = PBXGroup;
-			children = (
-				BFC045C62E1C17A6003D3130 /* Helpers */,
-				BFC045CB2E1C17DE003D3130 /* ViewModels */,
-				BFC045CA2E1C17C7003D3130 /* UseCases */,
-				BFC045C92E1C17B8003D3130 /* Sources */,
-				BFC045C82E1C17B0003D3130 /* Services */,
-				BFC045C72E1C17AB003D3130 /* Mocks */,
-			);
-			path = "History RepublicTests";
-			sourceTree = "<group>";
-		};
-		BFC045C62E1C17A6003D3130 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				BFC045D02E1C1A48003D3130 /* MockData.swift */,
-				BFC045CC2E1C1857003D3130 /* URLProtocol.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		BFC045C72E1C17AB003D3130 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				BF0C0FBC2E1C6484000F43CB /* MockUserProfileService.swift */,
-				BF0C0FB02E1C3748000F43CB /* MockAuthService.swift */,
-				BF0C0FA62E1C246A000F43CB /* MockHeroService.swift */,
-				BFC045D22E1C1AEC003D3130 /* JSON */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
-		BFC045C82E1C17B0003D3130 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				BFC045CD2E1C196E003D3130 /* HeroServiceTests.swift */,
-				BF0C0FAE2E1C33CD000F43CB /* UserAuthServiceTests.swift */,
-				BF0C0FB62E1C5FAD000F43CB /* UserProfileServiceTests.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		BFC045C92E1C17B8003D3130 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		BFC045CA2E1C17C7003D3130 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				BF0C0FA82E1C262C000F43CB /* HeroServiceUseCaseTests.swift */,
-				BF0C0FB22E1C3880000F43CB /* UserAuthServiceUseCaseTests.swift */,
-				BF0C0FBE2E1C652A000F43CB /* UserProfileServiceUseCaseTests.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
-		BFC045CB2E1C17DE003D3130 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				BF0C0FAA2E1C2BD2000F43CB /* HeroServiceViewModelTests.swift */,
-				BF0C0FB42E1C3E1C000F43CB /* UserAuthViewModelTests.swift */,
-				BF0C0FC02E1C6652000F43CB /* UserProfileViewModelTests.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		BFC045D22E1C1AEC003D3130 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				BF0C0FBA2E1C6344000F43CB /* UserProfileRequest.json */,
-				BF0C0FB82E1C62CC000F43CB /* UserProfileResponse.json */,
-				BF0C0FA42E1C1B71000F43CB /* HeroResponse.json */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
 		C905B8072DA88D850034EB14 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */,
 				C905B8082DA88D950034EB14 /* DefaultProfileView.swift */,
 				C961B62D2E15BC6B00738076 /* UserProfileView.swift */,
-				BFFACBE52E16C56D0027FEA6 /* EditUserProfileView.swift */,
+				C9CF86632E1C787700348736 /* EditUserProfileView.swift */,
+				C9CF86652E1C78AA00348736 /* TermsOfUseView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -370,7 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				C96AC68F2D9B4FC300369BAD /* History Republic */,
-				BFC045C52E1C17A2003D3130 /* History RepublicTests */,
+				C96AC6702D9B4F8300369BAD /* History RepublicTests */,
+				C96AC67A2D9B4F8300369BAD /* History RepublicUITests */,
 				C96AC65E2D9B4F8200369BAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -380,6 +292,7 @@
 			children = (
 				C96AC65D2D9B4F8200369BAD /* History Republic.app */,
 				C96AC66D2D9B4F8300369BAD /* History RepublicTests.xctest */,
+				C96AC6772D9B4F8300369BAD /* History RepublicUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -565,7 +478,6 @@
 			children = (
 				C9B3E3522D9C9D7B00BC3096 /* LoadingView.swift */,
 				C9B3E3B52D9C9F9100BC3096 /* ErrorView.swift */,
-				BFFACBE72E16DC170027FEA6 /* TermsOfUseView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -625,12 +537,38 @@
 			dependencies = (
 				C96AC66F2D9B4F8300369BAD /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				C96AC6702D9B4F8300369BAD /* History RepublicTests */,
+			);
 			name = "History RepublicTests";
 			packageProductDependencies = (
 			);
 			productName = "History RepublicTests";
 			productReference = C96AC66D2D9B4F8300369BAD /* History RepublicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C96AC6762D9B4F8300369BAD /* History RepublicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C96AC6872D9B4F8300369BAD /* Build configuration list for PBXNativeTarget "History RepublicUITests" */;
+			buildPhases = (
+				C96AC6732D9B4F8300369BAD /* Sources */,
+				C96AC6742D9B4F8300369BAD /* Frameworks */,
+				C96AC6752D9B4F8300369BAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C96AC6792D9B4F8300369BAD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C96AC67A2D9B4F8300369BAD /* History RepublicUITests */,
+			);
+			name = "History RepublicUITests";
+			packageProductDependencies = (
+			);
+			productName = "History RepublicUITests";
+			productReference = C96AC6772D9B4F8300369BAD /* History RepublicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -647,7 +585,10 @@
 					};
 					C96AC66C2D9B4F8300369BAD = {
 						CreatedOnToolsVersion = 16.1;
-						LastSwiftMigration = 1640;
+						TestTargetID = C96AC65C2D9B4F8200369BAD;
+					};
+					C96AC6762D9B4F8300369BAD = {
+						CreatedOnToolsVersion = 16.1;
 						TestTargetID = C96AC65C2D9B4F8200369BAD;
 					};
 				};
@@ -671,6 +612,7 @@
 			targets = (
 				C96AC65C2D9B4F8200369BAD /* History Republic */,
 				C96AC66C2D9B4F8300369BAD /* History RepublicTests */,
+				C96AC6762D9B4F8300369BAD /* History RepublicUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -689,9 +631,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0C0FA52E1C1B7A000F43CB /* HeroResponse.json in Resources */,
-				BF0C0FB92E1C62DD000F43CB /* UserProfileResponse.json in Resources */,
-				BF0C0FBB2E1C634C000F43CB /* UserProfileRequest.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96AC6752D9B4F8300369BAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,11 +651,7 @@
 				C9AB7D452DAB4336003D6C5E /* UserAuthServiceUseCase.swift in Sources */,
 				BF1C72AA2E1579430008D806 /* WebView.swift in Sources */,
 				C9B3E3B62D9C9F9100BC3096 /* ErrorView.swift in Sources */,
-
 				C9A0AD152E16F5DB003E843D /* FavoriteServiceRepository.swift in Sources */,
-
-				BFFACBE82E16DC170027FEA6 /* TermsOfUseView.swift in Sources */,
-
 				C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */,
 				C9A0AD172E16F638003E843D /* FavoriteServiceRepositoryProtocol.swift in Sources */,
 				C9AB7D472DAB43D7003D6C5E /* UserAuthServiceRepository.swift in Sources */,
@@ -721,8 +663,10 @@
 				BF1C72AE2E1587E40008D806 /* Font-Theme.swift in Sources */,
 				C96155632D9ED67E00BF755D /* HeroService.swift in Sources */,
 				C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */,
+				C9CF86662E1C78AA00348736 /* TermsOfUseView.swift in Sources */,
 				C9B6994F2DA74C59000CDB68 /* FavoriteView.swift in Sources */,
 				C96155672D9EDCEA00BF755D /* HeroServiceRepositoryProtocol.swift in Sources */,
+				C9CF86642E1C787700348736 /* EditUserProfileView.swift in Sources */,
 				BFAD1BD02E15BFFE0036C2A3 /* UserProfileServiceRepositoryProtocol.swift in Sources */,
 				C9B6994D2DA7483C000CDB68 /* TabBarView.swift in Sources */,
 				C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */,
@@ -738,7 +682,6 @@
 				C961B62E2E15BC6B00738076 /* UserProfileView.swift in Sources */,
 				C93892642DA9D1AF0094C753 /* CustomButton.swift in Sources */,
 				C96AC6D52D9B5A4F00369BAD /* LoginView.swift in Sources */,
-				BFFACBE62E16C56D0027FEA6 /* EditUserProfileView.swift in Sources */,
 				C95DD0562DAB0D7C001366FC /* RegisterRequest.swift in Sources */,
 				C96AC73F2D9B648400369BAD /* EndPoints.swift in Sources */,
 				C96155902D9EE25800BF755D /* HeroRowView.swift in Sources */,
@@ -772,20 +715,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0C0FB32E1C3880000F43CB /* UserAuthServiceUseCaseTests.swift in Sources */,
-				BF0C0FBF2E1C652A000F43CB /* UserProfileServiceUseCaseTests.swift in Sources */,
-				BF0C0FA92E1C262C000F43CB /* HeroServiceUseCaseTests.swift in Sources */,
-				BFC045CE2E1C196E003D3130 /* HeroServiceTests.swift in Sources */,
-				BF0C0FA72E1C2476000F43CB /* MockHeroService.swift in Sources */,
-				BF0C0FB72E1C5FAD000F43CB /* UserProfileServiceTests.swift in Sources */,
-				BFC045D12E1C1A4B003D3130 /* MockData.swift in Sources */,
-				BF0C0FBD2E1C648A000F43CB /* MockUserProfileService.swift in Sources */,
-				BF0C0FAF2E1C33CD000F43CB /* UserAuthServiceTests.swift in Sources */,
-				BF0C0FB12E1C374B000F43CB /* MockAuthService.swift in Sources */,
-				BF0C0FAB2E1C2BD2000F43CB /* HeroServiceViewModelTests.swift in Sources */,
-				BFC045CF2E1C19D2003D3130 /* URLProtocol.swift in Sources */,
-				BF0C0FB52E1C3E1C000F43CB /* UserAuthViewModelTests.swift in Sources */,
-				BF0C0FC12E1C6652000F43CB /* UserProfileViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96AC6732D9B4F8300369BAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +732,11 @@
 			isa = PBXTargetDependency;
 			target = C96AC65C2D9B4F8200369BAD /* History Republic */;
 			targetProxy = C96AC66E2D9B4F8300369BAD /* PBXContainerItemProxy */;
+		};
+		C96AC6792D9B4F8300369BAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C96AC65C2D9B4F8200369BAD /* History Republic */;
+			targetProxy = C96AC6782D9B4F8300369BAD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -991,7 +932,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1004,7 +944,6 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/History Republic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/History Republic";
@@ -1015,7 +954,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1031,6 +969,46 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/History Republic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/History Republic";
+			};
+			name = Release;
+		};
+		C96AC6882D9B4F8300369BAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinhe.History-RepublicUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = "History Republic";
+			};
+			name = Debug;
+		};
+		C96AC6892D9B4F8300369BAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinhe.History-RepublicUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = "History Republic";
 			};
 			name = Release;
 		};
@@ -1060,6 +1038,15 @@
 			buildConfigurations = (
 				C96AC6852D9B4F8300369BAD /* Debug */,
 				C96AC6862D9B4F8300369BAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C96AC6872D9B4F8300369BAD /* Build configuration list for PBXNativeTarget "History RepublicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C96AC6882D9B4F8300369BAD /* Debug */,
+				C96AC6892D9B4F8300369BAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
