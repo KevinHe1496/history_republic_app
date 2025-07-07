@@ -15,7 +15,14 @@ protocol AuthServiceProtocol {
 
 final class UserAuthService: AuthServiceProtocol {
     
+    private let session: URLSession
+    
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
+    
     func registerUser(name: String, email: String, password: String) async throws -> String {
+        var tokenJWT = ""
         // 1. Armar la URL
         guard let url = URL(string: "\(ConstantsApp.CONS_API_URL)\(EndPoints.register.rawValue)") else {
             throw HRError.badUrl
@@ -30,10 +37,29 @@ final class UserAuthService: AuthServiceProtocol {
         request.setValue(HttpMethods.content, forHTTPHeaderField: HttpMethods.contentTypeID)
         request.httpBody = jsonData
         
-        let response: AuthTokenResponse = try await NetworkService().sendRequest(request, decodeTo: AuthTokenResponse.self)
-        
-        let token = response.accessToken
-        return token
+        do {
+            let (data, response) = try await session.data(for: request)
+            
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                throw HRError.errorFromApi(statusCode: -1)
+            }
+            
+            guard httpResponse.statusCode == HttpResponseCodes.SUCESS else {
+                print("StatusCode: \(httpResponse.statusCode)")
+                throw HRError.errorFromApi(statusCode: httpResponse.statusCode)
+                
+            }
+            
+            let jwtToken = try JSONDecoder().decode(AuthTokenResponse.self, from: data)
+            
+            tokenJWT = jwtToken.accessToken
+            
+            
+        } catch {
+            throw HRError.errorParsingData
+        }
+        return tokenJWT
     }
     
     func loginApp(user: String, password: String) async throws -> String {
@@ -57,7 +83,7 @@ final class UserAuthService: AuthServiceProtocol {
         request.addValue("Basic \(encodeCredentials)", forHTTPHeaderField: "Authorization")
         
         
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await session.data(for: request)
             
             guard let httpResponse = response as? HTTPURLResponse else {
                 throw HRError.errorFromApi(statusCode: -1)
@@ -71,6 +97,7 @@ final class UserAuthService: AuthServiceProtocol {
             tokenJWT = result.accessToken
         } catch  {
             print("error in fetch \(error.localizedDescription)")
+            throw HRError.errorParsingData
         }
         return tokenJWT
     }
