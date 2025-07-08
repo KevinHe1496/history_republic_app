@@ -15,8 +15,14 @@ struct LoginView: View {
     /// Access to the shared app state view model
     @Environment(AppStateVM.self) var appState
     
+    @State private var viewModel: UserAuthViewModel
+    
+    init(appState: AppStateVM) {
+        _viewModel = State(initialValue: UserAuthViewModel(appState: appState))
+    }
+    
     /// Email input from user
-    @State private var email = "kevin@example.com"
+    @State private var email = "andy@hotmail.com"
     
     /// Password input from user
     @State private var pass = "123456"
@@ -64,8 +70,18 @@ struct LoginView: View {
                         title: "Sign in",
                         color: .mainBrown
                     ) {
-                        appState.loginApp(user: email, pass: pass)
+                        Task {
+                            try await viewModel.loginApp(email: email, pass: pass)
+                        }
+                       
                     }
+                    
+                    .alert("Mensaje", isPresented: $viewModel.showAlert) {
+                        Button("Ok") { }
+                    } message: {
+                        Text(viewModel.message)
+                    }
+                  
                     
                     // MARK: - Error Message
                     if let error = appState.loginError {
@@ -80,6 +96,7 @@ struct LoginView: View {
 //                .frame(maxHeight: .infinity, alignment: .bottom)
 //                .padding(.bottom, 30)
             }
+           
             .padding(16)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.greenSecondary) // Custom background color
@@ -89,6 +106,6 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView()
+    LoginView(appState: AppStateVM())
         .environment(AppStateVM())
 }

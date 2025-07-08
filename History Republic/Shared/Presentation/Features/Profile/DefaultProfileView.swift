@@ -60,7 +60,7 @@ struct DefaultProfileView: View {
         .sheet(item: $activeSheet) { sheet in
             switch sheet {
             case .login:
-                LoginView()       // Reemplaza por tu vista real
+                LoginView(appState: appState)       // Reemplaza por tu vista real
             case .register:
                 RegisterUserView(appState: appState)    // Reemplaza por tu vista real
             }

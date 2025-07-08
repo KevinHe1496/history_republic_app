@@ -56,26 +56,7 @@ final class AppStateVM {
     /// - Parameters:
     ///   - user: User's email
     ///   - pass: User's password
-    @MainActor
-    func loginApp(user: String, pass: String) {
-        
-        loginError = nil
-
-        guard isValidEmailPassword(user, pass) else {
-            loginError = "Invalid email or password."
-            return
-        }
-        
-        self.status = .loading
-        
-        Task {
-            if try await loginUseCase.loginApp(user: user, password: pass) == true {
-                self.status = .inicio
-            } else {
-                self.status = .error(error: "Incorrect username or password")
-            }
-        }
-    }
+   
     
     /// Logs the user out and returns the app to the login state
     @MainActor
@@ -112,10 +93,5 @@ final class AppStateVM {
         }
     }
     
-    // MARK: - Validation
-    
-    /// Validates the format of email and password input
-    private func isValidEmailPassword(_ email: String, _ password: String) -> Bool {
-        return email.contains("@") && email.contains(".") && password.count > 5 && !password.isEmpty
-    }
+   
 }
