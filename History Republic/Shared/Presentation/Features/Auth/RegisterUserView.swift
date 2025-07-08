@@ -19,8 +19,8 @@ struct RegisterUserView: View {
     @State private var viewModel: UserAuthViewModel
     
     init(appState: AppStateVM) {
-            _viewModel = State(initialValue: UserAuthViewModel(appState: appState))
-        }
+        _viewModel = State(initialValue: UserAuthViewModel(appState: appState))
+    }
     
     var body: some View {
         
@@ -44,10 +44,18 @@ struct RegisterUserView: View {
                 CustomSecureField(placeholder: "Password", password: $password)
                 
                 CustomButton(title: "Sign up", color: .mainBrown) {
-                    viewModel.registerUser(name: name, email: email, password: password)
+                    Task {
+                        try await viewModel.registerUser(name: name, email: email, password: password)
+                    }
+                    
                 }
             }
             Spacer().frame(height: 200)
+                .alert("Mensaje", isPresented: $viewModel.showAlert) {
+                    Button("OK") { }
+                } message: {
+                    Text(viewModel.message)
+                }
             
         }
         .padding(16)
