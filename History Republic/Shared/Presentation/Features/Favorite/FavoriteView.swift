@@ -39,6 +39,7 @@ struct FavoriteView: View {
                 }
                 .listStyle(.plain)
             }
+            .navigationTitle("Mis Favoritos")
             .onAppear {
                 Task {
                     try await viewModel.fetchUser()
