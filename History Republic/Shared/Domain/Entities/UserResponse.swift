@@ -1,6 +1,6 @@
 import Foundation
 
-struct UserResponse: Codable {
+struct UserResponse: Codable, Identifiable {
     let id: String
     let email: String
     let favorites: [HeroResponse]

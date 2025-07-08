@@ -8,8 +8,43 @@
 import SwiftUI
 
 struct FavoriteView: View {
+    @State private var viewModel = UserProfileViewModel()
+    
     var body: some View {
-        Text("Favorite View")
+        NavigationStack {
+            VStack {
+                List(viewModel.userData.favorites) { hero in
+                    ZStack(alignment: .topTrailing) {
+                        HStack {
+                            AsyncImage(url: hero.imageURL) { image in
+                                image.resizable()
+                                    .scaledToFill()
+                                    .frame(width: 100, height: 150)
+                                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                            } placeholder: {
+                                ProgressView()
+                                    .frame(width: 100, height: 150)
+                            }
+                            
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text(hero.title)
+                                    .font(.appTitle)
+                                Text(hero.information)
+                                    .font(.appDescription)
+                            }
+                            .padding(.horizontal)
+                        }
+                        .padding(.horizontal)
+                    }
+                }
+                .listStyle(.plain)
+            }
+            .onAppear {
+                Task {
+                    try await viewModel.fetchUser()
+                }
+            }
+        }
     }
 }
 
