@@ -3,7 +3,9 @@ import Foundation
 @Observable
 final class UserProfileViewModel {
     var userData: UserResponse = UserResponse(id: "", email: "", favorites: [], name: "")
-   
+
+    var heroes: [HeroResponse] = []
+
     
     @ObservationIgnored
     var useCase: UserProfileServiceUseCaseProtocol
@@ -21,6 +23,7 @@ final class UserProfileViewModel {
         do {
             let data = try await useCase.fetchUser()
             userData = data
+            heroes = data.favorites
         } catch {
             print("Error Fetching user in viewModel")
         }

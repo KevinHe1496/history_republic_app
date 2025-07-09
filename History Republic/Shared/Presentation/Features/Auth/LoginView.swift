@@ -22,7 +22,7 @@ struct LoginView: View {
     }
     
     /// Email input from user
-    @State private var email = "andy@hotmail.com"
+    @State private var email = "kevin@example.com"
     
     /// Password input from user
     @State private var pass = "123456"
