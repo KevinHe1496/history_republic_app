@@ -65,6 +65,7 @@ struct DefaultProfileView: View {
                 RegisterUserView(appState: appState)    // Reemplaza por tu vista real
             }
         }
+        
     }
 }
 

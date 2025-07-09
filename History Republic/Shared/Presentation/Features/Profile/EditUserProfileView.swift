@@ -15,6 +15,8 @@ struct EditUserProfileView: View {
     @State var name: String
     @State var showAlert: Bool = false
     
+   
+    
     var body: some View {
         Form {
             Section("Nombre") {

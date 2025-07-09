@@ -13,6 +13,8 @@ struct UserProfileView: View {
     @State var viewModel = UserProfileViewModel()
     @State var showAlert: Bool = false
     
+    
+    
     var body: some View {
         NavigationStack {
             List {
@@ -36,7 +38,7 @@ struct UserProfileView: View {
                         .font(.appDescription)
                     
                     
-                  
+                    
                 }
                 .frame(maxWidth: .infinity)
                 
@@ -55,19 +57,21 @@ struct UserProfileView: View {
                 
                 Section {
                     Button("Cerrar sesión") {
-                        appState.closeSessionUser()
+                        Task {
+                            await appState.closeSessionUser()
+                        }
                     }
                     .foregroundStyle(.greenSecondary)
                     .font(.appButton)
                     Button("Borrar cuenta") {
-                       showAlert = true
+                        showAlert = true
                     }
                     .font(.appButton)
                     .foregroundStyle(.greenSecondary)
                     .alert("Borrar mi cuenta", isPresented: $showAlert) {
                         Button("Eliminar", role: .destructive) {
                             Task {
-                                try await viewModel.deleteUser()
+                                try await appState.deleteAccount()
                             }
                         }
                         
