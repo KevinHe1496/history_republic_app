@@ -19,42 +19,49 @@ struct HeroListView: View {
     
     var body: some View {
         NavigationStack {
-            switch viewModel.status {
-            case .idle, .loading:
-                LoadingProgressView()
-            case .success:
-                VStack(spacing: 16) {
-                    
-                    // Secciónes y Podcasts
-                    // HeroListView.swift  (solo la parte de la lista)
-                    List($viewModel.heroes, id: \.id) { $hero in     // ← $viewModel.heroes
-                        NavigationLink {
-                            HeroDetailView(url: hero.url)
-                        } label: {
-                            HeroRowView(hero: $hero,                 // ← ahora sí hay $hero
-                                        viewModel: viewModel)
+            Group {
+                switch viewModel.status {
+                case .idle, .loading:
+                    LoadingProgressView()
+                case .success:
+                    VStack(spacing: 16) {
+                        
+                        // Secciónes y Podcasts
+                        // HeroListView.swift  (solo la parte de la lista)
+                        List($viewModel.heroes, id: \.id) { $hero in     // ← $viewModel.heroes
+                            NavigationLink {
+                                HeroDetailView(url: hero.url)
+                            } label: {
+                                HeroRowView(hero: $hero,                 // ← ahora sí hay $hero
+                                            viewModel: viewModel)
+                            }
+                            
                         }
+                        .listStyle(.plain)
+                        
                     }
-                    .listStyle(.plain)
-
-                }
-                .navigationTitle("Heroes")
-            case .error(let message):
-                VStack(spacing: 16) {
-                    Image(systemName: "exclamationmark.triangle.fill")
-                        .font(.system(size: 48))
-                        .foregroundStyle(.greenSecondary)
-                    Text(message)
-                        .multilineTextAlignment(.center)
-                        .foregroundStyle(.secondary)
-                    CustomButton(title: "Intentar de nuevo", color: .greenSecondary) {
-                        Task {
-                           try await viewModel.fetchAllHeroes()
+                    .navigationTitle("Heroes")
+                case .error(let message):
+                    VStack(spacing: 16) {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .font(.system(size: 48))
+                            .foregroundStyle(.greenSecondary)
+                        Text(message)
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(.secondary)
+                        CustomButton(title: "Intentar de nuevo", color: .greenSecondary) {
+                            Task {
+                                try await viewModel.fetchAllHeroes()
+                            }
                         }
                     }
                 }
             }
-
+            .onAppear {
+                Task {
+                    try await viewModel.fetchAllHeroes()
+                }
+            }
         }
     }
 }
