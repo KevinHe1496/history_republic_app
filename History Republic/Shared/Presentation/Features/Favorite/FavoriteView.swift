@@ -14,15 +14,20 @@ struct FavoriteView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                List($viewModel.heroes) { $hero in
-                    NavigationLink {
-                        HeroDetailView(url: hero.url)
-                    } label: {
-                        HeroRowView(hero: $hero, viewModel: viewModelHeroes)
+                if viewModel.userData.favorites.isEmpty {
+                    ContentUnavailableView("Aún no hay favoritos.", systemImage: "star.slash", description: Text("Agrega algunos elementos a tus favoritos para verlos aquí."))
+                } else {
+                    List($viewModel.heroes) { $hero in
+                        NavigationLink {
+                            HeroDetailView(url: hero.url)
+                        } label: {
+                            HeroRowView(hero: $hero, viewModel: viewModelHeroes)
 
+                        }
+                        .listStyle(.plain)
                     }
-                    .listStyle(.plain)
                 }
+              
             }
             .navigationTitle("Mis Favoritos")
             .onAppear {
