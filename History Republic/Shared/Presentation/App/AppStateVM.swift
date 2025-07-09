@@ -37,6 +37,7 @@ final class AppStateVM {
     /// Use case responsible for handling login and token validation logic
     @ObservationIgnored
     private var loginUseCase: UserAuthServiceUsecaseProtocol
+    private var userProfileUsecase = UserProfileServiceUseCase()
     
     // MARK: - Initializer
     
@@ -60,16 +61,24 @@ final class AppStateVM {
     
     /// Logs the user out and returns the app to the login state
     @MainActor
-    func closeSessionUser() {
+    func closeSessionUser() async {
         Task {
             await loginUseCase.logout()
             self.status = .login
         }
     }
     
+  
+    @MainActor
+    func deleteAccount() async throws {
+        try await userProfileUsecase.deleteUser()
+        KeyChainHR().deleteHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN)
+        self.status = .login
+    }
+    
     /// Validates if a user session already exists based on stored token
     @MainActor
-    func validateControlLogin() {
+    func validateControlLogin() async {
         Task {
             if await loginUseCase.validateToken() == true {
                 self.status = .inicio

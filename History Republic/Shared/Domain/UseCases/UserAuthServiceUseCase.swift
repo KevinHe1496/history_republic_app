@@ -28,7 +28,6 @@ final class UserAuthServiceUseCase: UserAuthServiceUsecaseProtocol {
         let token = try await repo.registerUser(name: name, email: email, password: password)
         
         if token != "" {
-            tokenJWT = token
             return true
         } else {
             

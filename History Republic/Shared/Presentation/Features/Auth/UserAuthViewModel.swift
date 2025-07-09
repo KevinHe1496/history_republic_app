@@ -37,13 +37,13 @@ final class UserAuthViewModel {
         
         if result {
             appState.status = .login
-            return ""
+            
         } else {
             showAlert = true
             appState.status = .error(error: "Iconrrect username or password.")
             return "Algo salio mal."
         }
-        
+        return ""
     }
     
     @MainActor

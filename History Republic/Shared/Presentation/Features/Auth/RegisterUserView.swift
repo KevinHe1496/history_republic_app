@@ -65,7 +65,7 @@ struct RegisterUserView: View {
     }
 }
 
-#Preview {
-    RegisterUserView(appState: AppStateVM())
-        .environment(AppStateVM())
-}
+//#Preview {
+//    RegisterUserView(appState: AppStateVM())
+//        .environment(AppStateVM())
+//}

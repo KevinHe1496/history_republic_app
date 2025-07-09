@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0B4B912E1EF6AF00A1BB5E /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0B4B902E1EF6A900A1BB5E /* SessionStore.swift */; };
 		BF1C72AA2E1579430008D806 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72A92E1579400008D806 /* WebView.swift */; };
 		BF1C72AC2E1579630008D806 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AB2E1579630008D806 /* HeroDetailView.swift */; };
 		BF1C72AE2E1587E40008D806 /* Font-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AD2E1587DE0008D806 /* Font-Theme.swift */; };
@@ -90,6 +91,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF0B4B902E1EF6A900A1BB5E /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		BF1C72A92E1579400008D806 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		BF1C72AB2E1579630008D806 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
 		BF1C72AD2E1587DE0008D806 /* Font-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font-Theme.swift"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		BF1C729B2E1572BA0008D806 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				BF0B4B902E1EF6A900A1BB5E /* SessionStore.swift */,
 				C96AC7DE2D9B701400369BAD /* AppStateVM.swift */,
 				C9B3E34F2D9C93F000BC3096 /* RootView.swift */,
 				C9B6994C2DA7483C000CDB68 /* TabBarView.swift */,
@@ -678,6 +681,7 @@
 				BF1C72AC2E1579630008D806 /* HeroDetailView.swift in Sources */,
 				C96AC6A22D9B511300369BAD /* SplashView.swift in Sources */,
 				C9B3E3BB2D9CA6A600BC3096 /* HeroListView.swift in Sources */,
+				BF0B4B912E1EF6AF00A1BB5E /* SessionStore.swift in Sources */,
 				C96AC7D12D9B68B700369BAD /* KeyChainKC.swift in Sources */,
 				C961B62E2E15BC6B00738076 /* UserProfileView.swift in Sources */,
 				C93892642DA9D1AF0094C753 /* CustomButton.swift in Sources */,

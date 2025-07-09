@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TabBarView: View {
     @Environment(AppStateVM.self) var appState
+   
+    
     init() {
         // Create a custom appearance
         let appearance = UITabBarAppearance()
@@ -33,7 +35,7 @@ struct TabBarView: View {
         UITabBar.appearance().standardAppearance = appearance
         UITabBar.appearance().scrollEdgeAppearance = appearance
     }
-
+    
     
     var body: some View {
         
@@ -41,23 +43,30 @@ struct TabBarView: View {
             Tab("Inicio", systemImage: "house.fill") {
                 HeroListView()
             }
-            if KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN) != "" {
+            if !KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN).isEmpty {
                 Tab("Favoritos", systemImage: "heart.fill") {
                     FavoriteView()
                 }
             }
+            
             Tab("Perfil", systemImage: "person.fill") {
-                if KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN) != "" {
+                if !KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN).isEmpty {
                     UserProfileView()
                 } else {
                     DefaultProfileView()
                 }
             }
+                
+           
+            
         }
+        
+        
     }
 }
 
 #Preview {
     TabBarView()
         .environment(AppStateVM())
+        
 }

@@ -3,13 +3,16 @@ import Foundation
 @Observable
 final class UserProfileViewModel {
     var userData: UserResponse = UserResponse(id: "", email: "", favorites: [], name: "")
+
     var heroes: [HeroResponse] = []
+
     
     @ObservationIgnored
     var useCase: UserProfileServiceUseCaseProtocol
     
     init(useCase: UserProfileServiceUseCaseProtocol = UserProfileServiceUseCase()) {
         self.useCase = useCase
+       
         Task {
             try await fetchUser()
         }
@@ -33,7 +36,9 @@ final class UserProfileViewModel {
     
     @MainActor
     func deleteUser() async throws {
-        _ = try await useCase.deleteUser()
+        // 1. Petición al backend
+        try await useCase.deleteUser()
     }
+   
     
 }

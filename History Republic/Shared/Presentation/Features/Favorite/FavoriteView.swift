@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FavoriteView: View {
     @State private var viewModel = UserProfileViewModel()
+
     @State var viewModelHeroes = HeroesViewModel()
     var body: some View {
         NavigationStack {
@@ -18,9 +19,10 @@ struct FavoriteView: View {
                         HeroDetailView(url: hero.url)
                     } label: {
                         HeroRowView(hero: $hero, viewModel: viewModelHeroes)
+
                     }
+                    .listStyle(.plain)
                 }
-                .listStyle(.plain)
             }
             .navigationTitle("Mis Favoritos")
             .onAppear {
