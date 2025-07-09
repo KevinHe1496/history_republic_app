@@ -57,10 +57,8 @@ struct HeroListView: View {
                     }
                 }
             }
-            .onAppear {
-                Task {
-                    try await viewModel.fetchAllHeroes()
-                }
+            .task {
+                try? await viewModel.fetchAllHeroes()
             }
         }
     }
