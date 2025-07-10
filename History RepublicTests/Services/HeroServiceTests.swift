@@ -52,6 +52,7 @@ final class HeroServiceTests: XCTestCase {
         XCTAssertEqual(hero.first?.information, "Joan of Arc was a teen who helped turn the tide of the Hundred Years’ War.")
         XCTAssertEqual(hero.first?.image, "https://historyrepublic.com/wp-content/uploads/2025/05/Joan_of_Arc.jpg")
         XCTAssertEqual(hero.first?.url, "https://historyrepublic.com/joan-of-arc/")
+        XCTAssertEqual(hero.first?.favoriteHero, false)
         
     }
     

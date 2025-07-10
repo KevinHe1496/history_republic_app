@@ -46,7 +46,7 @@ struct LoginView: View {
                 VStack(spacing: 10) {
                     
                     // Title
-                    Text("Login to your Account")
+                    Text("Accede a tu cuenta")
                         .foregroundStyle(.white)
                         .font(.system(size: 26).bold())
                     
@@ -61,13 +61,13 @@ struct LoginView: View {
                     
                     // Password Field
                     CustomSecureField(
-                        placeholder: "Password",
+                        placeholder: "Contraseña",
                         password: $pass
                     )
                     
                     // MARK: - Sign In Button
                     CustomButton(
-                        title: "Sign in",
+                        title: "Iniciar sesión",
                         color: .mainBrown
                     ) {
                         Task {

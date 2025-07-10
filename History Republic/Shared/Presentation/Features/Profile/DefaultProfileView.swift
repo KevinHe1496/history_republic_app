@@ -43,7 +43,7 @@ struct DefaultProfileView: View {
 
                 VStack(spacing: 16) {
 
-                    CustomButton(title: "Iniciar Sesión", color: .greenSecondary) {
+                    CustomButton(title: "Iniciar sesión", color: .greenSecondary) {
                         // 3️⃣  Abrir sheet de login
                         activeSheet = .login
                     }

@@ -2,6 +2,14 @@ import Foundation
 
 @testable import History_Republic
 final class MockHeroService: HeroServiceProtocol {
+    func addFavorite(with idHero: UUID) async throws {
+        // todo
+    }
+    
+    func removeFavorite(with idHero: UUID) async throws {
+        // todo
+    }
+    
     
     var shouldReturnTrue = false
     
@@ -18,7 +26,7 @@ final class MockHeroService: HeroServiceProtocol {
             title: "Joan of Arc",
             information: "Joan of Arc was a teen who helped turn the tide of the Hundred Years’ War.",
             image: "https://historyrepublic.com/wp-content/uploads/2025/05/Joan_of_Arc.jpg",
-            url: "https://historyrepublic.com/joan-of-arc/"
+            url: "https://historyrepublic.com/joan-of-arc/", favoriteHero: false
         )
         ]
     }

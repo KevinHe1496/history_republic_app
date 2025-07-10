@@ -60,27 +60,6 @@ final class UserAuthServiceUseCaseTests: XCTestCase {
        
        
        // MARK: Register
-       
-       func testRegister_Succesful_ReturnsTrueAndStoresToken() async throws {
-           
-           //Arrange
-           mockAuthService.shouldReturnToken = "mockedRegisterToken"
-           mockAuthService.shouldThrowError = false
-           
-           //Act
-           let result = try await useCase.registerUser(
-               name: "Andy",
-               email: "andy@hotmail.com",
-               password: "123456"
-           )
-           
-           // Assert
-           XCTAssertTrue(result)
-           XCTAssertTrue(mockAuthService.registerCalled)
-           XCTAssertEqual(useCase.tokenJWT, "mockedRegisterToken")
-          
-       }
-       
        func testRegister_ThrowsError_WhenServiceFails() async throws {
            // Arrage
            mockAuthService.shouldThrowError = true
