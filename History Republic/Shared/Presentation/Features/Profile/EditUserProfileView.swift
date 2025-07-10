@@ -28,13 +28,17 @@ struct EditUserProfileView: View {
                     showAlert = true
                 }
                 .font(.appButton)
-                .alert("Se ha editado exitosamente", isPresented: $showAlert) {
-                    Button("Ok") {
+                .alert("Mensaje", isPresented: $showAlert) {
+                    Button("OK") {
                         Task {
                             try await viewModel.updateUser(name: name)
                             dismiss()
                         }
                     }
+                    .font(.appButton)
+                } message: {
+                    Text("Se ha editado exitosamente.")
+                        .font(.appDescription)
                 }
                 .disabled(name.isEmpty)
             }

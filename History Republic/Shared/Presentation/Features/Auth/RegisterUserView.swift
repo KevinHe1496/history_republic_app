@@ -37,13 +37,13 @@ struct RegisterUserView: View {
             Spacer().frame(height: 50)
             
             VStack(spacing: 10) {
-                CustomTextField(placeholder: "Name", text: $name, keyboardType: .default)
+                CustomTextField(placeholder: "Nombre", text: $name, keyboardType: .default)
                 CustomTextField(placeholder: "Email", text: $email, keyboardType: .emailAddress)
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
-                CustomSecureField(placeholder: "Password", password: $password)
+                CustomSecureField(placeholder: "Contraseña", password: $password)
                 
-                CustomButton(title: "Sign up", color: .mainBrown) {
+                CustomButton(title: "Registrarse", color: .mainBrown) {
                     Task {
                         try await viewModel.registerUser(name: name, email: email, password: password)
                     }
@@ -65,7 +65,7 @@ struct RegisterUserView: View {
     }
 }
 
-//#Preview {
-//    RegisterUserView(appState: AppStateVM())
-//        .environment(AppStateVM())
-//}
+#Preview {
+    RegisterUserView(appState: AppStateVM())
+        .environment(AppStateVM())
+}

@@ -39,9 +39,9 @@ final class UserAuthViewModelTests: XCTestCase {
         // MARK: Register Function
         
         
-        func testRegisterUser_WhenValidAsDueno_ShouldUpdateAppStateToRegister() async {
+        func testRegisterUser_WhenValid_ShouldUpdateAppStateToRegister() async throws {
             
-             _ = await viewModel.registerUser(name: "Andy", email: "andy@hotmail.com", password: "123456")
+             _ = try await viewModel.registerUser(name: "Andy", email: "andy@hotmail.com", password: "123456")
             XCTAssertFalse(mockAuthService.shouldThrowError)
         }
 
