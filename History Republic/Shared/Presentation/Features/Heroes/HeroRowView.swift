@@ -45,6 +45,7 @@ struct HeroRowView: View {
                 .padding(8)
             }
         }
+        .frame(height: 150)
     }
 }
 
