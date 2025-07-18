@@ -28,18 +28,19 @@ struct HeroListView: View {
                         
                         // Secciónes y Podcasts
                         // HeroListView.swift  (solo la parte de la lista)
-                        List($viewModel.heroes, id: \.id) { $hero in     // ← $viewModel.heroes
-                            NavigationLink {
-                                HeroDetailView(url: hero.url)
-                            } label: {
-                                HeroRowView(hero: $hero,                 // ← ahora sí hay $hero
-                                            viewModel: viewModel)
+                        List {
+                            ForEach($viewModel.heroes.filter { $0.wrappedValue.nameHero.contains(viewModel.searchText) || viewModel.searchText.isEmpty }) { $hero in
+                                NavigationLink {
+                                    HeroDetailView(url: hero.url)
+                                } label: {
+                                    HeroRowView(hero: $hero, viewModel: viewModel)
+                                }
                             }
-                            
                         }
                         .listStyle(.plain)
                         
                     }
+                    .searchable(text: $viewModel.searchText)
                     .navigationTitle("Heroes")
                 case .error(let message):
                     VStack(spacing: 16) {

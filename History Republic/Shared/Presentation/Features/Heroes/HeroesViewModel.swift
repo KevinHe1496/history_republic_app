@@ -12,6 +12,7 @@ final class HeroesViewModel {
 
     var status: ViewState<[HeroResponse]> = .idle
     var heroes: [HeroResponse] = []
+    var searchText: String = ""
 
     @ObservationIgnored private var useCase: HeroServiceUseCaseProtocol
 
@@ -55,5 +56,16 @@ final class HeroesViewModel {
     /// Conveniencia para las vistas
     func isFavorite(heroID: UUID) -> Bool {
         heroes.first(where: { $0.id == heroID })?.favoriteHero ?? false
+    }
+    
+    
+    var filteredCharacters: [HeroResponse] {
+        if searchText.isEmpty {
+            return heroes
+        } else {
+            return heroes.filter { results in
+                results.nameHero.localizedCaseInsensitiveContains(searchText)
+            }
+        }
     }
 }

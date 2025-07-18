@@ -29,6 +29,7 @@ struct FavoriteView: View {
                 }
               
             }
+            .frame(maxWidth: .infinity)
             .navigationTitle("Mis Favoritos")
             .onAppear {
                 Task {
