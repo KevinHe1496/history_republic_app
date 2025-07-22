@@ -26,6 +26,7 @@
 "Inicia sesión si ya tienes una cuenta o regístrate como jugador o dueño para guardar tus canchas o administrarlas." = "Log in if you already have an account or sign up as a player or owner to save or manage your fields.";
 
 
+
 /* User Profile */
 "Editar perfil" = "Edit profile";
 "Editar Perfil" = "Edit Profile";
@@ -51,6 +52,8 @@
 /* Register View */
 "Nombre" = "Name";
 "Registrarse" = "Sign up";
+"Aceptar" = "OK";
+"¡Registro completado! Inicia sesión para comenzar." = "Registration completed! Log in to get started.";
 
 /* Empty Favorite Hero and Favorite view*/
 "Aún no hay favoritos." = "There are no favorites yet.";

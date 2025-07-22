@@ -21,6 +21,7 @@
 "¿Aún no tienes una cuenta?" = "¿Aún no tienes una cuenta?";
 "Inicia sesión si ya tienes una cuenta o regístrate como jugador o dueño para guardar tus canchas o administrarlas." = "Inicia sesión si ya tienes una cuenta o regístrate como jugador o dueño para guardar tus canchas o administrarlas.";
 
+
 /* User Profile */
 "Editar perfil" = "Editar perfil";
 "Editar Perfil" = "Editar Perfil";
@@ -45,6 +46,8 @@
 /* Register View */
 "Nombre" = "Nombre";
 "Registrarse" = "Registrarse";
+"Aceptar" = "Aceptar";
+"¡Registro completado! Inicia sesión para comenzar." = "¡Registro completado! Inicia sesión para comenzar.";
 
 /* Empty Favorite Hero and Favorite view */
 "Aún no hay favoritos." = "Aún no hay favoritos.";

@@ -31,15 +31,11 @@ final class UserAuthViewModel {
         
         }
         
-        appState.status = .loading
-        
         do {
             let result = try await useCase.registerUser(name: name, email: email, password: password)
             if result {
                 message = "¡Registro completado! Inicia sesión para comenzar."
                 showAlert = true
-                
-                self.appState.status = .login
             }
         } catch {
             message = "Algo salio mal."
