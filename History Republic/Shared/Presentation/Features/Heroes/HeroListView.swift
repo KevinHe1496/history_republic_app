@@ -43,19 +43,7 @@ struct HeroListView: View {
                     .searchable(text: $viewModel.searchText)
                     .navigationTitle("Héroes")
                 case .error(let message):
-                    VStack(spacing: 16) {
-                        Image(systemName: "exclamationmark.triangle.fill")
-                            .font(.system(size: 48))
-                            .foregroundStyle(.greenSecondary)
-                        Text(message)
-                            .multilineTextAlignment(.center)
-                            .foregroundStyle(.secondary)
-                        CustomButton(title: "Intentar de nuevo", color: .greenSecondary) {
-                            Task {
-                                try await viewModel.fetchAllHeroes()
-                            }
-                        }
-                    }
+                    ErrorLoadingView(message: message, viewModel: viewModel)
                 }
             }
             .task {
