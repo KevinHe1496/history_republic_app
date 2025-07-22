@@ -23,27 +23,30 @@ final class UserAuthViewModel {
     }
     
     @MainActor
-    func registerUser(name: String, email: String, password: String) async throws -> String {
+    func registerUser(name: String, email: String, password: String) async throws  {
         
         if let validationError = validateRegisterFields(name: name, email: email, password: password) {
+            message = validationError
             showAlert = true
-            return validationError
+        
         }
         
         appState.status = .loading
         
-        
-        let result = try await useCase.registerUser(name: name, email: email, password: password)
-        
-        if result {
-            appState.status = .login
-            
-        } else {
+        do {
+            let result = try await useCase.registerUser(name: name, email: email, password: password)
+            if result {
+                message = "¡Registro completado! Inicia sesión para comenzar."
+                showAlert = true
+                
+                self.appState.status = .login
+            }
+        } catch {
+            message = "Algo salio mal."
             showAlert = true
             appState.status = .error(error: "Iconrrect username or password.")
-            return "Algo salio mal."
+            print(error.localizedDescription)
         }
-        return ""
     }
     
     @MainActor
@@ -59,8 +62,6 @@ final class UserAuthViewModel {
             let result = try await useCase.loginApp(user: email, password: pass)
             
             if result {
-                
-                
                 self.appState.status = .inicio
                 return true
             } else {
@@ -72,7 +73,7 @@ final class UserAuthViewModel {
             
             
         } catch {
-            message   = "El email o contraseña es inválido."
+            message = "El email o contraseña es inválido."
             showAlert = true
             return false
         }

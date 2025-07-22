@@ -50,9 +50,10 @@ struct RegisterUserView: View {
                     
                 }
             }
-            Spacer().frame(height: 200)
+            Spacer()
+                .frame(height: 200)
                 .alert("Mensaje", isPresented: $viewModel.showAlert) {
-                    Button("OK") { }
+                    Button("Aceptar") { }
                 } message: {
                     Text(viewModel.message)
                 }

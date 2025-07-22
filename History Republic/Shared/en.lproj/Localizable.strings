@@ -1,0 +1,109 @@
+/* 
+  Localizable.strings
+  History Republic
+
+  Created by Andy Heredia on 22/7/25.
+  
+*/
+
+/* Tab bar Menu */
+
+"Inicio" = "Home";
+"Perfil" = "Profile";
+"Favoritos" = "Favorites";
+
+
+/* Hero List View */
+
+"Héroes" = "Heroes";
+"Buscar" = "Search";
+
+
+/* Default Profile */
+"Iniciar sesión" = "Login";
+"Registrarme" = "Sign up";
+"¿Aún no tienes una cuenta?" = "Don't have an account yet?";
+"Inicia sesión si ya tienes una cuenta o regístrate como jugador o dueño para guardar tus canchas o administrarlas." = "Log in if you already have an account or sign up as a player or owner to save or manage your fields.";
+
+
+/* User Profile */
+"Editar perfil" = "Edit profile";
+"Editar Perfil" = "Edit Profile";
+"Condiciones de uso" = "Terms of Use";
+"Cerrar sesión" = "Log out";
+"Borrar cuenta" = "Delete account";
+"Guardar Cambios" = "Save Changes";
+"Tu nombre" = "Your name";
+
+/* Message Alert */
+"Mensaje" = "Message";
+"Se ha editado exitosamente." = "Successfully edited.";
+"Borrar mi cuenta" = "Delete my account";
+"¿Estás seguro que quieres eliminar tu cuenta?" = "Are you sure you want to delete your account?";
+"Cancelar" = "Cancel";
+"Eliminar" = "Delete";
+
+
+/* Login View */
+"Accede a tu cuenta" = "Access your account";
+"Contraseña" = "Password";
+
+/* Register View */
+"Nombre" = "Name";
+"Registrarse" = "Sign up";
+
+/* Empty Favorite Hero and Favorite view*/
+"Aún no hay favoritos." = "There are no favorites yet.";
+"Agrega algunos elementos a tus favoritos para verlos aquí." = "Add some items to your favorites to see them here.";
+"Favoritos" = "Favorites";
+
+
+/* Terms of use view */
+
+"Condiciones de Uso" = "Terms of Use";
+
+"Bienvenido/a a History Republic, una plataforma móvil que te permite aprender sobre los relatos épicos a lo largo de la historia de forma amena e interactiva. Al descargar, instalar o utilizar la Aplicación aceptas íntegramente estas Condiciones de Uso (“Condiciones”). Si no estás de acuerdo, por favor no utilices la Aplicación." = "Welcome to History Republic, a mobile platform that allows you to learn about epic stories throughout history in an enjoyable and interactive way. By downloading, installing, or using the App, you fully accept these Terms of Use (“Terms”). If you do not agree, please do not use the App.";
+
+"1. Aceptación y modificaciones" = "1. Acceptance and Modifications";
+
+"Estas Condiciones constituyen un contrato vinculante entre History Republic (“nosotros”) y tú como usuario. Podremos actualizar las Condiciones cuando sea necesario. Te avisaremos mediante notificación dentro de la app o correo electrónico. El uso continuado tras la modificación implica tu aceptación." = "These Terms constitute a binding agreement between History Republic (“we”) and you as a user. We may update the Terms when necessary. We will notify you via in-app notification or email. Continued use after the modification implies your acceptance.";
+
+"2. Requisitos de edad y registro" = "2. Age Requirements and Registration";
+
+"Debes tener al menos 13 años (o la edad mínima que exija tu jurisdicción) para crear una cuenta. Si eres menor, necesitas consentimiento de tu tutor legal. La información de registro debe ser veraz y mantenerse actualizada." = "You must be at least 13 years old (or the minimum age required by your jurisdiction) to create an account. If you are a minor, you need consent from your legal guardian. Registration information must be truthful and kept up to date.";
+
+"3. Licencia de uso" = "3. Usage License";
+
+"Te concedemos una licencia personal, limitada, no exclusiva e intransferible para instalar y usar la Aplicación con fines únicamente educativos y no comerciales. Queda prohibido: (a) comercializar, copiar o distribuir la Aplicación o su contenido; (b) ingeniería inversa; (c) eludir medidas de seguridad." = "We grant you a personal, limited, non-exclusive, and non-transferable license to install and use the App solely for educational and non-commercial purposes. The following is prohibited: (a) commercializing, copying, or distributing the App or its content; (b) reverse engineering; (c) bypassing security measures.";
+
+"4. Propiedad intelectual" = "4. Intellectual Property";
+
+"Todo el contenido es propiedad nuestra o de nuestros licenciantes y está protegido por leyes de copyright. Los nombres History Republic y su logotipo son marcas registradas." = "All content is owned by us or our licensors and is protected by copyright laws. The names History Republic and its logo are registered trademarks.";
+
+"5. Contenido educativo y descargo de responsabilidad" = "5. Educational Content and Disclaimer";
+
+"Nos esforzamos por ofrecer información rigurosa; sin embargo, no garantizamos que todo el contenido sea absolutamente exacto. La Aplicación es puramente educativa." = "We strive to provide accurate information; however, we do not guarantee that all content is absolutely accurate. The App is purely educational.";
+
+"6. Contenido aportado por el usuario" = "6. User-Contributed Content";
+
+"Conservas tus derechos, pero nos concedes licencia mundial gratuita para mostrar tu contenido en la app. No publiques material ilegal, ofensivo o que infrinja derechos de terceros." = "You retain your rights, but you grant us a free, worldwide license to display your content in the app. Do not post illegal, offensive, or infringing material.";
+
+"7. Conductas prohibidas" = "7. Prohibited Conduct";
+
+"No se permite usar la Aplicación para fines comerciales sin autorización, extraer datos automáticamente (bots, scraping), acceder sin permiso a nuestros sistemas o violar leyes o estas Condiciones." = "It is not permitted to use the App for commercial purposes without authorization, automatically extract data (bots, scraping), access our systems without permission, or violate laws or these Terms.";
+
+"8. Privacidad" = "8. Privacy";
+
+"Consulta nuestra Política de Privacidad para saber cómo tratamos tus datos." = "Please refer to our Privacy Policy to learn how we handle your data.";
+
+"9. Limitación de responsabilidad" = "9. Limitation of Liability";
+
+"La Aplicación se ofrece “tal cual” y “según disponibilidad”. No asumimos responsabilidad por pérdidas indirectas o daños consecuentes." = "The App is provided “as is” and “as available.” We assume no responsibility for indirect losses or consequential damages.";
+
+"10. Suspensión y terminación" = "10. Suspension and Termination";
+
+"Podremos suspender o cancelar tu acceso si incumples estas Condiciones." = "We may suspend or terminate your access if you breach these Terms.";
+
+
+
+

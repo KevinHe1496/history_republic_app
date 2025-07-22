@@ -10,23 +10,22 @@ import SwiftUI
 struct HeroDetailView: View {
     
     var url: String
+    @State private var isLoading = true
     
     var body: some View {
-        if url.isEmpty {
-            VStack(spacing: 8) {
-                ProgressView()
-                Text("Cargando información del héroe…")
-                    .font(.caption)
-                    .foregroundColor(.red)
-                    .tint(.red)
-            }
-            .frame(height: 150)
-        } else {
-            WebView(url: URL(string: url)!)
-                .edgesIgnoringSafeArea(.all)
-        }
-        
-    }
+          ZStack {
+              if let validURL = URL(string: url) {
+                  WebView(url: validURL, isLoading: $isLoading)
+                      .edgesIgnoringSafeArea(.all)
+              } else {
+                  Text("URL inválida")
+              }
+
+              if isLoading {
+                      ProgressView()
+              }
+          }
+      }
 }
 
 #Preview {

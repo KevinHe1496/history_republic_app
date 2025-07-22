@@ -22,15 +22,17 @@ struct FavoriteView: View {
                             HeroDetailView(url: hero.url)
                         } label: {
                             HeroRowView(hero: $hero, viewModel: viewModelHeroes)
+                                
 
                         }
-                        .listStyle(.plain)
+                        
                     }
+                    .listStyle(.plain)
                 }
               
             }
             .frame(maxWidth: .infinity)
-            .navigationTitle("Mis Favoritos")
+            .navigationTitle("Favoritos")
             .onAppear {
                 Task {
                     try await viewModel.fetchUser()
