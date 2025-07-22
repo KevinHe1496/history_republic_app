@@ -54,7 +54,11 @@ struct RegisterUserView: View {
             Spacer()
                 .frame(height: 200)
                 .alert("Mensaje", isPresented: $viewModel.showAlert) {
-                    Button("Aceptar") { dismiss() }
+                    Button("Aceptar") {
+                        if viewModel.isRegistrationSuccess {
+                            dismiss()
+                        }
+                    }
                 } message: {
                     Text(viewModel.message)
                 }

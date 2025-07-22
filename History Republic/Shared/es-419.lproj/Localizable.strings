@@ -42,12 +42,19 @@
 /* Login View */
 "Accede a tu cuenta" = "Accede a tu cuenta";
 "Contraseña" = "Contraseña";
+"Email" = "Email";
 
 /* Register View */
 "Nombre" = "Nombre";
 "Registrarse" = "Registrarse";
 "Aceptar" = "Aceptar";
 "¡Registro completado! Inicia sesión para comenzar." = "¡Registro completado! Inicia sesión para comenzar.";
+"Usuario incorrecto o contraseña." = "Usuario incorrecto o contraseña.";
+"El email o contraseña es inválido." = "El email o contraseña es inválido.";
+"Todos los campos son requeridos." = "Todos los campos son requeridos.";
+"Ingresa un correo electrónico válido, por ejemplo: usuario@ejemplo.com" = "Ingresa un correo electrónico válido, por ejemplo: usuario@ejemplo.com";
+"La contraseña debe tener al menos 6 caracteres." = "La contraseña debe tener al menos 6 caracteres.";
+
 
 /* Empty Favorite Hero and Favorite view */
 "Aún no hay favoritos." = "Aún no hay favoritos.";
