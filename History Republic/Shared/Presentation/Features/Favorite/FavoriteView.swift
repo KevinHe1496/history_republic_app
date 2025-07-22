@@ -32,7 +32,7 @@ struct FavoriteView: View {
               
             }
             .frame(maxWidth: .infinity)
-            .navigationTitle("Mis Favoritos")
+            .navigationTitle("Favoritos")
             .onAppear {
                 Task {
                     try await viewModel.fetchUser()

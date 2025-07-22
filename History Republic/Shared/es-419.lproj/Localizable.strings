@@ -1,0 +1,86 @@
+/* 
+  Localizable.strings
+  History Republic
+
+  Created by Andy Heredia on 22/7/25.
+  
+*/
+
+/* Tab bar Menu */
+"Inicio" = "Inicio";
+"Perfil" = "Perfil";
+"Favoritos" = "Favoritos";
+
+/* Hero List View */
+"Héroes" = "Héroes";
+"Buscar" = "Buscar";
+
+/* Default Profile */
+"Iniciar sesión" = "Iniciar sesión";
+"Registrarme" = "Registrarme";
+"¿Aún no tienes una cuenta?" = "¿Aún no tienes una cuenta?";
+"Inicia sesión si ya tienes una cuenta o regístrate como jugador o dueño para guardar tus canchas o administrarlas." = "Inicia sesión si ya tienes una cuenta o regístrate como jugador o dueño para guardar tus canchas o administrarlas.";
+
+/* User Profile */
+"Editar perfil" = "Editar perfil";
+"Editar Perfil" = "Editar Perfil";
+"Condiciones de uso" = "Condiciones de uso";
+"Cerrar sesión" = "Cerrar sesión";
+"Borrar cuenta" = "Borrar cuenta";
+"Guardar Cambios" = "Guardar Cambios";
+"Tu nombre" = "Tu nombre";
+
+/* Message Alert */
+"Mensaje" = "Mensaje";
+"Se ha editado exitosamente." = "Se ha editado exitosamente.";
+"Borrar mi cuenta" = "Borrar mi cuenta";
+"¿Estás seguro que quieres eliminar tu cuenta?" = "¿Estás seguro que quieres eliminar tu cuenta?";
+"Cancelar" = "Cancelar";
+"Eliminar" = "Eliminar";
+
+/* Login View */
+"Accede a tu cuenta" = "Accede a tu cuenta";
+"Contraseña" = "Contraseña";
+
+/* Register View */
+"Nombre" = "Nombre";
+"Registrarse" = "Registrarse";
+
+/* Empty Favorite Hero and Favorite view */
+"Aún no hay favoritos." = "Aún no hay favoritos.";
+"Agrega algunos elementos a tus favoritos para verlos aquí." = "Agrega algunos elementos a tus favoritos para verlos aquí.";
+"Favoritos" = "Favoritos";
+
+/* Terms of use view */
+"Condiciones de Uso" = "Condiciones de Uso";
+"Bienvenido/a a History Republic, una plataforma móvil que te permite aprender sobre los relatos épicos a lo largo de la historia de forma amena e interactiva. Al descargar, instalar o utilizar la Aplicación aceptas íntegramente estas Condiciones de Uso (“Condiciones”). Si no estás de acuerdo, por favor no utilices la Aplicación." = "Bienvenido/a a History Republic, una plataforma móvil que te permite aprender sobre los relatos épicos a lo largo de la historia de forma amena e interactiva. Al descargar, instalar o utilizar la Aplicación aceptas íntegramente estas Condiciones de Uso (“Condiciones”). Si no estás de acuerdo, por favor no utilices la Aplicación.";
+
+"1. Aceptación y modificaciones" = "1. Aceptación y modificaciones";
+"Estas Condiciones constituyen un contrato vinculante entre History Republic (“nosotros”) y tú como usuario. Podremos actualizar las Condiciones cuando sea necesario. Te avisaremos mediante notificación dentro de la app o correo electrónico. El uso continuado tras la modificación implica tu aceptación." = "Estas Condiciones constituyen un contrato vinculante entre History Republic (“nosotros”) y tú como usuario. Podremos actualizar las Condiciones cuando sea necesario. Te avisaremos mediante notificación dentro de la app o correo electrónico. El uso continuado tras la modificación implica tu aceptación.";
+
+"2. Requisitos de edad y registro" = "2. Requisitos de edad y registro";
+"Debes tener al menos 13 años (o la edad mínima que exija tu jurisdicción) para crear una cuenta. Si eres menor, necesitas consentimiento de tu tutor legal. La información de registro debe ser veraz y mantenerse actualizada." = "Debes tener al menos 13 años (o la edad mínima que exija tu jurisdicción) para crear una cuenta. Si eres menor, necesitas consentimiento de tu tutor legal. La información de registro debe ser veraz y mantenerse actualizada.";
+
+"3. Licencia de uso" = "3. Licencia de uso";
+"Te concedemos una licencia personal, limitada, no exclusiva e intransferible para instalar y usar la Aplicación con fines únicamente educativos y no comerciales. Queda prohibido: (a) comercializar, copiar o distribuir la Aplicación o su contenido; (b) ingeniería inversa; (c) eludir medidas de seguridad." = "Te concedemos una licencia personal, limitada, no exclusiva e intransferible para instalar y usar la Aplicación con fines únicamente educativos y no comerciales. Queda prohibido: (a) comercializar, copiar o distribuir la Aplicación o su contenido; (b) ingeniería inversa; (c) eludir medidas de seguridad.";
+
+"4. Propiedad intelectual" = "4. Propiedad intelectual";
+"Todo el contenido es propiedad nuestra o de nuestros licenciantes y está protegido por leyes de copyright. Los nombres History Republic y su logotipo son marcas registradas." = "Todo el contenido es propiedad nuestra o de nuestros licenciantes y está protegido por leyes de copyright. Los nombres History Republic y su logotipo son marcas registradas.";
+
+"5. Contenido educativo y descargo de responsabilidad" = "5. Contenido educativo y descargo de responsabilidad";
+"Nos esforzamos por ofrecer información rigurosa; sin embargo, no garantizamos que todo el contenido sea absolutamente exacto. La Aplicación es puramente educativa." = "Nos esforzamos por ofrecer información rigurosa; sin embargo, no garantizamos que todo el contenido sea absolutamente exacto. La Aplicación es puramente educativa.";
+
+"6. Contenido aportado por el usuario" = "6. Contenido aportado por el usuario";
+"Conservas tus derechos, pero nos concedes licencia mundial gratuita para mostrar tu contenido en la app. No publiques material ilegal, ofensivo o que infrinja derechos de terceros." = "Conservas tus derechos, pero nos concedes licencia mundial gratuita para mostrar tu contenido en la app. No publiques material ilegal, ofensivo o que infrinja derechos de terceros.";
+
+"7. Conductas prohibidas" = "7. Conductas prohibidas";
+"No se permite usar la Aplicación para fines comerciales sin autorización, extraer datos automáticamente (bots, scraping), acceder sin permiso a nuestros sistemas o violar leyes o estas Condiciones." = "No se permite usar la Aplicación para fines comerciales sin autorización, extraer datos automáticamente (bots, scraping), acceder sin permiso a nuestros sistemas o violar leyes o estas Condiciones.";
+
+"8. Privacidad" = "8. Privacidad";
+"Consulta nuestra Política de Privacidad para saber cómo tratamos tus datos." = "Consulta nuestra Política de Privacidad para saber cómo tratamos tus datos.";
+
+"9. Limitación de responsabilidad" = "9. Limitación de responsabilidad";
+"La Aplicación se ofrece “tal cual” y “según disponibilidad”. No asumimos responsabilidad por pérdidas indirectas o daños consecuentes." = "La Aplicación se ofrece “tal cual” y “según disponibilidad”. No asumimos responsabilidad por pérdidas indirectas o daños consecuentes.";
+
+"10. Suspensión y terminación" = "10. Suspensión y terminación";
+"Podremos suspender o cancelar tu acceso si incumples estas Condiciones." = "Podremos suspender o cancelar tu acceso si incumples estas Condiciones.";

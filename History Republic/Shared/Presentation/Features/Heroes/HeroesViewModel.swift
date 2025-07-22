@@ -13,6 +13,7 @@ final class HeroesViewModel {
     var status: ViewState<[HeroResponse]> = .idle
     var heroes: [HeroResponse] = []
     var searchText: String = ""
+    var isloading: Bool = false
 
     @ObservationIgnored private var useCase: HeroServiceUseCaseProtocol
 
@@ -31,6 +32,8 @@ final class HeroesViewModel {
             status = .error("No se pudo cargar los héroes")
         }
     }
+    
+    
 
     /// Alterna favorito con actualización optimista
     @MainActor

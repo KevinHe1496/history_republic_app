@@ -41,7 +41,7 @@ struct HeroListView: View {
                         
                     }
                     .searchable(text: $viewModel.searchText)
-                    .navigationTitle("Heroes")
+                    .navigationTitle("Héroes")
                 case .error(let message):
                     VStack(spacing: 16) {
                         Image(systemName: "exclamationmark.triangle.fill")
