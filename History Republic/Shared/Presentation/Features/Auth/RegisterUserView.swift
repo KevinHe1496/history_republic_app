@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegisterUserView: View {
     @Environment(AppStateVM.self) private var appState
+    @Environment(\.dismiss) var dismiss
     
     @State private var name = ""
     @State private var email = ""
@@ -53,7 +54,11 @@ struct RegisterUserView: View {
             Spacer()
                 .frame(height: 200)
                 .alert("Mensaje", isPresented: $viewModel.showAlert) {
-                    Button("Aceptar") { }
+                    Button("Aceptar") {
+                        if viewModel.isRegistrationSuccess {
+                            dismiss()
+                        }
+                    }
                 } message: {
                     Text(viewModel.message)
                 }

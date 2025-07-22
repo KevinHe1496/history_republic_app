@@ -13,9 +13,9 @@ final class UserAuthViewModel {
     @ObservationIgnored
     private var useCase: UserAuthServiceUsecaseProtocol
     private var appState: AppStateVM
-    var isRegistered: Bool = false
     var showAlert: Bool = false
     var message: String = ""
+    var isRegistrationSuccess: Bool = false
     
     init(registerUC: UserAuthServiceUsecaseProtocol = UserAuthServiceUseCase(), appState: AppStateVM) {
         self.useCase = registerUC
@@ -28,21 +28,18 @@ final class UserAuthViewModel {
         if let validationError = validateRegisterFields(name: name, email: email, password: password) {
             message = validationError
             showAlert = true
-        
+            return
         }
-        
-        appState.status = .loading
         
         do {
             let result = try await useCase.registerUser(name: name, email: email, password: password)
             if result {
-                message = "¡Registro completado! Inicia sesión para comenzar."
+                message = String(localized: "¡Registro completado! Inicia sesión para comenzar.")
+                isRegistrationSuccess = true
                 showAlert = true
-                
-                self.appState.status = .login
             }
         } catch {
-            message = "Algo salio mal."
+            message = String(localized: "Usuario incorrecto o contraseña.")
             showAlert = true
             appState.status = .error(error: "Iconrrect username or password.")
             print(error.localizedDescription)
@@ -65,7 +62,7 @@ final class UserAuthViewModel {
                 self.appState.status = .inicio
                 return true
             } else {
-                message = "El email o contraseña es inválido."
+                message = String(localized: "El email o contraseña es inválido." )
                 showAlert = true
                 //self.appState.status = .error(error: "Incorrect username or password")
                 return false
@@ -73,7 +70,7 @@ final class UserAuthViewModel {
             
             
         } catch {
-            message = "El email o contraseña es inválido."
+            message = String(localized: "El email o contraseña es inválido.")
             showAlert = true
             return false
         }
@@ -85,15 +82,15 @@ final class UserAuthViewModel {
     /// Checks that all fields are filled and email/password are valid.
     func validateRegisterFields(name: String, email: String, password: String) -> String? {
         if name.isEmpty || email.isEmpty || password.isEmpty {
-            message = "Todos los campos son requeridos."
+            message = String(localized: "Todos los campos son requeridos.")
             return message
         }
         if !email.contains("@") || !email.contains(".") {
-            message = "Ingresa un correo electrónico válido, por ejemplo: usuario@ejemplo.com"
+            message = String(localized:"Ingresa un correo electrónico válido, por ejemplo: usuario@ejemplo.com")
             return message
         }
         if password.count < 6 {
-            message = "La contraseña debe tener al menos 6 caracteres."
+            message = String(localized:"La contraseña debe tener al menos 6 caracteres.")
             return message
         }
         return nil
@@ -102,20 +99,19 @@ final class UserAuthViewModel {
     
     func validateLoginFields(email: String, password: String) -> String? {
         if email.isEmpty || password.isEmpty {
-            message = "Todos los campos son requeridos."
+            message = String(localized:"Todos los campos son requeridos.")
             return message
         }
         if !email.contains("@") || !email.contains(".") {
-            message = "Ingresa un correo electrónico válido, por ejemplo: usuario@ejemplo.com"
+            message = String(localized:"Ingresa un correo electrónico válido, por ejemplo: usuario@ejemplo.com")
             return message
         }
         if password.count < 6 {
-            message = "La contraseña debe tener al menos 6 caracteres."
+            message = String(localized:"La contraseña debe tener al menos 6 caracteres.")
             return message
         }
         return nil
     }
-    
     
     
 }

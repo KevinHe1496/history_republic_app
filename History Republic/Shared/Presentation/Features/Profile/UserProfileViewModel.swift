@@ -29,6 +29,8 @@ final class UserProfileViewModel {
         }
     }
     
+   
+    
     @MainActor
     func updateUser(name: String) async throws {
         _ =  try await useCase.updateUser(name: name)

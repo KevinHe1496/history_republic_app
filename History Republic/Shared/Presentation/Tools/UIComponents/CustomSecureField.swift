@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomSecureField: View {
-    let placeholder: String
+    let placeholder: LocalizedStringKey
     @Binding var password: String
     
     var body: some View {

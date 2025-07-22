@@ -29,7 +29,7 @@ struct EditUserProfileView: View {
                 }
                 .font(.appButton)
                 .alert("Mensaje", isPresented: $showAlert) {
-                    Button("OK") {
+                    Button("Aceptar") {
                         Task {
                             try await viewModel.updateUser(name: name)
                             dismiss()
