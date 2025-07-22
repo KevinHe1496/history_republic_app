@@ -24,6 +24,7 @@
 		C93892602DA9CFA40094C753 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925F2DA9CFA40094C753 /* CustomTextField.swift */; };
 		C93892622DA9D0E30094C753 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93892612DA9D0E30094C753 /* CustomSecureField.swift */; };
 		C93892642DA9D1AF0094C753 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93892632DA9D1AF0094C753 /* CustomButton.swift */; };
+		C94697E12E21F38800AACE45 /* ErrorLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94697E02E21F38800AACE45 /* ErrorLoadingView.swift */; };
 		C95DD0542DAB0B26001366FC /* UserAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95DD0532DAB0B26001366FC /* UserAuthService.swift */; };
 		C95DD0562DAB0D7C001366FC /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95DD0552DAB0D7C001366FC /* RegisterRequest.swift */; };
 		C96154FE2D9ED4FD00BF755D /* AuthTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96154FD2D9ED4FD00BF755D /* AuthTokenResponse.swift */; };
@@ -108,6 +109,7 @@
 		C938925F2DA9CFA40094C753 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C93892612DA9D0E30094C753 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		C93892632DA9D1AF0094C753 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		C94697E02E21F38800AACE45 /* ErrorLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLoadingView.swift; sourceTree = "<group>"; };
 		C95DD0532DAB0B26001366FC /* UserAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthService.swift; sourceTree = "<group>"; };
 		C95DD0552DAB0D7C001366FC /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		C96154FD2D9ED4FD00BF755D /* AuthTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenResponse.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				C9CF86392E1C764600348736 /* FavoriteButton.swift */,
 				BF1C72A92E1579400008D806 /* WebView.swift */,
 				C9A0AD0D2E16CE97003E843D /* LoadingProgressView.swift */,
+				C94697E02E21F38800AACE45 /* ErrorLoadingView.swift */,
 			);
 			path = ReusableUI;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				C96AC7DF2D9B701400369BAD /* AppStateVM.swift in Sources */,
 				C9A0AD172E16F638003E843D /* FavoriteServiceRepositoryProtocol.swift in Sources */,
 				C9AB7D472DAB43D7003D6C5E /* UserAuthServiceRepository.swift in Sources */,
+				C94697E12E21F38800AACE45 /* ErrorLoadingView.swift in Sources */,
 				C96AC7DA2D9B69DC00369BAD /* hrPersistenceKeyChain.swift in Sources */,
 				C9A0AD0E2E16CE97003E843D /* LoadingProgressView.swift in Sources */,
 				C9A0AD132E16DA6A003E843D /* FavoritesManager.swift in Sources */,
