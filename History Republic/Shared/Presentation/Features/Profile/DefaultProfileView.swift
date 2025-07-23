@@ -31,24 +31,25 @@ struct DefaultProfileView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 80, height: 80)
-                    .foregroundStyle(.greendarkandlightmode)
+                    .foregroundStyle(.white)
 
                 Text("¿Aún no tienes una cuenta?")
                     .font(.appTitle)
+                    .foregroundStyle(.white)
 
                 Text("Inicia sesión si ya tienes una cuenta o regístrate como jugador o dueño para guardar tus canchas o administrarlas.")
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(.white)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
 
                 VStack(spacing: 16) {
 
-                    CustomButton(title: "Iniciar sesión", color: .greendarkandlightmode) {
+                    CustomButton(title: "Iniciar sesión", color: .mainBrown) {
                         // 3️⃣  Abrir sheet de login
                         activeSheet = .login
                     }
 
-                    CustomButton(title: "Registrarme", color: .greendarkandlightmode) {
+                    CustomButton(title: "Registrarme", color: .mainBrown) {
                         // 3️⃣  Abrir sheet de registro
                         activeSheet = .register
                     }
