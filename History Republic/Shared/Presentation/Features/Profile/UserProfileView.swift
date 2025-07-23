@@ -29,7 +29,7 @@ struct UserProfileView: View {
                         .padding(16)
                         .background(
                             Circle()
-                                .fill(Color.greenSecondary)
+                                .fill(Color.greendarkandlightmode)
                         )
                     
                     Text(viewModel.userData.name)
@@ -61,13 +61,13 @@ struct UserProfileView: View {
                             await appState.closeSessionUser()
                         }
                     }
-                    .foregroundStyle(.greenSecondary)
+                    .foregroundStyle(.greendarkandlightmode)
                     .font(.appButton)
                     Button("Borrar cuenta") {
                         showAlert = true
                     }
                     .font(.appButton)
-                    .foregroundStyle(.greenSecondary)
+                    .foregroundStyle(.greendarkandlightmode)
                     .alert("Borrar mi cuenta", isPresented: $showAlert) {
                         Button("Eliminar", role: .destructive) {
                             Task {
