@@ -22,7 +22,7 @@ struct DefaultProfileView: View {
     var body: some View {
         ZStack {
             // Fondo que cubre toda la pantalla
-            Color(.systemGroupedBackground)
+            Color(.greenSecondary)
                 .ignoresSafeArea()
 
             VStack(spacing: 24) {
@@ -31,7 +31,7 @@ struct DefaultProfileView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 80, height: 80)
-                    .foregroundStyle(.greenSecondary)
+                    .foregroundStyle(.greendarkandlightmode)
 
                 Text("¿Aún no tienes una cuenta?")
                     .font(.appTitle)
@@ -43,12 +43,12 @@ struct DefaultProfileView: View {
 
                 VStack(spacing: 16) {
 
-                    CustomButton(title: "Iniciar sesión", color: .greenSecondary) {
+                    CustomButton(title: "Iniciar sesión", color: .greendarkandlightmode) {
                         // 3️⃣  Abrir sheet de login
                         activeSheet = .login
                     }
 
-                    CustomButton(title: "Registrarme", color: .greenSecondary) {
+                    CustomButton(title: "Registrarme", color: .greendarkandlightmode) {
                         // 3️⃣  Abrir sheet de registro
                         activeSheet = .register
                     }
