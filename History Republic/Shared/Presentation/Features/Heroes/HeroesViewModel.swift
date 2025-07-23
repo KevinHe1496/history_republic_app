@@ -63,12 +63,9 @@ final class HeroesViewModel {
     
     
     var filteredCharacters: [HeroResponse] {
-        if searchText.isEmpty {
-            return heroes
-        } else {
-            return heroes.filter { results in
-                results.nameHero.localizedCaseInsensitiveContains(searchText)
-            }
-        }
+        heroes
+            .filter { searchText.isEmpty || $0.nameHero.localizedCaseInsensitiveContains(searchText) }
+            .sorted { $0.nameHero.localizedCaseInsensitiveCompare($1.nameHero) == .orderedAscending }
     }
+
 }
