@@ -81,7 +81,7 @@ final class AppStateVM {
     func validateControlLogin() async {
         Task {
             if await loginUseCase.validateToken() == true {
-                self.status = .inicio
+                self.startSplashToLoginView()
                 NSLog("Login OK")
             } else {
                 self.startSplashToLoginView()
@@ -97,7 +97,7 @@ final class AppStateVM {
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
             Task { @MainActor in
-                self.status = .login
+                self.status = .inicio
             }
         }
     }
