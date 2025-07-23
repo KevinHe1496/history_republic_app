@@ -83,7 +83,7 @@ final class AppStateVM {
                 //self.status = .login
                 NSLog("Login OK")
             } else {
-                self.status = .inicio
+                self.startSplashToTabBarView()
             }
         }
     }
@@ -100,6 +100,14 @@ final class AppStateVM {
             }
         }
     }
-    
+    func startSplashToTabBarView() {
+        self.status = .none
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+            Task { @MainActor in
+                self.status = .inicio
+            }
+        }
+    }
     
 }
