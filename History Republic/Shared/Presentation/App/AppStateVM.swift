@@ -84,7 +84,7 @@ final class AppStateVM {
                 self.startSplashToLoginView()
                 NSLog("Login OK")
             } else {
-                self.startSplashToLoginView()
+                self.status = .inicio
             }
         }
     }
