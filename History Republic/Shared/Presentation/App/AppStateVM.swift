@@ -57,23 +57,21 @@ final class AppStateVM {
     /// - Parameters:
     ///   - user: User's email
     ///   - pass: User's password
-   
+    
     
     /// Logs the user out and returns the app to the login state
     @MainActor
     func closeSessionUser() async {
-        Task {
-            await loginUseCase.logout()
-            self.status = .login
-        }
+        await loginUseCase.logout()
+        self.status = .inicio
     }
     
-  
+    
     @MainActor
     func deleteAccount() async throws {
         try await userProfileUsecase.deleteUser()
         KeyChainHR().deleteHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN)
-        self.status = .login
+        self.status = .inicio
     }
     
     /// Validates if a user session already exists based on stored token
@@ -82,6 +80,7 @@ final class AppStateVM {
         Task {
             if await loginUseCase.validateToken() == true {
                 self.startSplashToLoginView()
+                //self.status = .login
                 NSLog("Login OK")
             } else {
                 self.status = .inicio
@@ -97,10 +96,10 @@ final class AppStateVM {
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
             Task { @MainActor in
-                self.status = .inicio
+                self.status = .login
             }
         }
     }
     
-   
+    
 }

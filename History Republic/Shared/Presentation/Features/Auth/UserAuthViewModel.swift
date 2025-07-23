@@ -59,7 +59,7 @@ final class UserAuthViewModel {
             let result = try await useCase.loginApp(user: email, password: pass)
             
             if result {
-                self.appState.status = .inicio
+                self.appState.status = .login
                 return true
             } else {
                 message = String(localized: "El email o contraseña es inválido." )

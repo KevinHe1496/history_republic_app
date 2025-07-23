@@ -73,7 +73,6 @@ struct LoginView: View {
                         Task {
                             try await viewModel.loginApp(email: email, pass: pass)
                         }
-                       
                     }
                     
                     .alert("Mensaje", isPresented: $viewModel.showAlert) {
