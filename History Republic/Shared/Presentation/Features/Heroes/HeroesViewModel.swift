@@ -40,8 +40,6 @@ final class HeroesViewModel {
     
     @MainActor
     func fetchAllHeroesWithFavorites() async throws {
-        self.status = .loading
-        self.heroes = [] // ✅ Limpia lista antes de recargar
 
         let allHeroes = try await useCase.fetchHeroes()
         let favorites = try await favoriteUseCase.fetchFavorites()
