@@ -22,7 +22,7 @@ final class FavoriteServiceRepository: FavoriteServiceRepositoryProtocol {
         try await network.removeFavorite(with: idHero)
     }
     
-    func fetchFavorites() async throws -> [HeroLikeResponse] {
+    func fetchFavorites() async throws -> [HeroResponse] {
         try await network.fetchFavorites()
     }
 }

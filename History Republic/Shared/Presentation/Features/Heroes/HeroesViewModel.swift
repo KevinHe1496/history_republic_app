@@ -14,6 +14,7 @@ final class HeroesViewModel {
     var heroes: [HeroResponse] = []
     var searchText: String = ""
     var isloading: Bool = false
+    var favoritesHeroes = [HeroResponse]()
     
     @ObservationIgnored private var useCase: HeroServiceUseCaseProtocol
     @ObservationIgnored var favoriteUseCase: FavoriteServiceUseCaseProtocol
@@ -25,7 +26,7 @@ final class HeroesViewModel {
         self.useCase = useCase
         self.favoriteUseCase = favoriteUseCase
         Task {
-            try await fetchAllHeroes()
+            try await fetchAllHeroesWithFavorites()
         }
     }
     
@@ -33,38 +34,79 @@ final class HeroesViewModel {
     func fetchAllHeroes() async throws {
         status = .loading
         do {
-            heroes = try await useCase.fetchHeroes()
-            status = .success(heroes)
+            let heros = try await useCase.fetchHeroes()
+            status = .success(heros)
         } catch {
-            status = .error("No se pudo cargar los héroes")
+            status = .error(error.localizedDescription)
         }
     }
     
-        @MainActor
-        func fetchAllHeroesWithFavorites() async throws {
+    @MainActor
+    func fetchFavoritesHeroes() async throws {
+        do {
+            let heroes = try await favoriteUseCase.fetchFavorites()
+            favoritesHeroes = heroes
+        }catch {
+            print("No pudimos encontrar heroes favoritos")
+        }
+    }
     
+    
+    @MainActor
+    func fetchAllHeroesWithFavorites() async throws {
+        status = .loading
+        
+        do {
+            // 1️⃣ Obtener todos los héroes
             let allHeroes = try await useCase.fetchHeroes()
-            let favorites = try await favoriteUseCase.fetchFavorites()
-            let favoriteHeroIDs = favorites.map(\.id)
-    
-            let updatedHeroes = allHeroes.map { hero in
-                var updated = hero
-                updated.favoriteHero = favoriteHeroIDs.contains(hero.id)
-                return updated
+            
+            // 2️⃣ Inicializar arreglo actualizado
+            var updatedHeroes = allHeroes
+            
+            // 3️⃣ Verificar si el usuario tiene un token JWT guardado
+            let token = KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN)
+            
+            if !token.isEmpty {
+                // 4️⃣ Si hay token, cargar favoritos del usuario autenticado
+                let favorites = try await favoriteUseCase.fetchFavorites()
+                favoritesHeroes = favorites
+                let favoriteHeroIDs = Set(favorites.map(\.id)) // Mejora de rendimiento con Set
+                
+                updatedHeroes = allHeroes.map { hero in
+                    var updated = hero
+                    updated.favoriteHero = favoriteHeroIDs.contains(hero.id)
+                    return updated
+                }
+            } else {
+                // 5️⃣ Si no hay token, marcamos todos como no favoritos
+                updatedHeroes = allHeroes.map { hero in
+                    var updated = hero
+                    updated.favoriteHero = false
+                    return updated
+                }
             }
-    
+            
+            // 6️⃣ Actualizar estado
             self.heroes = updatedHeroes
             self.status = .success(updatedHeroes)
+            
+        } catch {
+            NSLog("❌ Error al cargar héroes o favoritos: \(error.localizedDescription)")
+            self.favoritesHeroes = []
+            self.heroes = []
+            self.status = .error("No se pudo cargar los héroes")
+            throw error
         }
+    }
     
-        @MainActor
-        func resetFavorites() {
-            heroes = heroes.map { hero in
-                var h = hero
-                h.favoriteHero = false
-                return h
-            }
+    @MainActor
+    func resetFavorites() {
+        heroes = heroes.map { hero in
+            var h = hero
+            h.favoriteHero = false
+            return h
         }
+    }
     
     //    /// Alterna favorito con actualización optimista
     //    @MainActor
@@ -94,39 +136,97 @@ final class HeroesViewModel {
             .sorted { $0.nameHero.localizedCaseInsensitiveCompare($1.nameHero) == .orderedAscending }
     }
     
+    
     @MainActor
-    func setLikeHero(heroId: UUID) async throws {
+    func setLikeHeroFromHeroes(heroId: UUID) async throws {
         guard let index = heroes.firstIndex(where: { $0.id == heroId }) else {
-            NSLog("❌ Héroe no encontrado")
+            NSLog("❌ Héroe no encontrado en heroes")
             return
         }
-        
+
         let isCurrentlyFavorite = heroes[index].favoriteHero
         var success = false
-        
+
         do {
             if isCurrentlyFavorite {
                 success = try await favoriteUseCase.removeFavorite(with: heroId)
             } else {
                 success = try await favoriteUseCase.addFavorite(with: heroId)
             }
-            
+
             if success {
                 heroes[index].favoriteHero.toggle()
                 NotificationCenter.default.post(
                     name: .kcNotificationrReloadAlumnos,
-                    object: "Cambio heroe me gusta"
+                    object: "Cambio desde vista general"
                 )
             } else {
-                NSLog("❌ La operación de favorito falló (sin error lanzado)")
+                NSLog("❌ La operación de favorito falló (heroes)")
             }
-            
         } catch {
-            NSLog("❌ Error al cambiar favorito: \(error.localizedDescription)")
+            NSLog("❌ Error en heroes: \(error.localizedDescription)")
         }
     }
+
+    @MainActor
+    func setLikeHeroFromFavorites(heroId: UUID) async throws {
+        guard let index = favoritesHeroes.firstIndex(where: { $0.id == heroId }) else {
+            NSLog("❌ Héroe no encontrado en favoritos")
+            return
+        }
+
+        var hero = favoritesHeroes[index]
+        let isCurrentlyFavorite = hero.favoriteHero
+        var success = false
+
+        do {
+            if isCurrentlyFavorite {
+                success = try await favoriteUseCase.removeFavorite(with: heroId)
+            } else {
+                success = try await favoriteUseCase.addFavorite(with: heroId)
+            }
+
+            if success {
+                // 1. Eliminar de la lista de favoritos si hizo dislike
+                if isCurrentlyFavorite {
+                    favoritesHeroes.remove(at: index)
+                } else {
+                    hero.favoriteHero = true
+                    favoritesHeroes[index] = hero
+                }
+
+                NotificationCenter.default.post(
+                    name: .kcNotificationrReloadAlumnos,
+                    object: "Cambio desde favoritos"
+                )
+            } else {
+                NSLog("❌ La operación de favorito falló (favorites)")
+            }
+        } catch {
+            NSLog("❌ Error en favoritos: \(error.localizedDescription)")
+        }
+    }
+
+    
     
 }
+
+//    @MainActor
+//    func setLikeHero(heroId: UUID) async throws {
+//        //llamo al server
+//        if (try await favoriteUseCase.addFavorite(with: heroId) == true) {
+//            if let index = heroes.firstIndex(where: {$0.id == heroId}){
+//                heroes[index].favoriteHero.toggle()
+//            }
+//        } else {
+//            NSLog("Error al llamar me gusta")
+//        }
+//
+//        //Notificamos
+//        NotificationCenter.default.post(name: .kcNotificationrReloadAlumnos, object: "Cambio heroe me gusta")
+//    }
+//}
+
 
 extension Notification.Name {
     static let kcNotificationrReloadAlumnos = Notification.Name("ReloadAlumnos")

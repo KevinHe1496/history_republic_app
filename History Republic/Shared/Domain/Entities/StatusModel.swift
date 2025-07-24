@@ -9,5 +9,5 @@ import Foundation
 
 /// Estados de la aplicacion
 enum Status {
-    case none, loading, login, register, inicio, error(error: String), userProfile, defaultProfile
+    case splash, loading, inicio, error(error: String)
 }

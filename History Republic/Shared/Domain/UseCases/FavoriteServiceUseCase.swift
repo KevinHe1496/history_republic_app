@@ -10,7 +10,7 @@ import Foundation
 protocol FavoriteServiceUseCaseProtocol {
     func addFavorite(with idHero: UUID) async throws -> Bool
     func removeFavorite(with idHero: UUID) async throws -> Bool
-    func fetchFavorites() async throws -> [HeroLikeResponse]
+    func fetchFavorites() async throws -> [HeroResponse]
 }
 
 final class FavoriteServiceUseCase: FavoriteServiceUseCaseProtocol{
@@ -28,7 +28,7 @@ final class FavoriteServiceUseCase: FavoriteServiceUseCaseProtocol{
         try await repo.removeFavorite(with: idHero)
     }
     
-    func fetchFavorites() async throws -> [HeroLikeResponse] {
+    func fetchFavorites() async throws -> [HeroResponse] {
         try await repo.fetchFavorites()
     }
 }

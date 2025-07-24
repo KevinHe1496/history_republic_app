@@ -10,10 +10,10 @@ import SwiftUI
 
 struct RootView: View {
     @Environment(AppStateVM.self) var appState
-   
+    
     var body: some View {
         switch appState.status {
-        case .none:
+        case .splash:
             withAnimation {
                 SplashView()
             }
@@ -22,14 +22,6 @@ struct RootView: View {
                 LoadingView()
             }
             
-        case .login:
-            withAnimation {
-                TabBarView()
-            }
-        case .register:
-            withAnimation {
-                RegisterUserView(appState: appState)
-            }
         case .inicio:
             withAnimation {
                 TabBarView()
@@ -38,18 +30,8 @@ struct RootView: View {
             withAnimation {
                 Text("Error \(errorString)")
             }
-        case .userProfile:
-            withAnimation {
-                UserProfileView()
-            }
-        case .defaultProfile:
-            withAnimation {
-                DefaultProfileView()
-            }
         }
-            
     }
-    
 }
 
 #Preview {

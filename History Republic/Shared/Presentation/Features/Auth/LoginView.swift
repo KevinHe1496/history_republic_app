@@ -76,6 +76,7 @@ struct LoginView: View {
                             _ = try await viewModel.loginApp(email: email, pass: pass)
                             _ = try await herosViewModel.fetchAllHeroesWithFavorites()
                         }
+                        dismiss()
                     }
                     
                     .alert("Mensaje", isPresented: $viewModel.showAlert) {

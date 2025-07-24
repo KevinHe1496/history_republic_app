@@ -10,7 +10,7 @@ import Foundation
 protocol FavoriteServiceProtocol {
     func addFavorite(with idHero: UUID) async throws -> Bool
     func removeFavorite(with idHero: UUID) async throws -> Bool
-    func fetchFavorites() async throws -> [HeroLikeResponse]
+    func fetchFavorites() async throws -> [HeroResponse]
 }
 
 final class FavoriteService: FavoriteServiceProtocol {
@@ -76,7 +76,7 @@ final class FavoriteService: FavoriteServiceProtocol {
 
     
 
-    func fetchFavorites() async throws -> [HeroLikeResponse] {
+    func fetchFavorites() async throws -> [HeroResponse] {
         let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.addFavorite.rawValue)"
         
         guard let url = URL(string: urlString) else {
@@ -101,7 +101,7 @@ final class FavoriteService: FavoriteServiceProtocol {
         }
         
         do {
-            let result = try JSONDecoder().decode([HeroLikeResponse].self, from: data)
+            let result = try JSONDecoder().decode([HeroResponse].self, from: data)
             return result
         } catch {
             print("Hubo un error obteniendo los favoritos: \(error.localizedDescription)")
