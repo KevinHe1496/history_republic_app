@@ -48,7 +48,6 @@ struct HeroListView: View {
             }
             .onAppear {
                 Task {
-//                    try await viewModel.fetchAllHeroes()
                     try await viewModel.fetchAllHeroesWithFavorites()
                     
                 }
