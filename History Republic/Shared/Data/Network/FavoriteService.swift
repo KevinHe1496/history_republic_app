@@ -7,14 +7,9 @@
 
 import Foundation
 
-enum FavoriteAction {
-    case liked     // ❤️ se marcó como favorito (201)
-    case unliked   // 💔 se quitó de favoritos (204)
-}
-
 protocol FavoriteServiceProtocol {
-    func addFavorite(with idHero: UUID) async throws
-    func removeFavorite(with idHero: UUID) async throws
+    func addFavorite(with idHero: UUID) async throws -> Bool
+    func removeFavorite(with idHero: UUID) async throws -> Bool
     func fetchFavorites() async throws -> [HeroResponse]
 }
 
@@ -22,7 +17,7 @@ final class FavoriteService: FavoriteServiceProtocol {
 
     private let session: URLSession = .shared
 
-    func addFavorite(with idHero: UUID) async throws  {
+    func addFavorite(with idHero: UUID) async throws -> Bool {
         // 1. URL segura
         let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.addFavorite.rawValue)/\(idHero.uuidString)"
 
@@ -39,24 +34,28 @@ final class FavoriteService: FavoriteServiceProtocol {
         request.setValue("Bearer \(jwToken)", forHTTPHeaderField: "Authorization")
 
         // 4. Call
-        let (_, response) = try await session.data(for: request)
-
-        guard let res = response as? HTTPURLResponse,
-              res.statusCode == HttpResponseCodes.SUCESS else {
-            throw HRError.errorFromApi(statusCode: (response as? HTTPURLResponse)?.statusCode ?? -1)
+        do {
+            let (_, response) = try await session.data(for: request)
+            
+            if (response.getResponseCode() == HttpResponseCodes.SUCCESS_CREATE){
+                //Succes
+                return true
+            }
+            return false
+        } catch {
+            NSLog("Error en like hero: \(error.localizedDescription)")
+            return false
         }
      
     }
     
-    func removeFavorite(with idHero: UUID) async throws {
-        //Todo
-        // 1. URL segura
+    func removeFavorite(with idHero: UUID) async throws -> Bool {
         let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.addFavorite.rawValue)/\(idHero.uuidString)"
 
         guard let url = URL(string: urlString) else {
             throw HRError.badUrl
         }
-        
+
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
         
@@ -64,53 +63,19 @@ final class FavoriteService: FavoriteServiceProtocol {
         request.setValue("Bearer \(jwToken)", forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        
-        // 4. Call
-        let (_, response) = try await session.data(for: request)
+        do {
+            let (_, response) = try await session.data(for: request)
+            let statusCode = response.getResponseCode()
 
-        guard let res = response as? HTTPURLResponse,
-              res.statusCode == HttpResponseCodes.SUCESS else {
-            throw HRError.errorFromApi(statusCode: (response as? HTTPURLResponse)?.statusCode ?? -1)
-        }
-       
-    }
-    
-    func toggleFavorite(id: UUID) async throws -> FavoriteAction {
-
-        // 1️⃣ Construir URL
-        let urlString = "\(ConstantsApp.CONS_API_URL)/api/favorites/\(id.uuidString)"
-        guard let url = URL(string: urlString) else {
-            throw HRError.badUrl
-        }
-
-        // 2️⃣ Crear request
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-
-        // 3️⃣ Incluir token JWT
-        let token = KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN)
-        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-
-        // 4️⃣ Llamada con URLSession
-        let (_, response) = try await URLSession.shared.data(for: request)
-
-        // 5️⃣ Interpretar respuesta HTTP
-        guard let res = response as? HTTPURLResponse else {
-            throw HRError.errorFromApi(statusCode: -1)
-        }
-
-        switch res.statusCode {
-        case 201:
-            return .liked                  // héroe fue marcado como favorito
-        case 204:
-            return .unliked                // héroe fue quitado de favoritos
-        case 401:
-            throw HRError.errorParsingData     // token expirado o ausente
-        default:
-            throw HRError.errorFromApi(statusCode: res.statusCode)
+            return statusCode == HttpResponseCodes.SUCESS
+        } catch {
+            NSLog("Error al eliminar favorito: \(error.localizedDescription)")
+            return false
         }
     }
+
     
+
     func fetchFavorites() async throws -> [HeroResponse] {
         let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.addFavorite.rawValue)"
         
@@ -143,4 +108,19 @@ final class FavoriteService: FavoriteServiceProtocol {
             throw HRError.dataNoReveiced
         }
     }
+}
+
+
+//ejemplo extension
+extension URLResponse {
+ 
+    func getResponseCode() -> Int {
+        if let resp = self as? HTTPURLResponse {
+            return resp.statusCode
+        } else{
+            return 500
+        }
+        
+    }
+    
 }

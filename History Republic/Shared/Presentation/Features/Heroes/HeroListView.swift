@@ -29,11 +29,11 @@ struct HeroListView: View {
                         // Secciónes y Podcasts
                         // HeroListView.swift  (solo la parte de la lista)
                         List {
-                            ForEach($viewModel.heroes.filter { $0.wrappedValue.nameHero.contains(viewModel.searchText) || viewModel.searchText.isEmpty }) { $hero in
+                            ForEach(viewModel.filteredCharacters) { hero in
                                 NavigationLink {
                                     HeroDetailView(url: hero.url)
                                 } label: {
-                                    HeroRowView(hero: $hero, viewModel: viewModel)
+                                    HeroRowView(hero: hero, viewModel: viewModel)
                                 }
                             }
                         }
@@ -49,7 +49,6 @@ struct HeroListView: View {
             .onAppear {
                 Task {
                     try await viewModel.fetchAllHeroesWithFavorites()
-                    
                 }
             }
         }

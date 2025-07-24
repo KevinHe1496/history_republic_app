@@ -14,8 +14,14 @@ final class AppStateVM {
     
     // MARK: - Published Properties
     
+
+    var canFetchFavorites: Bool {
+        isLogged // o validación extra si quieres
+    }
+
+    
     /// Current status of the app (none, loading, loaded, error, etc.)
-    var status = Status.none
+    var status = Status.splash
     
     /// Flag indicating whether a loading process is active
     var isLoading = false
@@ -63,8 +69,12 @@ final class AppStateVM {
     func closeSessionUser() async {
         heoresViewModel.resetFavorites()
         await loginUseCase.logout()
-        isLogged = false
+        // Cambiar temporalmente para forzar transición
+        self.status = .loading
+        try? await Task.sleep(nanoseconds: 300_000_000) // 0.3 segundos
         self.status = .inicio
+//        isLogged = false
+        
     }
     
     
@@ -72,6 +82,9 @@ final class AppStateVM {
     func deleteAccount() async throws {
         try await userProfileUsecase.deleteUser()
         KeyChainHR().deleteHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN)
+        // Cambiar temporalmente para forzar transición
+        self.status = .loading
+        try? await Task.sleep(nanoseconds: 300_000_000) // 0.3 segundos
         self.status = .inicio
     }
     
@@ -81,11 +94,12 @@ final class AppStateVM {
         Task {
             if await loginUseCase.validateToken() == true {
                 self.startSplashToLoginView()
-                isLogged = true
+//                isLogged = true
                 //self.status = .login
                 NSLog("Login OK")
             } else {
                 self.startSplashToTabBarView()
+                NSLog("Login ERROR")
             }
         }
     }
@@ -94,16 +108,16 @@ final class AppStateVM {
     
     /// Navigates from splash screen to login view after a short delay
     func startSplashToLoginView() {
-        self.status = .none
+        self.status = .splash
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
             Task { @MainActor in
-                self.status = .login
+                self.status = .inicio
             }
         }
     }
     func startSplashToTabBarView() {
-        self.status = .none
+        self.status = .splash
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
             Task { @MainActor in

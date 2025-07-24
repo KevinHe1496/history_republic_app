@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct HeroRowView: View {
-    @Environment(AppStateVM.self) var appState
-    @Binding var hero: HeroResponse
-    @State var viewModel: HeroesViewModel
+    var hero: HeroResponse
+    @Bindable var viewModel: HeroesViewModel
 
     var body: some View {
         ZStack {
@@ -42,17 +41,25 @@ struct HeroRowView: View {
             )
             
             // Botón en esquina superior derecha
-            if appState.isLogged {
+            if !KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN).isEmpty {
                 VStack {
                     HStack {
                         Spacer()
-                        FavoriteButton(isFavorite: $hero.favoriteHero) { newValue in
+
+                        
+                        Button {
                             Task {
-                                try await viewModel.toggleFavorite(heroID: hero.id,
-                                                                   newValue: newValue)
+                                try await viewModel.setLikeHeroFromHeroes(heroId: hero.id)
                             }
+                        } label: {
+                            Image(systemName: "heart.fill")
+                                .font(.system(size: 24))
+                                .foregroundStyle(hero.favoriteHero ? .red : .gray)
+                                .padding(8)
+                                .background(Color.white)
+                                .clipShape(Circle())
                         }
-                        .padding(8)
+                        .buttonStyle(.borderless)
                     }
                     Spacer()
                 }
@@ -63,10 +70,16 @@ struct HeroRowView: View {
 }
 
 
-
+//                        FavoriteButton(hero: hero, herosViewModel: viewModel, isFavorite: hero.favoriteHero) { newValue in
+//                            Task {
+////                                try await viewModel.toggleFavorite(heroID: hero.id,
+////                                                                   newValue: newValue)
+//                                try await viewModel.setLikeHero(heroId: hero.id)
+//                            }
+//                        }
+//                        .padding(8)
 
 
 #Preview {
-    HeroRowView(hero: .constant(.sampleHero), viewModel: HeroesViewModel())
-        .environment(AppStateVM())
+    HeroRowView(hero: .sampleHero, viewModel: HeroesViewModel())
 }

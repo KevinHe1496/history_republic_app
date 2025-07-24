@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import SwiftUICore
 
 @Observable
 final class UserAuthViewModel {
+    
     
     @ObservationIgnored
     private var useCase: UserAuthServiceUsecaseProtocol
@@ -61,7 +63,10 @@ final class UserAuthViewModel {
             
             if result {
                 appState.isLogged = true
-                self.appState.status = .login
+                // Cambiar temporalmente para forzar transición
+                self.appState.status = .loading
+                try? await Task.sleep(nanoseconds: 300_000_000) // 0.3 segundos
+                self.appState.status = .inicio
                 return true
             } else {
                 message = String(localized: "El email o contraseña es inválido." )

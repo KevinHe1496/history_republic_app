@@ -14,11 +14,11 @@ final class FavoriteServiceRepository: FavoriteServiceRepositoryProtocol {
         self.network = network
     }
     
-    func addFavorite(with idHero: UUID) async throws {
+    func addFavorite(with idHero: UUID) async throws -> Bool {
         try await network.addFavorite(with: idHero)
     }
     
-    func removeFavorite(with idHero: UUID) async throws {
+    func removeFavorite(with idHero: UUID) async throws -> Bool {
         try await network.removeFavorite(with: idHero)
     }
     

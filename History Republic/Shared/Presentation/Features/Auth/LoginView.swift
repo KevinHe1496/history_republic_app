@@ -14,7 +14,7 @@ struct LoginView: View {
     
     /// Access to the shared app state view model
     @Environment(AppStateVM.self) var appState
-    
+  
     @State private var viewModel: UserAuthViewModel
     @State private var herosViewModel = HeroesViewModel()
     
@@ -23,10 +23,10 @@ struct LoginView: View {
     }
     
     /// Email input from user
-    @State private var email = ""
+    @State private var email = "kevin@example.com"
     
     /// Password input from user
-    @State private var pass = ""
+    @State private var pass = "123456"
     
     var body: some View {
         NavigationStack {
@@ -74,8 +74,8 @@ struct LoginView: View {
                         Task(priority: .high) {
                             _ = try await viewModel.loginApp(email: email, pass: pass)
                             _ = try await herosViewModel.fetchAllHeroesWithFavorites()
-                            
                         }
+                        
                     }
                     
                     .alert("Mensaje", isPresented: $viewModel.showAlert) {
