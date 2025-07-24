@@ -16,9 +16,14 @@ final class HeroesViewModel {
     var isloading: Bool = false
 
     @ObservationIgnored private var useCase: HeroServiceUseCaseProtocol
+    @ObservationIgnored var favoriteUseCase: FavoriteServiceUseCaseProtocol
 
-    init(useCase: HeroServiceUseCaseProtocol = HeroServiceUseCase()) {
+    init(
+        useCase: HeroServiceUseCaseProtocol = HeroServiceUseCase(),
+        favoriteUseCase: FavoriteServiceUseCaseProtocol = FavoriteServiceUseCase()
+    ) {
         self.useCase = useCase
+        self.favoriteUseCase = favoriteUseCase
         Task { try await fetchAllHeroes() }
     }
 
@@ -33,7 +38,33 @@ final class HeroesViewModel {
         }
     }
     
+    @MainActor
+    func fetchAllHeroesWithFavorites() async throws {
+        self.status = .loading
+        self.heroes = [] // ✅ Limpia lista antes de recargar
+
+        let allHeroes = try await useCase.fetchHeroes()
+        let favorites = try await favoriteUseCase.fetchFavorites()
+        let favoriteHeroIDs = favorites.map(\.id)
+
+        let updatedHeroes = allHeroes.map { hero in
+            var updated = hero
+            updated.favoriteHero = favoriteHeroIDs.contains(hero.id)
+            return updated
+        }
+
+        self.heroes = updatedHeroes
+        self.status = .success(updatedHeroes)
+    }
     
+    @MainActor
+    func resetFavorites() {
+        heroes = heroes.map { hero in
+            var h = hero
+            h.favoriteHero = false
+            return h
+        }
+    }
 
     /// Alterna favorito con actualización optimista
     @MainActor
@@ -44,6 +75,7 @@ final class HeroesViewModel {
         heroes[idx].favoriteHero = newValue
 
         do {
+            _ = try await favoriteUseCase.fetchFavorites()
             if newValue {
                 try await useCase.addFavorite(with: heroID)
             } else {
@@ -55,17 +87,10 @@ final class HeroesViewModel {
             throw error
         }
     }
-
-    /// Conveniencia para las vistas
-    func isFavorite(heroID: UUID) -> Bool {
-        heroes.first(where: { $0.id == heroID })?.favoriteHero ?? false
-    }
-    
     
     var filteredCharacters: [HeroResponse] {
         heroes
             .filter { searchText.isEmpty || $0.nameHero.localizedCaseInsensitiveContains(searchText) }
             .sorted { $0.nameHero.localizedCaseInsensitiveCompare($1.nameHero) == .orderedAscending }
     }
-
 }

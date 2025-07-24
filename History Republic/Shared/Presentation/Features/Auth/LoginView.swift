@@ -16,16 +16,17 @@ struct LoginView: View {
     @Environment(AppStateVM.self) var appState
     
     @State private var viewModel: UserAuthViewModel
+    @State private var herosViewModel = HeroesViewModel()
     
     init(appState: AppStateVM) {
         _viewModel = State(initialValue: UserAuthViewModel(appState: appState))
     }
     
     /// Email input from user
-    @State private var email = "kevin@example.com"
+    @State private var email = ""
     
     /// Password input from user
-    @State private var pass = "123456"
+    @State private var pass = ""
     
     var body: some View {
         NavigationStack {
@@ -70,8 +71,10 @@ struct LoginView: View {
                         title: "Iniciar sesión",
                         color: .mainBrown
                     ) {
-                        Task {
-                            try await viewModel.loginApp(email: email, pass: pass)
+                        Task(priority: .high) {
+                            _ = try await viewModel.loginApp(email: email, pass: pass)
+                            _ = try await herosViewModel.fetchAllHeroesWithFavorites()
+                            
                         }
                     }
                     
