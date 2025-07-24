@@ -17,9 +17,6 @@ final class AppStateVM {
     /// Current status of the app (none, loading, loaded, error, etc.)
     var status = Status.none
     
-    /// JWT token for authenticated user sessions
-    var tokenJWT: String = ""
-    
     /// Flag indicating whether a loading process is active
     var isLoading = false
     
@@ -29,15 +26,17 @@ final class AppStateVM {
     // MARK: - Ignored Observations
     
     /// Flag that indicates if the user is currently logged in
-    @ObservationIgnored
+   
     var isLogged: Bool = false
     
     // MARK: - Dependencies
     
     /// Use case responsible for handling login and token validation logic
     @ObservationIgnored
-    private var loginUseCase: UserAuthServiceUsecaseProtocol
+    var loginUseCase: UserAuthServiceUsecaseProtocol
     private var userProfileUsecase = UserProfileServiceUseCase()
+    @ObservationIgnored
+    private var heoresViewModel = HeroesViewModel()
     
     // MARK: - Initializer
     
@@ -62,7 +61,9 @@ final class AppStateVM {
     /// Logs the user out and returns the app to the login state
     @MainActor
     func closeSessionUser() async {
+        heoresViewModel.resetFavorites()
         await loginUseCase.logout()
+        isLogged = false
         self.status = .inicio
     }
     
@@ -80,10 +81,11 @@ final class AppStateVM {
         Task {
             if await loginUseCase.validateToken() == true {
                 self.startSplashToLoginView()
+                isLogged = true
                 //self.status = .login
                 NSLog("Login OK")
             } else {
-                self.status = .inicio
+                self.startSplashToTabBarView()
             }
         }
     }
@@ -100,6 +102,14 @@ final class AppStateVM {
             }
         }
     }
-    
+    func startSplashToTabBarView() {
+        self.status = .none
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+            Task { @MainActor in
+                self.status = .inicio
+            }
+        }
+    }
     
 }

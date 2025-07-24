@@ -46,8 +46,12 @@ struct HeroListView: View {
                     ErrorLoadingView(message: message, viewModel: viewModel)
                 }
             }
-            .task {
-                try? await viewModel.fetchAllHeroes()
+            .onAppear {
+                Task {
+                    viewModel.status = .loading
+                    try await viewModel.fetchAllHeroesWithFavorites()
+                    
+                }
             }
         }
     }

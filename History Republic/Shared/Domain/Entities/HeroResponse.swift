@@ -4,12 +4,12 @@ import Foundation
 // MARK: - Heroes List
 struct HeroResponse: Codable, Identifiable {
     let id: UUID
-    let nameHero: String
-    let title: String
-    let information: String
-    let image: String
-    let url: String
-    var favoriteHero: Bool
+    var nameHero: String
+    var title: String
+    var information: String
+    var image: String
+    var url: String
+    var favoriteHero: Bool = false
     
     var imageURL: URL? {
         if let url = URL(string: image) {
@@ -30,3 +30,6 @@ struct HeroResponse: Codable, Identifiable {
     )
 }
 
+struct HerosLikeRequest: Codable {
+    var hero: UUID
+}

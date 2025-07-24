@@ -16,6 +16,7 @@ final class UserAuthViewModel {
     var showAlert: Bool = false
     var message: String = ""
     var isRegistrationSuccess: Bool = false
+    var isLogged: Bool = false
     
     init(registerUC: UserAuthServiceUsecaseProtocol = UserAuthServiceUseCase(), appState: AppStateVM) {
         self.useCase = registerUC
@@ -59,6 +60,7 @@ final class UserAuthViewModel {
             let result = try await useCase.loginApp(user: email, password: pass)
             
             if result {
+                appState.isLogged = true
                 self.appState.status = .login
                 return true
             } else {

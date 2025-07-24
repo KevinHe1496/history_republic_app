@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RootView: View {
     @Environment(AppStateVM.self) var appState
-    
+   
     var body: some View {
         switch appState.status {
         case .none:
@@ -47,7 +47,9 @@ struct RootView: View {
                 DefaultProfileView()
             }
         }
+            
     }
+    
 }
 
 #Preview {

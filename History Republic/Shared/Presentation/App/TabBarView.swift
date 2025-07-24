@@ -57,11 +57,9 @@ struct TabBarView: View {
                 }
             }
                 
-           
+            
             
         }
-        
-        
     }
 }
 

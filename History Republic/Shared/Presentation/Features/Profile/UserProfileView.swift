@@ -12,6 +12,7 @@ struct UserProfileView: View {
     
     @State var viewModel = UserProfileViewModel()
     @State var showAlert: Bool = false
+    @State var herosViewModel = HeroesViewModel()
     
     
     
@@ -59,6 +60,7 @@ struct UserProfileView: View {
                     Button("Cerrar sesión") {
                         Task {
                             await appState.closeSessionUser()
+                            
                         }
                     }
                     .foregroundStyle(.greendarkandlightmode)

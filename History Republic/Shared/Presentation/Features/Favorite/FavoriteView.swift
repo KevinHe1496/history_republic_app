@@ -11,6 +11,7 @@ struct FavoriteView: View {
     @State private var viewModel = UserProfileViewModel()
 
     @State var viewModelHeroes = HeroesViewModel()
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -34,6 +35,7 @@ struct FavoriteView: View {
             .frame(maxWidth: .infinity)
             .navigationTitle("Favoritos")
             .onAppear {
+                
                 Task {
                     try await viewModel.fetchUser()
                 }

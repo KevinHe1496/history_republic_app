@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct HeroRowView: View {
+    @Environment(AppStateVM.self) var appState
     @Binding var hero: HeroResponse
     @State var viewModel: HeroesViewModel
 
@@ -41,7 +42,7 @@ struct HeroRowView: View {
             )
             
             // Botón en esquina superior derecha
-            if !KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN).isEmpty {
+            if appState.isLogged {
                 VStack {
                     HStack {
                         Spacer()
@@ -67,4 +68,5 @@ struct HeroRowView: View {
 
 #Preview {
     HeroRowView(hero: .constant(.sampleHero), viewModel: HeroesViewModel())
+        .environment(AppStateVM())
 }
