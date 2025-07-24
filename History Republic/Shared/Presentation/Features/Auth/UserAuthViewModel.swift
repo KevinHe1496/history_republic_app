@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import SwiftUICore
 
 @Observable
 final class UserAuthViewModel {
+    
     
     @ObservationIgnored
     private var useCase: UserAuthServiceUsecaseProtocol

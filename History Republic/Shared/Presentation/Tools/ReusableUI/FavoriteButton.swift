@@ -10,7 +10,9 @@
 import SwiftUI
 
 struct FavoriteButton: View {
-    @Binding var isFavorite: Bool
+    var hero: HeroResponse
+    @Bindable var herosViewModel: HeroesViewModel
+    @State var isFavorite: Bool
     var onToggle: ((Bool) -> Void)? = nil
     @State private var animate = false
 

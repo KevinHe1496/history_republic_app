@@ -42,6 +42,7 @@ struct TabBarView: View {
         TabView {
             Tab("Inicio", systemImage: "house.fill") {
                 HeroListView()
+                    
             }
             if !KeyChainHR().loadHR(key: ConstantsApp.CONS_TOKEN_ID_KEYCHAIN).isEmpty {
                 Tab("Favoritos", systemImage: "heart.fill") {

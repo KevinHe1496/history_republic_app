@@ -18,11 +18,11 @@ struct FavoriteView: View {
                 if viewModel.userData.favorites.isEmpty {
                     ContentUnavailableView("Aún no hay favoritos.", systemImage: "star.slash", description: Text("Agrega algunos elementos a tus favoritos para verlos aquí."))
                 } else {
-                    List($viewModel.heroes) { $hero in
+                    List(viewModel.heroes) { hero in
                         NavigationLink {
                             HeroDetailView(url: hero.url)
                         } label: {
-                            HeroRowView(hero: $hero, viewModel: viewModelHeroes)
+                            HeroRowView(hero: hero, viewModel: viewModelHeroes)
                                 
 
                         }

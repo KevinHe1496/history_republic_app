@@ -63,7 +63,7 @@ final class AppStateVM {
     func closeSessionUser() async {
         heoresViewModel.resetFavorites()
         await loginUseCase.logout()
-        isLogged = false
+//        isLogged = false
         self.status = .inicio
     }
     
@@ -81,11 +81,12 @@ final class AppStateVM {
         Task {
             if await loginUseCase.validateToken() == true {
                 self.startSplashToLoginView()
-                isLogged = true
+//                isLogged = true
                 //self.status = .login
                 NSLog("Login OK")
             } else {
                 self.startSplashToTabBarView()
+                NSLog("Login ERROR")
             }
         }
     }
