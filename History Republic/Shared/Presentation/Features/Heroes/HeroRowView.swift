@@ -50,7 +50,6 @@ struct HeroRowView: View {
                         Button {
                             Task {
                                 try await viewModel.setLikeHeroFromHeroes(heroId: hero.id)
-                                try await viewModel.setLikeHeroFromFavorites(heroId: hero.id)
                             }
                         } label: {
                             Image(systemName: "heart.fill")

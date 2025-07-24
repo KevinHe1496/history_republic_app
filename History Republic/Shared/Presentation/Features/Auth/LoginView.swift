@@ -14,8 +14,7 @@ struct LoginView: View {
     
     /// Access to the shared app state view model
     @Environment(AppStateVM.self) var appState
-    @Environment(\.dismiss) var dismiss
-    
+  
     @State private var viewModel: UserAuthViewModel
     @State private var herosViewModel = HeroesViewModel()
     
@@ -76,7 +75,7 @@ struct LoginView: View {
                             _ = try await viewModel.loginApp(email: email, pass: pass)
                             _ = try await herosViewModel.fetchAllHeroesWithFavorites()
                         }
-                        dismiss()
+                        
                     }
                     
                     .alert("Mensaje", isPresented: $viewModel.showAlert) {

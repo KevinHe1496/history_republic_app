@@ -108,28 +108,6 @@ final class HeroesViewModel {
         }
     }
     
-    //    /// Alterna favorito con actualización optimista
-    //    @MainActor
-    //    func toggleFavorite(heroID: UUID, newValue: Bool) async throws {
-    //        guard let idx = heroes.firstIndex(where: { $0.id == heroID }) else { return }
-    //
-    //        // ① cambiamos en memoria
-    //        heroes[idx].favoriteHero = newValue
-    //
-    //        do {
-    //            _ = try await favoriteUseCase.fetchFavorites()
-    //            if newValue {
-    //                try await useCase.addFavorite(with: heroID)
-    //            } else {
-    //                try await useCase.removeFavorite(with: heroID)
-    //            }
-    //        } catch {
-    //            // ② revertimos si falla
-    //            heroes[idx].favoriteHero.toggle()
-    //            throw error
-    //        }
-    //    }
-    //
     var filteredCharacters: [HeroResponse] {
         heroes
             .filter { searchText.isEmpty || $0.nameHero.localizedCaseInsensitiveContains(searchText) }
@@ -168,46 +146,46 @@ final class HeroesViewModel {
         }
     }
 
-    @MainActor
-    func setLikeHeroFromFavorites(heroId: UUID) async throws {
-        guard let index = favoritesHeroes.firstIndex(where: { $0.id == heroId }) else {
-            NSLog("❌ Héroe no encontrado en favoritos")
-            return
-        }
-
-        var hero = favoritesHeroes[index]
-        let isCurrentlyFavorite = hero.favoriteHero
-        var success = false
-
-        do {
-            if isCurrentlyFavorite {
-                success = try await favoriteUseCase.removeFavorite(with: heroId)
-            } else {
-                success = try await favoriteUseCase.addFavorite(with: heroId)
-            }
-
-            if success {
-                // 1. Eliminar de la lista de favoritos si hizo dislike
-                if isCurrentlyFavorite {
-                    favoritesHeroes.remove(at: index)
-                } else {
-                    hero.favoriteHero = true
-                    favoritesHeroes[index] = hero
-                }
-
-                NotificationCenter.default.post(
-                    name: .kcNotificationrReloadAlumnos,
-                    object: "Cambio desde favoritos"
-                )
-            } else {
-                NSLog("❌ La operación de favorito falló (favorites)")
-            }
-        } catch {
-            NSLog("❌ Error en favoritos: \(error.localizedDescription)")
-        }
-    }
-
     
+//    @MainActor
+//    func setLikeHeroFromFavorites(heroId: UUID) async throws {
+//        guard let index = favoritesHeroes.firstIndex(where: { $0.id == heroId }) else {
+//            NSLog("❌ Héroe no encontrado en favoritos")
+//            return
+//        }
+//
+//        var hero = favoritesHeroes[index]
+//        let isCurrentlyFavorite = hero.favoriteHero
+//        var success = false
+//
+//        do {
+//            if isCurrentlyFavorite {
+//                success = try await favoriteUseCase.removeFavorite(with: heroId)
+//            } else {
+//                success = try await favoriteUseCase.addFavorite(with: heroId)
+//            }
+//
+//            if success {
+//                // 1. Eliminar de la lista de favoritos si hizo dislike
+//                if isCurrentlyFavorite {
+//                    favoritesHeroes.remove(at: index)
+//                } else {
+//                    hero.favoriteHero = true
+//                    favoritesHeroes[index] = hero
+//                }
+//
+//                NotificationCenter.default.post(
+//                    name: .kcNotificationrReloadAlumnos,
+//                    object: "Cambio desde favoritos"
+//                )
+//            } else {
+//                NSLog("❌ La operación de favorito falló (favorites)")
+//            }
+//        } catch {
+//            NSLog("❌ Error en favoritos: \(error.localizedDescription)")
+//        }
+//    }
+
     
 }
 
