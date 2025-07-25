@@ -121,17 +121,17 @@ final class HeroesViewModel {
             NSLog("❌ Héroe no encontrado en heroes")
             return
         }
-
+        
         let isCurrentlyFavorite = heroes[index].favoriteHero
         var success = false
-
+        
         do {
             if isCurrentlyFavorite {
                 success = try await favoriteUseCase.removeFavorite(with: heroId)
             } else {
                 success = try await favoriteUseCase.addFavorite(with: heroId)
             }
-
+            
             if success {
                 heroes[index].favoriteHero.toggle()
                 NotificationCenter.default.post(
@@ -145,67 +145,10 @@ final class HeroesViewModel {
             NSLog("❌ Error en heroes: \(error.localizedDescription)")
         }
     }
-
-    
-//    @MainActor
-//    func setLikeHeroFromFavorites(heroId: UUID) async throws {
-//        guard let index = favoritesHeroes.firstIndex(where: { $0.id == heroId }) else {
-//            NSLog("❌ Héroe no encontrado en favoritos")
-//            return
-//        }
-//
-//        var hero = favoritesHeroes[index]
-//        let isCurrentlyFavorite = hero.favoriteHero
-//        var success = false
-//
-//        do {
-//            if isCurrentlyFavorite {
-//                success = try await favoriteUseCase.removeFavorite(with: heroId)
-//            } else {
-//                success = try await favoriteUseCase.addFavorite(with: heroId)
-//            }
-//
-//            if success {
-//                // 1. Eliminar de la lista de favoritos si hizo dislike
-//                if isCurrentlyFavorite {
-//                    favoritesHeroes.remove(at: index)
-//                } else {
-//                    hero.favoriteHero = true
-//                    favoritesHeroes[index] = hero
-//                }
-//
-//                NotificationCenter.default.post(
-//                    name: .kcNotificationrReloadAlumnos,
-//                    object: "Cambio desde favoritos"
-//                )
-//            } else {
-//                NSLog("❌ La operación de favorito falló (favorites)")
-//            }
-//        } catch {
-//            NSLog("❌ Error en favoritos: \(error.localizedDescription)")
-//        }
-//    }
-
     
 }
-
-//    @MainActor
-//    func setLikeHero(heroId: UUID) async throws {
-//        //llamo al server
-//        if (try await favoriteUseCase.addFavorite(with: heroId) == true) {
-//            if let index = heroes.firstIndex(where: {$0.id == heroId}){
-//                heroes[index].favoriteHero.toggle()
-//            }
-//        } else {
-//            NSLog("Error al llamar me gusta")
-//        }
-//
-//        //Notificamos
-//        NotificationCenter.default.post(name: .kcNotificationrReloadAlumnos, object: "Cambio heroe me gusta")
-//    }
-//}
-
-
-extension Notification.Name {
-    static let kcNotificationrReloadAlumnos = Notification.Name("ReloadAlumnos")
-}
+    
+    
+    extension Notification.Name {
+        static let kcNotificationrReloadAlumnos = Notification.Name("ReloadAlumnos")
+    }

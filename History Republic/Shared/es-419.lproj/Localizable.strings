@@ -94,3 +94,9 @@
 
 "10. Suspensión y terminación" = "10. Suspensión y terminación";
 "Podremos suspender o cancelar tu acceso si incumples estas Condiciones." = "Podremos suspender o cancelar tu acceso si incumples estas Condiciones.";
+
+
+/* Error Loading View*/
+"Intentar de nuevo" = "Intentar de nuevo";
+"No se pudo cargar los héroes" = "No se pudo cargar los héroes";
+"Error al cargar la vista" = "Error al cargar la vista";

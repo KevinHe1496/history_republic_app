@@ -117,3 +117,7 @@
 
 
 
+/* Error Loading View*/
+"Intentar de nuevo" = "Try again";
+"No se pudo cargar los héroes" = "Could not load the heroes";
+"Error al cargar la vista" = "Error loading the view";

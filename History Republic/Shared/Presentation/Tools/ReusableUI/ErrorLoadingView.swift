@@ -22,6 +22,7 @@ struct ErrorLoadingView: View {
             CustomButton(title: "Intentar de nuevo", color: .greenSecondary) {
                 Task {
                     try await viewModel.fetchAllHeroesWithFavorites()
+                    try await viewModel.fetchAllHeroes()
                 }
             }
         }

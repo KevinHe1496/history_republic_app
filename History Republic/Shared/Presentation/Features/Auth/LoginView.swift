@@ -23,10 +23,10 @@ struct LoginView: View {
     }
     
     /// Email input from user
-    @State private var email = "kevin@example.com"
+    @State private var email = ""
     
     /// Password input from user
-    @State private var pass = "123456"
+    @State private var pass = ""
     
     var body: some View {
         NavigationStack {
