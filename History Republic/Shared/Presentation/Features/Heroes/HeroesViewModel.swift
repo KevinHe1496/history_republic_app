@@ -94,7 +94,7 @@ final class HeroesViewModel {
             NSLog("❌ Error al cargar héroes o favoritos: \(error.localizedDescription)")
             self.favoritesHeroes = []
             self.heroes = []
-            self.status = .error("No se pudo cargar los héroes")
+            self.status = .error(String(localized: "No se pudo cargar los héroes"))
             throw error
         }
     }
