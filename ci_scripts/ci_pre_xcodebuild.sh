@@ -8,7 +8,7 @@
 
 echo 'Change Beta App Icon'
 
-APP_ICON_PATH="$CI_PRIMARY_REPOSITORY_PATH/History Republic/Assets.xcassets/AppIcon.appiconset"
+APP_ICON_PATH="$CI_PRIMARY_REPOSITORY_PATH/History\ Republic/Assets.xcassets/AppIcon.appiconset"
 
 echo $APP_ICON_PATH
 
