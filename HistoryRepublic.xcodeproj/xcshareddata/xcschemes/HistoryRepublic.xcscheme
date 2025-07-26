@@ -18,7 +18,7 @@
                BlueprintIdentifier = "C96AC65C2D9B4F8200369BAD"
                BuildableName = "History Republic.app"
                BlueprintName = "History Republic"
-               ReferencedContainer = "container:History Republic.xcodeproj">
+               ReferencedContainer = "container:HistoryRepublic.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -38,7 +38,7 @@
                BlueprintIdentifier = "C96AC66C2D9B4F8300369BAD"
                BuildableName = "History RepublicTests.xctest"
                BlueprintName = "History RepublicTests"
-               ReferencedContainer = "container:History Republic.xcodeproj">
+               ReferencedContainer = "container:HistoryRepublic.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -73,7 +73,7 @@
             BlueprintIdentifier = "C96AC65C2D9B4F8200369BAD"
             BuildableName = "History Republic.app"
             BlueprintName = "History Republic"
-            ReferencedContainer = "container:History Republic.xcodeproj">
+            ReferencedContainer = "container:HistoryRepublic.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -90,7 +90,7 @@
             BlueprintIdentifier = "C96AC65C2D9B4F8200369BAD"
             BuildableName = "History Republic.app"
             BlueprintName = "History Republic"
-            ReferencedContainer = "container:History Republic.xcodeproj">
+            ReferencedContainer = "container:HistoryRepublic.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

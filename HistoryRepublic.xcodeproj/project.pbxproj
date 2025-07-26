@@ -661,7 +661,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C96AC6582D9B4F8200369BAD /* Build configuration list for PBXProject "History Republic" */;
+			buildConfigurationList = C96AC6582D9B4F8200369BAD /* Build configuration list for PBXProject "HistoryRepublic" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -955,7 +955,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"History Republic/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -991,7 +991,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"History Republic/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1107,7 +1107,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C96AC6582D9B4F8200369BAD /* Build configuration list for PBXProject "History Republic" */ = {
+		C96AC6582D9B4F8200369BAD /* Build configuration list for PBXProject "HistoryRepublic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C96AC67F2D9B4F8300369BAD /* Debug */,
