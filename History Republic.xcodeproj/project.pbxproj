@@ -347,7 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				BFC1AF292E35707C00CDD011 /* ci_scripts */,
-				C96AC68F2D9B4FC300369BAD /* History Republic */,
+				C96AC68F2D9B4FC300369BAD /* HistoryRepublic */,
 				C96AC6702D9B4F8300369BAD /* History RepublicTests */,
 				C96AC67A2D9B4F8300369BAD /* History RepublicUITests */,
 				C96AC65E2D9B4F8200369BAD /* Products */,
@@ -372,7 +372,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		C96AC68F2D9B4FC300369BAD /* History Republic */ = {
+		C96AC68F2D9B4FC300369BAD /* HistoryRepublic */ = {
 			isa = PBXGroup;
 			children = (
 				C96AC6942D9B4FCD00369BAD /* Shared */,
@@ -380,7 +380,7 @@
 				C96AC68C2D9B4FC300369BAD /* Assets.xcassets */,
 				C96AC68E2D9B4FC300369BAD /* History_RepublicApp.swift */,
 			);
-			path = "History Republic";
+			path = HistoryRepublic;
 			sourceTree = "<group>";
 		};
 		C96AC6942D9B4FCD00369BAD /* Shared */ = {
@@ -955,7 +955,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"History Republic/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -991,7 +991,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"History Republic/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
