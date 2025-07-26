@@ -14,5 +14,5 @@ echo $APP_ICON_PATH
 
 rm -rf $APP_ICON_PATH
 
-mv "$CI_PRIMARY_REPOSITORY_PATH/ci_script/AppIcon-Beta.appiconset" $APP_ICON_PATH
+mv "$CI_PRIMARY_REPOSITORY_PATH/ci_scripts/AppIcon-Beta.appiconset" $APP_ICON_PATH
 
