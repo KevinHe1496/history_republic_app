@@ -55,11 +55,12 @@ struct TermsOfUseView: View {
                        }
 
                        Group {
-                           Text("6. Servicios de terceros")
+                           Text("6. Contenido web y cookies")
                                .font(.headline)
-                           Text("""
-                           La App no recopila cookies con fines de rastreo. El contenido web que se muestra no utiliza cookies de seguimiento. No usamos AppTrackingTransparency porque no realizamos ningún rastreo de usuarios.
-                           """)
+                           Text("La App puede mostrar contenido web alojado en nuestros propios servidores (por ejemplo, páginas creadas con WordPress o Elementor). Este contenido web no utiliza cookies ni realiza ningún tipo de rastreo de usuarios.")
+                           
+                           Text("Por lo tanto, no usamos el marco AppTrackingTransparency (ATT), ya que no se realiza ningún rastreo de usuarios.")
+                         
                        }
 
                        Group {

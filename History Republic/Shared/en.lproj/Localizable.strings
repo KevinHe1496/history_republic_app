@@ -106,9 +106,13 @@
 
 "Implementamos medidas de seguridad para proteger tus datos personales. Sin embargo, ningún sistema es completamente seguro y no garantizamos protección absoluta." = "We implement security measures to protect your personal data. However, no system is completely secure, and we do not guarantee absolute protection.";
 
-"6. Servicios de terceros" = "6. Third-Party Services";
+"6. Contenido web y cookies" = "6. Web Content and Cookies";
 
-"La App no recopila cookies con fines de rastreo. El contenido web que se muestra no utiliza cookies de seguimiento. No usamos AppTrackingTransparency porque no realizamos ningún rastreo de usuarios." = "The App does not collect cookies for tracking purposes. The web content displayed does not use tracking cookies. We do not use AppTrackingTransparency because no user tracking is performed.";
+"La App puede mostrar contenido web alojado en nuestros propios servidores (por ejemplo, páginas creadas con WordPress o Elementor). Este contenido web no utiliza cookies ni realiza ningún tipo de rastreo de usuarios." = "The App may display web content hosted on our own servers (e.g., pages created with WordPress or Elementor). This web content does not use cookies and does not perform any kind of user tracking.";
+
+"Por lo tanto, no usamos el marco AppTrackingTransparency (ATT), ya que no se realiza ningún rastreo de usuarios." = "Therefore, we do not use the AppTrackingTransparency (ATT) framework, as no user tracking is performed.";
+
+
 
 "7. Tus derechos" = "7. Your Rights";
 
