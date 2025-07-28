@@ -3,100 +3,89 @@ import SwiftUI
 struct TermsOfUseView: View {
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                Text("Condiciones de Uso")
-                    .font(.title2)
-                    .bold()
+                   VStack(alignment: .leading, spacing: 16) {
+                       Text("Política de Privacidad")
+                           .font(.title2)
+                           .bold()
 
-                Text("""
-                Bienvenido/a a History Republic, una plataforma móvil que te permite aprender sobre los relatos épicos a lo largo de la historia de forma amena e interactiva. Al descargar, instalar o utilizar la Aplicación aceptas íntegramente estas Condiciones de Uso (“Condiciones”). Si no estás de acuerdo, por favor no utilices la Aplicación.
-                """)
+                       Text("Fecha de entrada en vigor: 25 de julio de 2025")
 
-                Group {
-                    Text("1. Aceptación y modificaciones")
-                        .font(.headline)
-                    Text("""
-                    Estas Condiciones constituyen un contrato vinculante entre History Republic (“nosotros”) y tú como usuario. Podremos actualizar las Condiciones cuando sea necesario. Te avisaremos mediante notificación dentro de la app o correo electrónico. El uso continuado tras la modificación implica tu aceptación.
-                    """)
-                }
+                       Group {
+                           Text("1. Introducción")
+                               .font(.headline)
+                           
+                           Text("En History Republic nos comprometemos a proteger tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tus datos personales cuando utilizas nuestra aplicación móvil History Republic (“la App”).")
+                           Text("Al descargar, instalar o utilizar la App, aceptas esta Política de Privacidad. Si no estás de acuerdo, por favor no utilices la App.")
+                       }
 
-                Group {
-                    Text("2. Requisitos de edad y registro")
-                        .font(.headline)
-                    Text("""
-                    Debes tener al menos 13 años (o la edad mínima que exija tu jurisdicción) para crear una cuenta. Si eres menor, necesitas consentimiento de tu tutor legal. La información de registro debe ser veraz y mantenerse actualizada.
-                    """)
-                }
+                       Group {
+                           Text("2. Recopilación y uso de datos")
+                               .font(.headline)
+                           Text("Podemos recopilar los siguientes tipos de datos cuando te registras o utilizas la App:")
+                           
+                           Text("• Información personal: como tu nombre y correo electrónico al crear una cuenta.")
+                           Text("• Datos de uso: información sobre cómo usas la App, incluyendo interacciones y funciones utilizadas.")
+                           Text("Utilizamos estos datos únicamente con fines educativos y funcionales, como permitir el inicio de sesión, mejorar el rendimiento y enviar notificaciones relacionadas con la App.")
+                           Text("No utilizamos tus datos para publicidad ni para rastrearte en otras aplicaciones o sitios web de terceros.")
+                       }
 
-                Group {
-                    Text("3. Licencia de uso")
-                        .font(.headline)
-                    Text("""
-                    Te concedemos una licencia personal, limitada, no exclusiva e intransferible para instalar y usar la Aplicación con fines únicamente educativos y no comerciales. Queda prohibido: (a) comercializar, copiar o distribuir la Aplicación o su contenido; (b) ingeniería inversa; (c) eludir medidas de seguridad.
-                    """)
-                }
+                       Group {
+                           Text("3. Requisitos de edad")
+                               .font(.headline)
+                           Text("""
+                           Debes tener al menos 13 años (o la edad mínima en tu jurisdicción) para crear una cuenta. Si eres menor, necesitas el consentimiento de un tutor legal.
+                           """)
+                       }
 
-                Group {
-                    Text("4. Propiedad intelectual")
-                        .font(.headline)
-                    Text("""
-                    Todo el contenido es propiedad nuestra o de nuestros licenciantes y está protegido por leyes de copyright. Los nombres History Republic y su logotipo son marcas registradas.
-                    """)
-                }
+                       Group {
+                           Text("4. Compartición de datos")
+                               .font(.headline)
+                           Text("No vendemos, alquilamos ni compartimos tus datos personales con terceros, salvo cuando:")
+                           
+                           Text("• Lo requiera la ley.")
+                           Text("• Sea necesario para proteger nuestros derechos o los de otros usuarios.")
+                       }
 
-                Group {
-                    Text("5. Contenido educativo y descargo de responsabilidad")
-                        .font(.headline)
-                    Text("""
-                    Nos esforzamos por ofrecer información rigurosa; sin embargo, no garantizamos que todo el contenido sea absolutamente exacto. La Aplicación es puramente educativa.
-                    """)
-                }
+                       Group {
+                           Text("5. Seguridad de los datos")
+                               .font(.headline)
+                           Text("""
+                           Implementamos medidas de seguridad para proteger tus datos personales. Sin embargo, ningún sistema es completamente seguro y no garantizamos protección absoluta.
+                           """)
+                       }
 
-                Group {
-                    Text("6. Contenido aportado por el usuario")
-                        .font(.headline)
-                    Text("""
-                    Conservas tus derechos, pero nos concedes licencia mundial gratuita para mostrar tu contenido en la app. No publiques material ilegal, ofensivo o que infrinja derechos de terceros.
-                    """)
-                }
+                       Group {
+                           Text("6. Servicios de terceros")
+                               .font(.headline)
+                           Text("""
+                           La App no recopila cookies con fines de rastreo. El contenido web que se muestra no utiliza cookies de seguimiento. No usamos AppTrackingTransparency porque no realizamos ningún rastreo de usuarios.
+                           """)
+                       }
 
-                Group {
-                    Text("7. Conductas prohibidas")
-                        .font(.headline)
-                    Text("""
-                    No se permite usar la Aplicación para fines comerciales sin autorización, extraer datos automáticamente (bots, scraping), acceder sin permiso a nuestros sistemas o violar leyes o estas Condiciones.
-                    """)
-                }
+                       Group {
+                           Text("7. Tus derechos")
+                               .font(.headline)
+                           
+                           Text("Tienes derecho a:")
+                           Text("• Acceder y actualizar tus datos personales.")
+                           Text("• Solicitar la eliminación de tu cuenta y datos.")
+                           Text("• Retirar tu consentimiento (si aplica).")
+                           
+                           Text("Para ejercer estos derechos, contáctanos en: historyrepublic.25@gmail.com")
+                       }
 
-
-                Group {
-                    Text("8. Privacidad")
-                        .font(.headline)
-                    Text("""
-                    Consulta nuestra Política de Privacidad para saber cómo tratamos tus datos.
-                    """)
-                }
-
-                Group {
-                    Text("9. Limitación de responsabilidad")
-                        .font(.headline)
-                    Text("""
-                    La Aplicación se ofrece “tal cual” y “según disponibilidad”. No asumimos responsabilidad por pérdidas indirectas o daños consecuentes.
-                    """)
-                }
-
-                Group {
-                    Text("10. Suspensión y terminación")
-                        .font(.headline)
-                    Text("""
-                    Podremos suspender o cancelar tu acceso si incumples estas Condiciones.
-                    """)
-                }
-
-            }
-            .padding()
-        }
-        .navigationTitle("Condiciones de uso")
+                       Group {
+                           Text("8. Cambios en esta política")
+                               .font(.headline)
+                           Text("""
+                           Podemos actualizar esta Política de Privacidad. Cualquier cambio será notificado dentro de la App o por correo electrónico.
+                           """)
+                       }
+                   }
+                   .padding()
+               }
+               .navigationTitle("Política de Privacidad")
+           
     }
 }
 

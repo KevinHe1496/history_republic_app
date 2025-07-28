@@ -70,50 +70,61 @@
 
 /* Terms of use view */
 
-"Condiciones de Uso" = "Terms of Use";
+"Política de Privacidad" = "Privacy Policy";
 
-"Bienvenido/a a History Republic, una plataforma móvil que te permite aprender sobre los relatos épicos a lo largo de la historia de forma amena e interactiva. Al descargar, instalar o utilizar la Aplicación aceptas íntegramente estas Condiciones de Uso (“Condiciones”). Si no estás de acuerdo, por favor no utilices la Aplicación." = "Welcome to History Republic, a mobile platform that allows you to learn about epic stories throughout history in an enjoyable and interactive way. By downloading, installing, or using the App, you fully accept these Terms of Use (“Terms”). If you do not agree, please do not use the App.";
+"Fecha de entrada en vigor: 25 de julio de 2025" = "Effective Date: 25 July 2025";
 
-"1. Aceptación y modificaciones" = "1. Acceptance and Modifications";
+"1. Introducción" = "1. Introduction";
 
-"Estas Condiciones constituyen un contrato vinculante entre History Republic (“nosotros”) y tú como usuario. Podremos actualizar las Condiciones cuando sea necesario. Te avisaremos mediante notificación dentro de la app o correo electrónico. El uso continuado tras la modificación implica tu aceptación." = "These Terms constitute a binding agreement between History Republic (“we”) and you as a user. We may update the Terms when necessary. We will notify you via in-app notification or email. Continued use after the modification implies your acceptance.";
+"En History Republic nos comprometemos a proteger tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tus datos personales cuando utilizas nuestra aplicación móvil History Republic (“la App”)." = "At History Republic, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal data when you use our mobile application, History Republic (“the App”).";
 
-"2. Requisitos de edad y registro" = "2. Age Requirements and Registration";
+"Al descargar, instalar o utilizar la App, aceptas esta Política de Privacidad. Si no estás de acuerdo, por favor no utilices la App." = "By downloading, installing, or using the App, you agree to this Privacy Policy. If you do not agree, please do not use the App.";
 
-"Debes tener al menos 13 años (o la edad mínima que exija tu jurisdicción) para crear una cuenta. Si eres menor, necesitas consentimiento de tu tutor legal. La información de registro debe ser veraz y mantenerse actualizada." = "You must be at least 13 years old (or the minimum age required by your jurisdiction) to create an account. If you are a minor, you need consent from your legal guardian. Registration information must be truthful and kept up to date.";
+"2. Recopilación y uso de datos" = "2. Data Collection and Use";
 
-"3. Licencia de uso" = "3. Usage License";
+"Podemos recopilar los siguientes tipos de datos cuando te registras o utilizas la App:" = "We may collect the following types of data when you register or use the App:";
 
-"Te concedemos una licencia personal, limitada, no exclusiva e intransferible para instalar y usar la Aplicación con fines únicamente educativos y no comerciales. Queda prohibido: (a) comercializar, copiar o distribuir la Aplicación o su contenido; (b) ingeniería inversa; (c) eludir medidas de seguridad." = "We grant you a personal, limited, non-exclusive, and non-transferable license to install and use the App solely for educational and non-commercial purposes. The following is prohibited: (a) commercializing, copying, or distributing the App or its content; (b) reverse engineering; (c) bypassing security measures.";
+"• Información personal: como tu nombre y correo electrónico al crear una cuenta." = "• Personal Information: Such as your name and email address when creating an account.";
 
-"4. Propiedad intelectual" = "4. Intellectual Property";
+"• Datos de uso: información sobre cómo usas la App, incluyendo interacciones y funciones utilizadas." = "• Usage Data: Information about how you use the App, including interactions and features used.";
 
-"Todo el contenido es propiedad nuestra o de nuestros licenciantes y está protegido por leyes de copyright. Los nombres History Republic y su logotipo son marcas registradas." = "All content is owned by us or our licensors and is protected by copyright laws. The names History Republic and its logo are registered trademarks.";
+"Utilizamos estos datos únicamente con fines educativos y funcionales, como permitir el inicio de sesión, mejorar el rendimiento y enviar notificaciones relacionadas con la App." = "We use this data solely for educational and functional purposes, such as enabling login, improving performance, and sending notifications related to the App.";
 
-"5. Contenido educativo y descargo de responsabilidad" = "5. Educational Content and Disclaimer";
+"No utilizamos tus datos para publicidad ni para rastrearte en otras aplicaciones o sitios web de terceros." = "We do not use your data for advertising or to track you across other apps or third-party websites.";
 
-"Nos esforzamos por ofrecer información rigurosa; sin embargo, no garantizamos que todo el contenido sea absolutamente exacto. La Aplicación es puramente educativa." = "We strive to provide accurate information; however, we do not guarantee that all content is absolutely accurate. The App is purely educational.";
+"3. Requisitos de edad" = "3. Age Requirements";
 
-"6. Contenido aportado por el usuario" = "6. User-Contributed Content";
+"Debes tener al menos 13 años (o la edad mínima en tu jurisdicción) para crear una cuenta. Si eres menor, necesitas el consentimiento de un tutor legal." = "You must be at least 13 years old (or the minimum age required in your jurisdiction) to create an account. If you are underage, you need the consent of a legal guardian.";
 
-"Conservas tus derechos, pero nos concedes licencia mundial gratuita para mostrar tu contenido en la app. No publiques material ilegal, ofensivo o que infrinja derechos de terceros." = "You retain your rights, but you grant us a free, worldwide license to display your content in the app. Do not post illegal, offensive, or infringing material.";
+"4. Compartición de datos" = "4. Data Sharing";
 
-"7. Conductas prohibidas" = "7. Prohibited Conduct";
+"No vendemos, alquilamos ni compartimos tus datos personales con terceros, salvo cuando:" = "We do not sell, rent, or share your personal data with third parties, except when:";
+"• Lo requiera la ley." = "• Required by law.";
+"• Sea necesario para proteger nuestros derechos o los de otros usuarios." = "• Necessary to protect our rights or the rights of other users.";
 
-"No se permite usar la Aplicación para fines comerciales sin autorización, extraer datos automáticamente (bots, scraping), acceder sin permiso a nuestros sistemas o violar leyes o estas Condiciones." = "It is not permitted to use the App for commercial purposes without authorization, automatically extract data (bots, scraping), access our systems without permission, or violate laws or these Terms.";
+"5. Seguridad de los datos" = "5. Data Security";
 
-"8. Privacidad" = "8. Privacy";
+"Implementamos medidas de seguridad para proteger tus datos personales. Sin embargo, ningún sistema es completamente seguro y no garantizamos protección absoluta." = "We implement security measures to protect your personal data. However, no system is completely secure, and we do not guarantee absolute protection.";
 
-"Consulta nuestra Política de Privacidad para saber cómo tratamos tus datos." = "Please refer to our Privacy Policy to learn how we handle your data.";
+"6. Servicios de terceros" = "6. Third-Party Services";
 
-"9. Limitación de responsabilidad" = "9. Limitation of Liability";
+"La App no recopila cookies con fines de rastreo. El contenido web que se muestra no utiliza cookies de seguimiento. No usamos AppTrackingTransparency porque no realizamos ningún rastreo de usuarios." = "The App does not collect cookies for tracking purposes. The web content displayed does not use tracking cookies. We do not use AppTrackingTransparency because no user tracking is performed.";
 
-"La Aplicación se ofrece “tal cual” y “según disponibilidad”. No asumimos responsabilidad por pérdidas indirectas o daños consecuentes." = "The App is provided “as is” and “as available.” We assume no responsibility for indirect losses or consequential damages.";
+"7. Tus derechos" = "7. Your Rights";
 
-"10. Suspensión y terminación" = "10. Suspension and Termination";
+"Tienes derecho a:" = "You have the right to:";
 
-"Podremos suspender o cancelar tu acceso si incumples estas Condiciones." = "We may suspend or terminate your access if you breach these Terms.";
+"• Acceder y actualizar tus datos personales." = "• Access and update your personal data.";
+"• Solicitar la eliminación de tu cuenta y datos." = "• Request the deletion of your account and data.";
+"• Retirar tu consentimiento (si aplica)." = "• Withdraw your consent (if applicable).";
 
+"Para ejercer estos derechos, contáctanos en: historyrepublic.25@gmail.com" = "To exercise these rights, please contact us at: historyrepublic.25@gmail.com";
+
+"8. Cambios en esta política" = "8. Changes to this Policy";
+
+"Podemos actualizar esta Política de Privacidad. Cualquier cambio será notificado dentro de la App o por correo electrónico." = "We may update this Privacy Policy. Any changes will be communicated within the App or by email.";
+
+"Política de Privacidad" = "Privacy Policy";
 
 
 
