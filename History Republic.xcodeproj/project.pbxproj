@@ -14,6 +14,8 @@
 		BF1C72B02E15A1FA0008D806 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72AF2E15A1F50008D806 /* UserProfileService.swift */; };
 		BF1C72B22E15A4CF0008D806 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72B12E15A4C20008D806 /* UserResponse.swift */; };
 		BF1C72B42E15A6250008D806 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C72B32E15A6210008D806 /* UserRequest.swift */; };
+		BFA74EFC2E425A38005426FB /* QuizResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA74EFB2E425A34005426FB /* QuizResponse.swift */; };
+		BFA74EFE2E425AA9005426FB /* QuestionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA74EFD2E425AA2005426FB /* QuestionResponse.swift */; };
 		BFAD1BCE2E15BE070036C2A3 /* UserProfileServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BCD2E15BE010036C2A3 /* UserProfileServiceRepository.swift */; };
 		BFAD1BD02E15BFFE0036C2A3 /* UserProfileServiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */; };
 		BFAD1BD22E15C0A90036C2A3 /* UserProfileServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */; };
@@ -100,6 +102,8 @@
 		BF1C72AF2E15A1F50008D806 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
 		BF1C72B12E15A4C20008D806 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		BF1C72B32E15A6210008D806 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		BFA74EFB2E425A34005426FB /* QuizResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResponse.swift; sourceTree = "<group>"; };
+		BFA74EFD2E425AA2005426FB /* QuestionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionResponse.swift; sourceTree = "<group>"; };
 		BFAD1BCD2E15BE010036C2A3 /* UserProfileServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceRepository.swift; sourceTree = "<group>"; };
 		BFAD1BCF2E15BFF60036C2A3 /* UserProfileServiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceRepositoryProtocol.swift; sourceTree = "<group>"; };
 		BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileServiceUseCase.swift; sourceTree = "<group>"; };
@@ -417,6 +421,8 @@
 		C96AC69C2D9B503E00369BAD /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				BFA74EFD2E425AA2005426FB /* QuestionResponse.swift */,
+				BFA74EFB2E425A34005426FB /* QuizResponse.swift */,
 				BF1C72B32E15A6210008D806 /* UserRequest.swift */,
 				BF1C72B12E15A4C20008D806 /* UserResponse.swift */,
 				C96154FD2D9ED4FD00BF755D /* AuthTokenResponse.swift */,
@@ -661,6 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AB7D452DAB4336003D6C5E /* UserAuthServiceUseCase.swift in Sources */,
+				BFA74EFC2E425A38005426FB /* QuizResponse.swift in Sources */,
 				BF1C72AA2E1579430008D806 /* WebView.swift in Sources */,
 				C9B3E3B62D9C9F9100BC3096 /* ErrorView.swift in Sources */,
 				C9A0AD152E16F5DB003E843D /* FavoriteServiceRepository.swift in Sources */,
@@ -683,6 +690,7 @@
 				BFAD1BD02E15BFFE0036C2A3 /* UserProfileServiceRepositoryProtocol.swift in Sources */,
 				C9B6994D2DA7483C000CDB68 /* TabBarView.swift in Sources */,
 				C9B3E2D02D9C85AD00BC3096 /* HRError.swift in Sources */,
+				BFA74EFE2E425AA9005426FB /* QuestionResponse.swift in Sources */,
 				C9AB7D492DAB49B8003D6C5E /* UserAuthViewModel.swift in Sources */,
 				C96AC7C92D9B664C00369BAD /* HttpMethods.swift in Sources */,
 				BFAD1BCE2E15BE070036C2A3 /* UserProfileServiceRepository.swift in Sources */,
@@ -897,7 +905,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"History Republic/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -933,7 +941,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"History Republic/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -63,3 +63,24 @@ struct HeroLikeResponse: Codable, Identifiable {
         url: "https://historyrepublic.com/wp-content/uploads/2025/05/St_Olga_by_Nesterov_in_1892.jpg", favoriteHero: false
     )
 }
+
+struct HeroRelationResponse: Codable {
+    let id: UUID
+    var nameHero: String
+    var title: String
+    var information: String
+    var image: String
+    var url: String
+    var favoriteHero: Bool = false
+    let quiz: QuizResponse
+    
+    var imageURL: URL? {
+        if let url = URL(string: image) {
+            return url
+        } else {
+            print("No tenia imagen")
+            return nil
+        }
+    }
+    
+}

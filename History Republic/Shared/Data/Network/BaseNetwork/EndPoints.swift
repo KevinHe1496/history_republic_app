@@ -14,6 +14,7 @@ enum EndPoints: String {
     case register = "/api/auth/register"
     case fetchMe = "/api/users/me"
     case heroes = "/api/heroes"
+    case heroesWithRelations = "/api/heroes/relations"
     
     case addFavorite = "/api/favorites"
 

@@ -9,6 +9,7 @@ import Foundation
 
 protocol HeroServiceProtocol {
     func fetchAllHeroes() async throws -> [HeroResponse]
+    func fetchAllHeroesWithRelations() async throws -> [HeroRelationResponse]
     func addFavorite(with idHero: UUID) async throws
     func removeFavorite(with idHero: UUID) async throws
 }
@@ -57,6 +58,46 @@ final class HeroService: HeroServiceProtocol {
             print("Error in fetch heroes \(error.localizedDescription)")
             throw HRError.errorParsingData
         }
+        
+        return modelReturn
+    }
+    
+    
+    func fetchAllHeroesWithRelations() async throws -> [HeroRelationResponse] {
+        var modelReturn = [HeroRelationResponse]()
+        
+        let urlString = "\(ConstantsApp.CONS_API_URL)\(EndPoints.heroesWithRelations.rawValue)"
+        
+        guard let url = URL(string: urlString) else {
+            throw HRError.badUrl
+        }
+        
+        var request: URLRequest = URLRequest(url: url)
+        request.httpMethod = HttpMethods.get
+        
+        
+        do {
+            let (data, response) = try await session.data(for: request)
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                throw HRError.errorFromApi(statusCode: -1)
+            }
+            
+            guard (200...299).contains(httpResponse.statusCode) else {
+                print("StatusCode: \(httpResponse.statusCode)")
+                throw HRError.errorFromApi(statusCode: httpResponse.statusCode)
+            }
+            
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            
+            let result = try decoder.decode([HeroRelationResponse].self, from: data)
+            modelReturn = result
+        } catch {
+            print("Error in fetch heroes \(error.localizedDescription)")
+            throw HRError.errorParsingData
+        }
+        
         
         return modelReturn
     }
