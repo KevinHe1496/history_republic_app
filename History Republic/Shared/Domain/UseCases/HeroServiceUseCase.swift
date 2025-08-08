@@ -10,6 +10,7 @@ import Foundation
 protocol HeroServiceUseCaseProtocol {
     var repo: HeroServiceRepositoryProtocol { get set }
     func fetchHeroes() async throws -> [HeroResponse]
+    func fetchAllHeroesWithRelations() async throws -> [HeroRelationResponse]
     func addFavorite(with idHero: UUID) async throws
     func removeFavorite(with idHero: UUID) async throws
 }
@@ -23,6 +24,10 @@ final class HeroServiceUseCase: HeroServiceUseCaseProtocol {
     
     func fetchHeroes() async throws -> [HeroResponse] {
         return try await repo.fetchHeroes()
+    }
+    
+    func fetchAllHeroesWithRelations() async throws -> [HeroRelationResponse] {
+        return try await repo.fetchAllHeroesWithRelations()
     }
     
     func addFavorite(with idHero: UUID) async throws {

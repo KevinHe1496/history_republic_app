@@ -31,7 +31,7 @@ struct HeroListView: View {
                         List {
                             ForEach(viewModel.filteredCharacters) { hero in
                                 NavigationLink {
-                                    HeroDetailView(url: hero.url)
+                                    HeroDetailView(url: hero.url, quiz: hero.quiz ?? QuizResponse.sampler)
                                 } label: {
                                     HeroRowView(hero: hero, viewModel: viewModel)
                                 }

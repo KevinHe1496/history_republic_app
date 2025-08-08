@@ -9,6 +9,7 @@ import Foundation
 
 protocol HeroServiceRepositoryProtocol {
     func fetchHeroes() async throws -> [HeroResponse]
+    func fetchAllHeroesWithRelations() async throws -> [HeroRelationResponse]
     func addFavorite(with idHero: UUID) async throws
     func removeFavorite(with idHero: UUID) async throws
 }

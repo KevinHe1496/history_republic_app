@@ -10,6 +10,7 @@ struct HeroResponse: Codable, Identifiable {
     var image: String
     var url: String
     var favoriteHero: Bool = false
+    let quiz: QuizResponse?
     
     var imageURL: URL? {
         if let url = URL(string: image) {
@@ -26,9 +27,11 @@ struct HeroResponse: Codable, Identifiable {
         title: "Saiyan Warrior",
         information: "ashiodiasdh asidas0 ashd haishdasiop dhasipodsahidpyais udhjapsd ashd pshd aoshd",
         image: "goku_image", // Suponiendo que es el nombre de una imagen en tus assets
-        url: "https://historyrepublic.com/wp-content/uploads/2025/05/St_Olga_by_Nesterov_in_1892.jpg", favoriteHero: false
+        url: "https://historyrepublic.com/wp-content/uploads/2025/05/St_Olga_by_Nesterov_in_1892.jpg", favoriteHero: false, quiz: QuizResponse(id: "1", title: "Examen", description: "Examen sorppresa", questions: [QuestionResponse(id: "1", text: "Joan de arco", options: ["Hola", "Como", "Estas"], correctAnswer: "Hola")])
     )
 }
+
+
 
 struct HerosLikeRequest: Codable {
     var hero: UUID
@@ -60,7 +63,7 @@ struct HeroLikeResponse: Codable, Identifiable {
         title: "Saiyan Warrior",
         information: "ashiodiasdh asidas0 ashd haishdasiop dhasipodsahidpyais udhjapsd ashd pshd aoshd",
         image: "goku_image", // Suponiendo que es el nombre de una imagen en tus assets
-        url: "https://historyrepublic.com/wp-content/uploads/2025/05/St_Olga_by_Nesterov_in_1892.jpg", favoriteHero: false
+        url: "https://historyrepublic.com/wp-content/uploads/2025/05/St_Olga_by_Nesterov_in_1892.jpg", favoriteHero: false, quiz: QuizResponse(id: "1", title: "Examen", description: "Examen Sorpresa mi brother", questions: [QuestionResponse(id: "1", text: "Joan de arco", options: ["Hola", "Como", "Estas"], correctAnswer: "Hola")])
     )
 }
 

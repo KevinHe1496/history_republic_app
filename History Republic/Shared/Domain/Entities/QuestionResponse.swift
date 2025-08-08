@@ -1,6 +1,6 @@
 import Foundation
 
-struct QuestionResponse: Codable {
+struct QuestionResponse: Codable, Identifiable {
     let id: String
     let text: String
     let options: [String]
