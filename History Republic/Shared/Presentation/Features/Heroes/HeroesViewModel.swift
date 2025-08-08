@@ -12,9 +12,18 @@ final class HeroesViewModel {
     
     var status: ViewState<[HeroResponse]> = .idle
     var heroes: [HeroResponse] = []
+    var heroesWithRelations: [HeroRelationResponse] = []
     var searchText: String = ""
     var isloading: Bool = false
     var favoritesHeroes = [HeroResponse]()
+    // 1️⃣ Preguntas del quiz actual
+    var quizQuestions: QuizResponse = QuizResponse(id: "", title: "", description: "", questions: [])
+
+    // 2️⃣ Respuestas seleccionadas por el usuario
+    var selectedAnswers: [String: String] = [:]
+
+    // 3️⃣ Puntuación actual
+    var score: Int = 0
     
     @ObservationIgnored private var useCase: HeroServiceUseCaseProtocol
     @ObservationIgnored var favoriteUseCase: FavoriteServiceUseCaseProtocol
@@ -36,6 +45,17 @@ final class HeroesViewModel {
         do {
             let heros = try await useCase.fetchHeroes()
             status = .success(heros)
+        } catch {
+            status = .error(error.localizedDescription)
+        }
+    }
+    
+    @MainActor
+    func fetchAllHeroesWithRelations() async throws {
+      
+        do {
+             heroesWithRelations = try await useCase.fetchAllHeroesWithRelations()
+           
         } catch {
             status = .error(error.localizedDescription)
         }
@@ -113,7 +133,6 @@ final class HeroesViewModel {
             .filter { searchText.isEmpty || $0.nameHero.localizedCaseInsensitiveContains(searchText) }
             .sorted { $0.nameHero.localizedCaseInsensitiveCompare($1.nameHero) == .orderedAscending }
     }
-    
     
     @MainActor
     func setLikeHeroFromHeroes(heroId: UUID) async throws {

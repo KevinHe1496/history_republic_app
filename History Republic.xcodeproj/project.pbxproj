@@ -21,6 +21,7 @@
 		BFAD1BD22E15C0A90036C2A3 /* UserProfileServiceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD12E15C09C0036C2A3 /* UserProfileServiceUseCase.swift */; };
 		BFAD1BDA2E15CE130036C2A3 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */; };
 		BFC785E42E300A2E00FAC0FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFC785E22E300A2E00FAC0FB /* Localizable.strings */; };
+		BFE4B31D2E43ED2A003895EB /* HeroesQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4B31C2E43ED2A003895EB /* HeroesQuizView.swift */; };
 		C905B8092DA88D950034EB14 /* DefaultProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905B8082DA88D950034EB14 /* DefaultProfileView.swift */; };
 		C92E12D92E15CCB3001BEA10 /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92E12D82E15CCB3001BEA10 /* FavoriteService.swift */; };
 		C938925C2DA9CCD90094C753 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938925B2DA9CCD90094C753 /* RegisterUserView.swift */; };
@@ -110,6 +111,7 @@
 		BFAD1BD92E15CE060036C2A3 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		BFC785E32E300A2E00FAC0FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFC785E52E300AA200FAC0FB /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BFE4B31C2E43ED2A003895EB /* HeroesQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesQuizView.swift; sourceTree = "<group>"; };
 		C905B8082DA88D950034EB14 /* DefaultProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProfileView.swift; sourceTree = "<group>"; };
 		C92E12D82E15CCB3001BEA10 /* FavoriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
 		C938925B2DA9CCD90094C753 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 				C9B3E3BA2D9CA6A600BC3096 /* HeroListView.swift */,
 				C961558F2D9EE25800BF755D /* HeroRowView.swift */,
 				BF1C72AB2E1579630008D806 /* HeroDetailView.swift */,
+				BFE4B31C2E43ED2A003895EB /* HeroesQuizView.swift */,
 			);
 			path = Heroes;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				C96AC6A22D9B511300369BAD /* SplashView.swift in Sources */,
 				C9B3E3BB2D9CA6A600BC3096 /* HeroListView.swift in Sources */,
 				BF0B4B912E1EF6AF00A1BB5E /* SessionStore.swift in Sources */,
+				BFE4B31D2E43ED2A003895EB /* HeroesQuizView.swift in Sources */,
 				C96AC7D12D9B68B700369BAD /* KeyChainKC.swift in Sources */,
 				C961B62E2E15BC6B00738076 /* UserProfileView.swift in Sources */,
 				C93892642DA9D1AF0094C753 /* CustomButton.swift in Sources */,

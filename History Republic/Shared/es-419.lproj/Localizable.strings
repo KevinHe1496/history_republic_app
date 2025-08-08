@@ -126,3 +126,10 @@
 "Intentar de nuevo" = "Intentar de nuevo";
 "No se pudo cargar los héroes" = "No se pudo cargar los héroes";
 "Error al cargar la vista" = "Error al cargar la vista";
+
+/* Heroes Quiz View */
+"quiz_score_format" = "Puntaje: %lld/%lld";
+"Enviar" = "Enviar";
+"Reiniciar" = "Reiniciar";
+"🧠 Examen" = "🧠 Examen";
+"¡A jugar!" = "¡A jugar!";

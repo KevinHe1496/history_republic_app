@@ -22,7 +22,7 @@ struct FavoriteView: View {
                     List(viewModelHeroes.heroes) { hero in
                         if hero.favoriteHero == true {
                             NavigationLink {
-                                HeroDetailView(url: hero.url)
+                                HeroDetailView(url: hero.url, quiz: hero.quiz ?? QuizResponse.sampler)
                             } label: {
                                 HeroRowView(hero: hero, viewModel: viewModelHeroes)
                             }

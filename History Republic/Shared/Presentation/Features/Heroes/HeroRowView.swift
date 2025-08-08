@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct HeroRowView: View {
+    
     var hero: HeroResponse
     @Bindable var viewModel: HeroesViewModel
 

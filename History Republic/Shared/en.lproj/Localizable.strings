@@ -136,3 +136,12 @@
 "Intentar de nuevo" = "Try again";
 "No se pudo cargar los héroes" = "Could not load the heroes";
 "Error al cargar la vista" = "Error loading the view";
+
+
+/* Heroes Quiz View */
+
+"🧠 Examen" = "🧠 Quiz";
+"quiz_score_format" = "Score: %lld/%lld";
+"Enviar" = "Send";
+"Reiniciar" = "Restart";
+"¡A jugar!" = "Let's play";
