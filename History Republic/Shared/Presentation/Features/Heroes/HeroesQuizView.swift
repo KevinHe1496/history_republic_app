@@ -12,6 +12,7 @@ struct HeroesQuizView: View {
     // qué eligió el usuario por pregunta
     @State private var selections: [String: String] = [:]
     @State private var showResult = false
+    @State private var didSubmit = false
     
     var body: some View {
         ScrollView {
@@ -52,19 +53,20 @@ struct HeroesQuizView: View {
                 }
                 
                 // Botón de enviar y resultado
-                Button(showResult ? "Reiniciar" : "Enviar") {
-                    if showResult {
-                        // reset
-                        selections = [:]
-                        showResult = false
-                    } else {
+                Button("Enviar") {
                         showResult = true
-                    }
                 }
                 .buttonStyle(.borderedProminent)
+                .frame(maxWidth: .infinity)
                 .tint(.greendarkandlightmode)
                 
-                if showResult {
+                .alert("Mensaje", isPresented: $showResult) {
+                        Button("Aceptar") { }
+                        Button("Reiniciar") {
+                                                selections = [:]
+                                                didSubmit = false
+                                            }
+                } message: {
                     let score = quiz.questions.filter { selections[$0.id] == $0.correctAnswer }.count
                     Text(String(localized: "quiz_score_format",
                                 defaultValue: "Puntaje: \(score)/\(quiz.questions.count)",
@@ -72,6 +74,14 @@ struct HeroesQuizView: View {
                     .font(.title3.bold())
                     .padding(.top, 8)
                 }
+//                if showResult {
+//                    let score = quiz.questions.filter { selections[$0.id] == $0.correctAnswer }.count
+//                    Text(String(localized: "quiz_score_format",
+//                                defaultValue: "Puntaje: \(score)/\(quiz.questions.count)",
+//                                comment: "Texto que muestra el puntaje obtenido en un quiz"))
+//                    .font(.title3.bold())
+//                    .padding(.top, 8)
+//                }
             }
             .padding()
             .navigationTitle("🧠 Examen")
